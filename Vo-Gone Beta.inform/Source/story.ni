@@ -6,7 +6,7 @@ First Half ends when Nick is friendly.
 
 When play begins:
 	say "Another late night working on this lab in the CSL. You've spent all day complaining about this 357 project you can't quite finish up because of style issues, but you know that complaining won't solve anything and eventually you need to hunker down and finish.[line break][line break]No one else is here in the CSL with you. Better just get started on that project on one of the lab computers…[line break]";
-	
+
 The CSL is a region. The Main Room, Admin Room, Rack Room, Coffee Room, 232B, and Mac Lab are rooms in the CSL.
 The Admin Room door is a door. The admin room door is north of the Main Room and south of the admin room. The admin room door is locked. The Mac Lab is southwest of the Main Room. 232B is northwest of the Main Room. The Coffee Room is northeast of the Main Room.
 
@@ -202,7 +202,9 @@ The Lab Computer is a door. "The lab computer you are working at hums softly." T
 Logging in is an action applying to one thing. Understand "Log in [any thing]" as logging in.
 
 Carry out logging in:
-	If the scene is midpoint:
+	If the scene is first half:
+		say "357 can wait, you have more important matters on your hands now.";
+	otherwise:
 		If the noun is a lab computer:
 			If the player is carrying an access key:
 				say "You enter the professor's username and access key…";
@@ -214,11 +216,9 @@ Carry out logging in:
 				say "You try logging in as the Professor to investigate his files, but the [lab computer] is asking for the professor's access key before continuing.";
 		otherwise:
 			Say "You can't log in a [noun].";
-	Otherwise:
-		say "357 can wait, you have more important matters on your hands now.";
 
 Instead of logging in for the first time during the first half:
-	Say "You begin typing your username as password. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope is isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.";
+	Say "You begin typing your username and password. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope is isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.";
 
 Logging out is an action applying to nothing. Understand "Log out" as logging out.
 

@@ -12376,7 +12376,7 @@ self = noun;
 self = noun;
    if (debug_rules) DB_Rule(R_766, 766);
       ! phrase 1
-      ! [1: say ~You begin typing your username as password. As you do so, you begin wondering to yourself what Staley will include on the next programming test[unicode 8230]really hope is isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.~]
+      ! [1: say ~You begin typing your username and password. As you do so, you begin wondering to yourself what Staley will include on the next programming test[unicode 8230]really hope is isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.~]
       say__p=1;ParaContent();  print (PrintText) SC_67; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_68; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_69; ParaContent();  new_line; ParaContent();  print (PrintText) SC_70; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_71;  new_line; .L_Say18; .L_SayX17;
       RulebookFails(); rtrue;
@@ -19205,59 +19205,59 @@ self = noun;
    if (actor == player) {
    if (debug_rules) DB_Rule(R_765, 765);
       ! phrase 1
-      ! [1: if the scene is midpoint begin]
+      ! [1: if the scene is first half begin]
        if ((true))  {
          ! phrase 2
-         ! [2: if the noun is a lab computer begin]
-          if (((noun == I142_lab_computer)))  {
-            ! phrase 3
-            ! [3: if the player is carrying an access key begin]
-             if (((player == CarrierOf(I144_access_key))))  {
-               ! phrase 4
-               ! [4: say ~You enter the professor's username and access key[unicode 8230]~]
-               say__p=1;ParaContent();  print (PrintText) SC_144; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
-	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif;  .L_Say91; .L_SayX90;
-               ! phrase 5
-               ! [5: change the lab computer to unlocked]
-                SetEitherOrProperty(I142_lab_computer, ~locked, false, 0); 
-               ! phrase 6
-               ! [6: try opening the lab computer]
-                TryAction(0, player, ##Open, I142_lab_computer, 0);; 
-               ! phrase 7
-               ! [7: try going southeast]
-                TryAction(0, player, ##Go, I50_southeast, 0);; 
-               ! phrase 8
-               ! [8: now the command prompt is ~XxRadProf420NoScopexX: @@126$~]
-                (Global_Vars-->1) = SC_145; 
-               ! phrase 9
-               ! [9: otherwise]
-               } else {
-
-               ! phrase 10
-               ! [10: say ~You try logging in as the Professor to investigate his files, but the [lab computer] is asking for the professor's access key before continuing.~]
-               say__p=1;ParaContent();  print (PrintText) SC_146; ParaContent();  print (PrintShortName) I142_lab_computer; ParaContent();  print (PrintText) SC_147;  new_line; .L_Say92; .L_SayX91;
-               ! phrase 11
-               ! [11: end if]
-               }
-
-            ! phrase 12
-            ! [12: otherwise]
-            } else {
-
-            ! phrase 13
-            ! [13: say ~You can't log in a [noun].~]
-            say__p=1;ParaContent();  print (PrintText) SC_148; ParaContent();  print (PrintShortName) noun; ParaContent();  print (PrintText) SC_117;  new_line; .L_Say93; .L_SayX92;
-            ! phrase 14
-            ! [14: end if]
-            }
-
-         ! phrase 15
-         ! [15: otherwise]
+         ! [2: say ~357 can wait, you have more important matters on your hands now.~]
+         say__p=1;ParaContent();  print (PrintText) SC_144;  new_line; .L_Say91; .L_SayX90;
+         ! phrase 3
+         ! [3: otherwise]
          } else {
 
-         ! phrase 16
-         ! [16: say ~357 can wait, you have more important matters on your hands now.~]
-         say__p=1;ParaContent();  print (PrintText) SC_149;  new_line; .L_Say94; .L_SayX93;
+         ! phrase 4
+         ! [4: if the noun is a lab computer begin]
+          if (((noun == I142_lab_computer)))  {
+            ! phrase 5
+            ! [5: if the player is carrying an access key begin]
+             if (((player == CarrierOf(I144_access_key))))  {
+               ! phrase 6
+               ! [6: say ~You enter the professor's username and access key[unicode 8230]~]
+               say__p=1;ParaContent();  print (PrintText) SC_145; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif;  .L_Say92; .L_SayX91;
+               ! phrase 7
+               ! [7: change the lab computer to unlocked]
+                SetEitherOrProperty(I142_lab_computer, ~locked, false, 0); 
+               ! phrase 8
+               ! [8: try opening the lab computer]
+                TryAction(0, player, ##Open, I142_lab_computer, 0);; 
+               ! phrase 9
+               ! [9: try going southeast]
+                TryAction(0, player, ##Go, I50_southeast, 0);; 
+               ! phrase 10
+               ! [10: now the command prompt is ~XxRadProf420NoScopexX: @@126$~]
+                (Global_Vars-->1) = SC_146; 
+               ! phrase 11
+               ! [11: otherwise]
+               } else {
+
+               ! phrase 12
+               ! [12: say ~You try logging in as the Professor to investigate his files, but the [lab computer] is asking for the professor's access key before continuing.~]
+               say__p=1;ParaContent();  print (PrintText) SC_147; ParaContent();  print (PrintShortName) I142_lab_computer; ParaContent();  print (PrintText) SC_148;  new_line; .L_Say93; .L_SayX92;
+               ! phrase 13
+               ! [13: end if]
+               }
+
+            ! phrase 14
+            ! [14: otherwise]
+            } else {
+
+            ! phrase 15
+            ! [15: say ~You can't log in a [noun].~]
+            say__p=1;ParaContent();  print (PrintText) SC_149; ParaContent();  print (PrintShortName) noun; ParaContent();  print (PrintText) SC_117;  new_line; .L_Say94; .L_SayX93;
+            ! phrase 16
+            ! [16: end if]
+            }
+
          ! phrase 17
          ! [17: end if]
          }
@@ -19669,7 +19669,7 @@ self = noun;
       say__p=1;ParaContent();  print (PrintText) SC_175; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_176;  new_line; .L_Say112; .L_SayX111;
       ! phrase 2
       ! [2: now the command prompt is ~XxRadProf420NoScopexX: @@126$~]
-       (Global_Vars-->1) = SC_145; 
+       (Global_Vars-->1) = SC_146; 
       ! phrase 3
       ! [3: change bosstransition to 1]
        (Global_Vars-->12) = 1; 
@@ -19743,7 +19743,7 @@ self = noun;
        if ((((Global_Vars-->13) == 2)))  {
          ! phrase 2
          ! [2: now the command prompt is ~XxRadProf420NoScopexX: @@126$~]
-          (Global_Vars-->1) = SC_145; 
+          (Global_Vars-->1) = SC_146; 
          ! phrase 3
          ! [3: change bosstransition to 1]
           (Global_Vars-->12) = 1; 
@@ -32177,7 +32177,7 @@ Constant SC_128 = " You: All we have to do is check the records on the computer 
 Constant SC_239 = " a green light on its is blinking ";
 Constant SC_191 = " as hard as you can. ";
 Constant SC_116 = " here";
-Constant SC_147 = " is asking for the professor's access key before continuing.";
+Constant SC_148 = " is asking for the professor's access key before continuing.";
 Constant SC_198 = " is filled with the low hum of ";
 Constant SC_240 = " it appears to be off.";
 Constant SC_106 = " or ";
@@ -32214,7 +32214,7 @@ Constant SC_107 = ", ";
 Constant SC_105 = ",";
 Constant SC_117 = ".";
 Constant SC_209 = "232B is quite empty at this hour. It looks like some student left their USB cable in here.";
-Constant SC_149 = "357 can wait, you have more important matters on your hands now.";
+Constant SC_144 = "357 can wait, you have more important matters on your hands now.";
 Constant SC_34 = ": ";
 Constant SC_118 = ":";
 Constant SC_175 = "=================================================";
@@ -32350,20 +32350,20 @@ Constant SC_84 = "Where are you trying to put this digital folder? There must be
 Constant SC_99 = "Why am I telling you this now, I am sure you wonder. ";
 Constant SC_168 = "Why are you trying to run unix commands HERE?";
 Constant SC_103 = "Would you like to ";
-Constant SC_145 = "XxRadProf420NoScopexX: @@126$";
+Constant SC_146 = "XxRadProf420NoScopexX: @@126$";
 Constant SC_241 = "XxRadProf420NoScopexX:";
 Constant SC_109 = "You ";
 Constant SC_11 = "You are at the base of the Eastern Stairs. Going up will take you to the third floor. Going west will take you back to the center of the hallway.";
 Constant SC_12 = "You are at the base of the Western Stairs. Going up will take you to the third floor. Going east will take you back to the center of the hallway.";
-Constant SC_67 = "You begin typing your username as password. As you do so, you begin wondering to yourself what Staley will include on the next programming test";
+Constant SC_67 = "You begin typing your username and password. As you do so, you begin wondering to yourself what Staley will include on the next programming test";
 Constant SC_21 = "You can access the terminal by logging in a lab computer. You can log in a lab computer by saying ~log in lab computer~";
 Constant SC_200 = "You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.";
 Constant SC_173 = "You can't disconnect things that aren't connected in the first place.";
-Constant SC_148 = "You can't log in a ";
+Constant SC_149 = "You can't log in a ";
 Constant SC_174 = "You disconnect the two computers and take back your cable.";
 Constant SC_88 = "You dont have an access card to use!";
 Constant SC_86 = "You dont have anything to use!";
-Constant SC_144 = "You enter the professor's username and access key";
+Constant SC_145 = "You enter the professor's username and access key";
 Constant SC_170 = "You have nothing to connect them with!";
 Constant SC_150 = "You have successfully logged out of the lab computer";
 Constant SC_71 = "You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.";
@@ -32376,7 +32376,7 @@ Constant SC_23 = "You see that you are logged in as the professor and you can na
 Constant SC_42 = "You survived!";
 Constant SC_196 = "You take a closer look at the terminal on the screen...";
 Constant SC_183 = "You think for a moment about a password the professor would use for admin access to Hallie";
-Constant SC_146 = "You try logging in as the Professor to investigate his files, but the ";
+Constant SC_147 = "You try logging in as the Professor to investigate his files, but the ";
 Constant SC_41 = "You walk out of the CSL proudly and give the system log to the police officers. They look at it skeptically. After a few minutes of reading and whispering to themselves, they let you go. You have never been so happy to leave the CSL.";
 Constant SC_44 = "You want to make sure nick didn't kill the professor.";
 Constant SC_138 = "You watch him fastforward throught the time, to find when the professor dies. It looks like he died around 10:45.";
