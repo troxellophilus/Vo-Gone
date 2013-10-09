@@ -1,16 +1,18 @@
-"Vo-Gone Beta" by Drew Troxell
+"Vo-Gone" by DJABAC Game Studios
 
 First Half is a scene.
 First Half begins when play begins.
 First Half ends when Nick is friendly.
 
 When play begins:
-	say "Another late night working on this lab in the CSL. No one else is here. You hear a thump coming from the southwest in the Mac Lab."
+	say "Another late night working on this lab in the CSL. You've spent all day complaining about this 357 project you can't quite finish up because of style issues, but you know that complaining won't solve anything and eventually you need to hunker down and finish.[line break][line break]No one else is here in the CSL with you. Better just get started on that project on one of the lab computers…[line break]";
 	
 The CSL is a region. The Main Room, Admin Room, Rack Room, Coffee Room, 232B, and Mac Lab are rooms in the CSL.
-The Admin Room is north of the Main Room. The Mac Lab is southwest of the Main Room. 232B is northwest of the Main Room. The Coffee Room is northeast of the Main Room.
+The Admin Room door is a door. The admin room door is north of the Main Room and south of the admin room. The admin room door is locked. The Mac Lab is southwest of the Main Room. 232B is northwest of the Main Room. The Coffee Room is northeast of the Main Room.
 
-The RR door is east of the Main Room and west of the Rack Room. The RR door is a door. The RR door is lockable and locked. The RR door can be unlocked by the access card.
+The description of the Main Room is "The [Main Room] is filled with the low hum of [lab computer]s softly minding their own business.[line break][line break]You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway."
+
+The Door to the Rack Room is east of the Main Room and west of the Rack Room. The Door to the Rack Room is a door. The Door to the Rack Room is lockable and locked. The Door to the Rack Room can be unlocked by the access card.
 
 The Campus is a region. The Hallway, Eastern Stairs, and Western Stairs are rooms in the Campus.
 The Hallway is south of the Main Room. The Eastern Stairs are east of the Hallway. The Western Stairs is west of the Hallway.
@@ -68,12 +70,17 @@ A passcode is a kind of thing. A passcode can be held and moved. The account inf
 
 A computer is a kind of thing. A computer can be on or off.  A computer is usually off. The friend's computer is in Room 302.  The description of the friend's computer is "It looks like he was working on a project for the professor. But he could have done that before. [line break]The last email he sent was at 11pm, that doesn't prove anything."
 
-The Mac computer is in the Mac Lab. "The Mac computers give off a faint glow." The description of the Mac computer is "[one of]There seems to be an email being composed.[or] Really? Internet Explorer 6?[or] Now's not the time for that.[or]Ok, one more cat video.[then purely at random]". The Mac computer is fixed in place.
+Instead of going southwest in the main room:
+	Move the player to the mac lab;
+
+The description of the mac lab is "The Mac computers give off a faint glow. A strong stench fills the room.[line break][line break] To the northeast is the Main Room."
+
+The Mac computer is in the Mac Lab. The description of the Mac computer is "[one of]There seems to be an email being composed.[or] Really? Internet Explorer 6?[or] Now's not the time for that.[or]Ok, one more cat video.[then purely at random]". The Mac computer is fixed in place.
 
 An email is a thing. An email can be read or unread.
 
 Instead of examining an email:
-	say "'To whoever finds this, I'm not sure what's happening. My cell-phone can't make calls anymore, but I keep getting these text messages. I don't think I have much time left. He's coming for m-'";
+	say "'To whoever finds this, I'm not sure what's happening. My cell-phone can't make calls anymore, but I keep getting these text messages. I don't think I have much time left. She's coming for m-'";
 	now the email is read.
 	
 
@@ -94,7 +101,7 @@ When NPC Arrival begins:
 	say "'Dead?' You jump in surprise at the voice behind you. At the door is Nick, the TA for one of your classes.";
 	move Nick to the Mac Lab.
 When NPC Arrival ends:
-	say "Nick suddenly starts acting strange. [paragraph break]'I need to get my stuff upstairs.' [paragraph break] And he suddenly runs away.";
+	say "[line break]Nick suddenly starts acting strange. He keeps looking at you accusingly. [paragraph break]'I need to get my stuff upstairs.' [paragraph break] And he suddenly runs away.";
 	move Nick to the Room 302;
 	now Nick is hostile.
 
@@ -177,6 +184,7 @@ When midpoint begins:
 	Now Nick is carrying an access key;
 	say "Nick: 'I took something from the professor earlier but I left it downstairs…'";
 	say "[line break]Nick runs downstairs.";
+	Now Inform AI Dissertation is in Documents;
 	
 Instead of talking to Nick when the first half has ended:
 	Say "Oh, by the way, I found this access key scribbled on a post-it note in the Mac Lab. Thought it might be a clue.";
@@ -184,35 +192,36 @@ Instead of talking to Nick when the first half has ended:
 	Now the access key is in the main room.;
 	Now the player has the access key;
 
-The Main Room is a room. The player is in the Main Room. The description of the Main Room is "The [Main Room] is filled with the low hum of [lab computer]s softly minding their own business."
-
 The Lab Computer is a door. The Lab Computer is northwest of the Terminal and southeast of the Main Room. The description of the lab computer is "You can access the terminal by logging in a lab computer. You can log in a lab computer by saying 'log in lab computer'". The Lab Computer is locked. The access key unlocks the lab computer.
 
 Logging in is an action applying to one thing. Understand "Log in [any thing]" as logging in.
 
 Carry out logging in:
-	If the noun is a lab computer:
-		If the player is carrying an access key:
-			say "You enter the professor's username and access key…";
-			Change the lab computer to unlocked;
-			Try opening the lab computer;
-			Try going southeast;
-			Now the command prompt is "XxRadProf420NoScopexX: ~$".;
+	If the scene is midpoint:
+		If the noun is a lab computer:
+			If the player is carrying an access key:
+				say "You enter the professor's username and access key…";
+				Change the lab computer to unlocked;
+				Try opening the lab computer;
+				Try going southeast;
+				Now the command prompt is "XxRadProf420NoScopexX: ~$".;
+			otherwise:
+				say "You try logging in as the Professor to investigate his files, but the [lab computer] is asking for the professor's access key before continuing.";
 		otherwise:
-			say "The [lab computer] is asking for the professor's access key before continuing.";
-	otherwise:
-		Say "You can't log in a [noun].";
-		
-Instead of logging in during the first half:
-	say "No use working on your 357 project now, you have a murder to solve!";
+			Say "You can't log in a [noun].";
+	Otherwise:
+		say "357 can wait, you have more important matters on your hands now.";
+
+Instead of logging in for the first time during the first half:
+	Say "You begin typing your username as password. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope is isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.";
 
 The Terminal is a room. The description of the Terminal is "From the unix [terminal] you can navigate through user files with standard unix commands."
 
 A directory is a kind of container. The description of a directory is "Directories contain files and other directories." A directory is openable.
 
-A personal file is a kind of thing. The description of a personal file is "Users organize files to their own preferences in the filesystem."
+A personal file is a kind of thing. The description of a personal file is "Users organize files to their own preferences in the filesystem." Personal files are fixed in place.
 
-The current directory is a directory that varies. The current directory is usually XxRadProf420NoScopexX. XxRadProf420NoScopexX is a directory in the Terminal. Documents is a directory in XxRadProf420NoScopexX. Inform AI Dissertation is a personal file in Documents. Pictures is a directory in XxRadProf420NoScopexX. Large File is a personal file in Pictures. Books is a directory in XxRadProf420NoScopexX. Cows and Springs is a personal file in Books. Minnie Mouse is a personal file in Books. The Intricacies of TF2 is a personal file in Books.
+The current directory is a directory that varies. The current directory is usually XxRadProf420NoScopexX. XxRadProf420NoScopexX is a directory in the Terminal. Documents is a directory in XxRadProf420NoScopexX. Inform AI Dissertation is a personal file. Pictures is a directory in XxRadProf420NoScopexX. Large File is a personal file in Pictures. Books is a directory in XxRadProf420NoScopexX. Cows and Springs is a personal file in Books. Minnie Mouse is a personal file in Books. The Intricacies of TF2 is a personal file in Books.
 
 Directory listing is an action applying to nothing. Understand "ls" as directory listing.
 
@@ -228,7 +237,7 @@ Carry out directory changing:
 	Otherwise:
 		say "The cd command is performed as follows: cd (directory)";
 
-File editing is an action applying to one thing. Understand "vi [any thing]" as file editing.
+File editing is an action applying to one thing. Understand "vi [any personal file]", "vim [any personal file]", "nano [any personal file]" as file editing.
 
 AIEngage is a number that varies. AIEngage is usually 0.
 
@@ -278,12 +287,18 @@ After reading a command when the player is in the terminal and the scene is AI E
 
 
 
-Scene5 is a scene. Scene5 begins when Midpoint ends.
+Scene5 is a scene. Scene5 begins when Midpoint ends. Scene5 ends when the player unlocks the door to the rack room.
 
 When scene5 begins:
-	Now the description of the Main Room is "YOU'VE BEEN TRAPPED! Outsmart the AI and escape the CSL alive.";
+	Now the description of the Main Room is "Normally, you are used to the Main Room as a safe haven. Now the Main Room feels ominous, as if someone is watching you.[line break][line break]'I've got to get out of here' you think to yourself.'[line break][line break]You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.";
+	Say "Nick: Looks like she locked all of the doors. I'll go see if I can unlock any of them…";
 	Move the player to the Main Room.;
+	Now the Eastern webcam is in the Main Room.;
 	Now the command prompt is ">";
+	Now the Admin Room door is unlocked;
+	
+Instead of talking to Nick during Scene5:
+	say "Nick: I managed to unlock every door in here except the Rack Room and the exit to the south. That webcam is creeping me out…";
 
 An Access Card is a kind of thing. An Access Card can be valid or expired. 
 The Rack Room Access Card is an Access Card. The Rack Room Access Card is expired. 
@@ -301,7 +316,7 @@ An Access Card Programmer is a kind of thing. There is an Access Card Programmer
 
 A webcam is a kind of thing. A webcam can be on or off. A webcam is usually on. A webcam is fixed in place. 
 
-The Eastern webcam is a webcam. The Eastern webcam is on. The Eastern webcam is in the Main Room. "There is a webcam to the east". The description of the Eastern webcam is "It's a webcam, [if the webcam is on] a green light on its is blinking [otherwise] it appears to be off."
+The Eastern webcam is a webcam. "A webcam peers across the Door to the Rack Room entrance on the East side of the main room." The Eastern webcam is on. The description of the Eastern webcam is "It's a webcam, [if the webcam is on] a green light on its is blinking [otherwise] it appears to be off."
 
 Instead of blocking the Eastern webcam:
 	if the player has Duct Tape:
@@ -317,16 +332,16 @@ Instead of using the Access Card Programmer:
 	otherwise:
 		say "You dont have an access card to use!";
 
-Instead of unlocking the RR door with the access card:
+Instead of unlocking the Door to the Rack Room with the access card:
 	if the Eastern webcam is on:
 		say "The AI saw you coming, the password has been changed!";
 		say "The card is expired!";
 		now the Rack Room Access Card is expired;
 	otherwise:
-		if the RR door is locked:
+		if the Door to the Rack Room is locked:
 			if the Rack Room Access Card is valid:
 				say "Now the door is now unlocked";
-				now the RR door is unlocked;
+				now the Door to the Rack Room is unlocked;
 			otherwise:
 				say "The card is expired!";
 		otherwise:

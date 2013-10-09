@@ -3,9 +3,9 @@
 <plist version="1.0"><dict>
     <key>Application Version</key><string>6G60</string>
     <key>0</key><dict>
-        <key>Filename</key><string>/Users/dtroxell/Documents/CSC 378/Vo-Gone Beta.inform/Source/story.ni</string>
+        <key>Filename</key><string>/Users/dtroxell/Documents/CSC 378/VGRepo/Vo-Gone Beta.inform/Source/story.ni</string>
         <key>Line</key><integer>1</integer>
-        <key>Title</key><string>"Vo-Gone Beta" by Drew Troxell</string>
+        <key>Title</key><string>"Vo-Gone" by DJABAC Game Studios</string>
         <key>Level</key><integer>0</integer>
         <key>Indentation</key><integer>0</integer>
     </dict>
