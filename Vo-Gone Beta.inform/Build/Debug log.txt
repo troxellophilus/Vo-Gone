@@ -1,5 +1,5 @@
 Debugging log of Inform 7
-Inform called as: /Applications/Inform.app/Contents/Resources/Compilers/ni -rules /Applications/Inform.app/Contents/Resources/Inform7/Extensions -package /Users/dtroxell/Documents/CSC 378/VGRepo/Vo-Gone Beta.inform -extension=z8 
+Inform called as: /Applications/Inform.app/Contents/Resources/Compilers/ni -rules /Applications/Inform.app/Contents/Resources/Inform7/Extensions -package /Users/Cameron/School Stuff/Fall '13/CSC 378/Project 1 - Interactive Fiction/Vo-Gone/Vo-Gone Beta.inform -extension=z8 
 
 
 -----------------------------------------------------

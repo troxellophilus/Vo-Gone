@@ -1,18 +1,18 @@
 ! Blurb file created by Inform build 6G60
 
-status "/Applications/Inform.app/Contents/Resources/Inform7/Extensions/Reserved/CblorbModel.html" "/Users/dtroxell/Documents/CSC 378/VGRepo/Vo-Gone Beta.inform/Build/StatusCblorb.html"
+status "/Applications/Inform.app/Contents/Resources/Inform7/Extensions/Reserved/CblorbModel.html" "/Users/Cameron/School Stuff/Fall '13/CSC 378/Project 1 - Interactive Fiction/Vo-Gone/Vo-Gone Beta.inform/Build/StatusCblorb.html"
 
 
 ! Identification
 
-project folder "/Users/dtroxell/Documents/CSC 378/VGRepo/Vo-Gone Beta.inform"
-release to "/Users/dtroxell/Documents/CSC 378/VGRepo/Vo-Gone Beta Materials/Release"
+project folder "/Users/Cameron/School Stuff/Fall '13/CSC 378/Project 1 - Interactive Fiction/Vo-Gone/Vo-Gone Beta.inform"
+release to "/Users/Cameron/School Stuff/Fall '13/CSC 378/Project 1 - Interactive Fiction/Vo-Gone/Vo-Gone Beta Materials/Release"
 
 ! Blorb instructions
 
 storyfile leafname "Vo-Gone.zblorb"
-storyfile "/Users/dtroxell/Documents/CSC 378/VGRepo/Vo-Gone Beta.inform/Build/output.z8" include
-ifiction "/Users/dtroxell/Documents/CSC 378/VGRepo/Vo-Gone Beta.inform/Metadata.iFiction" include
+storyfile "/Users/Cameron/School Stuff/Fall '13/CSC 378/Project 1 - Interactive Fiction/Vo-Gone/Vo-Gone Beta.inform/Build/output.z8" include
+ifiction "/Users/Cameron/School Stuff/Fall '13/CSC 378/Project 1 - Interactive Fiction/Vo-Gone/Vo-Gone Beta.inform/Metadata.iFiction" include
 cover "/Applications/Inform.app/Contents/Resources/Inform7/Extensions/Reserved/DefaultCover.jpg"
 picture 1 "/Applications/Inform.app/Contents/Resources/Inform7/Extensions/Reserved/DefaultCover.jpg"
 
