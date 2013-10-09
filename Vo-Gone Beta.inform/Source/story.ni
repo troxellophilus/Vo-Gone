@@ -20,6 +20,10 @@ The Hallway is south of the Main Room. The Eastern Stairs are east of the Hallwa
 The Upstairs is a region. The Student Developer Lab 1, Student Developer Lab 2, Waiting Area, Room 301, Room 302, and Room 303 are rooms in the Upstairs.
 The Waiting Area is above the Western Stairs. The Waiting Area is above the Eastern Stairs. Room 301 is northwest of the Waiting Area. Room 302 is north of the Waiting Area. Room 303 is northeast of the Waiting Area. The Student Developer Lab 1 is southwest of the Waiting Area. The Student Developer Lab 2 is southeast of the Waiting Area.
 
+The description of the hallway is "A light breeze rolls through the hallway and gives you a short chill. [paragraph break]The hallway extends East and West. Going North will take you back to the main room."
+The description of the eastern stairs is "You are at the base of the Eastern Stairs. Going up will take you to the third floor. Going west will take you back to the center of the hallway.";
+The description of the western stairs is "You are at the base of the Western Stairs. Going up will take you to the third floor. Going east will take you back to the center of the hallway.";
+
 Going by name is an action applying to one thing. Understand "go to [any room]" as going by name.
 
 Carry out going by name:
@@ -70,12 +74,11 @@ A passcode is a kind of thing. A passcode can be held and moved. The account inf
 
 A computer is a kind of thing. A computer can be on or off.  A computer is usually off. The friend's computer is in Room 302.  The description of the friend's computer is "It looks like he was working on a project for the professor. But he could have done that before. [line break]The last email he sent was at 11pm, that doesn't prove anything."
 
-Instead of going southwest in the main room:
-	Move the player to the mac lab;
-
 The description of the mac lab is "The Mac computers give off a faint glow. A strong stench fills the room.[line break][line break] To the northeast is the Main Room."
 
 The Mac computer is in the Mac Lab. The description of the Mac computer is "[one of]There seems to be an email being composed.[or] Really? Internet Explorer 6?[or] Now's not the time for that.[or]Ok, one more cat video.[then purely at random]". The Mac computer is fixed in place.
+
+The description of the account info is "This account info might come in handy."
 
 An email is a thing. An email can be read or unread.
 
@@ -84,7 +87,7 @@ Instead of examining an email:
 	now the email is read.
 	
 
-The light switch is a device in the Mac Lab. "[if switched off]The room is dimly lit. You can see a light switch.[otherwise]The corpse lies next to the Mac computer." A light switch is fixed in place.
+The light switch is a device in the Mac Lab. "[if switched off]The room is dimly lit. You can see a light switch.[otherwise]A professor lies next to the Mac computer." A light switch is fixed in place.
 Understand "lights" as light switch.
 	
 Corpse Found is a scene.
@@ -98,14 +101,14 @@ NPC Arrival is a scene.
 NPC Arrival begins when the professor is dead.
 NPC Arrival ends when the email is read.
 When NPC Arrival begins:
-	say "'Dead?' You jump in surprise at the voice behind you. At the door is Nick, the TA for one of your classes.";
+	say "'Dead?' You jump in surprise at the voice behind you. At the door is Nick, the TA for one of your classes.[line break][line break]As you gaze back at the lifeless body, you surmise that he probably is dead. You also realize that you and Nick are the only two people in the CSL…better look for some evidence to figure out exactly what happened.";
 	move Nick to the Mac Lab.
 When NPC Arrival ends:
-	say "[line break]Nick suddenly starts acting strange. He keeps looking at you accusingly. [paragraph break]'I need to get my stuff upstairs.' [paragraph break] And he suddenly runs away.";
+	say "[line break]Nick suddenly starts acting strange. He keeps looking at you accusingly. [paragraph break]'I need to get my stuff upstairs, the logs on my computer prove that I didn't have anything to do with this.' [paragraph break] And he suddenly runs away.";
 	move Nick to the Room 302;
 	now Nick is hostile.
 
-A screen is a kind of thing. A screen can be on or off. A screen is usually off. A screen can be angry or happy. A screen is usually angry. A screen can be boring or playful. A screen is usually boring. A screen can be crazy or calm. A screen is usually calm. The shell is a screen in Room 302. The description of the shell is "One of the computers in the CSL seems to have a shell open. This might give you access to some records, but not on a student account. [line break] Professors usually have an admin account to use."
+A screen is a kind of thing. A screen can be on or off. A screen is usually off. A screen can be angry or happy. A screen is usually angry. A screen can be boring or playful. A screen is usually boring. A screen can be crazy or calm. A screen is usually calm. The shell is a screen in Room 302. The description of the shell is "One of the computers in room 302 seems to have a shell open. This might give you access to computer logs, and the logs may clear Nick's name, but you can't access them on a student account. [line break] Professors usually have admin account info to access the logs. Helps them determine if projects were turned in on time or not."
 
 Before taking the account info:
 	if player does not have the account info:
@@ -116,14 +119,13 @@ Instead of examining the shell:
 	if the shell is off:
 		say  "[description of shell]";
 	if the shell is on:
-		say "Checking the computer logs... There are time stamps. [line break] It looks like your story checks out! That's good enough for me.";
+		say "Checking the computer logs... There are time stamps. [line break]It looks like Nick was working up here at the time you heard the scream and thump! That seems to be satisfying evidence, what a relief.[paragraph break]Now to clear your name.";
 		now the shell is playful;
 		
 Your Turn is a scene. Your Turn begins when the shell is playful for the first time. Your Turn ends when the shell is crazy. When Your Turn begins: 
-	say "(wow, that's a relief) [line break] friend: Ok, I had my turn, now we check yours. [line break] you: Fair enough, all we have to do is check the records on the computer I was using. ";
+	say "Nick: Obviously I didn't do it, but what's YOUR alibi? [line break] You: All we have to do is check the records on the computer I was using in the main room. Should clear my name right away.[line break]Nick: uh huh…[line break]";
 	Move player to the Main Room;
-	say "you: Ok, here's the computer I was using. [line break] friend: It... it's completely wiped. [line break] you: ! Wait, no! Hold on! [line break] friend: It's ok, you gave me a chance to prove myself, I'll give you the same.";
-	Move player to the waiting area;
+	say "You: Ok, here's the computer I was using. [line break]Nick: It... it's completely wiped… [line break]You: ! Wait, no! Hold on! [line break]Nick: It's ok, you gave me a chance to prove myself, I'll give you the same. Come find me with some real proof.[line break]~Nick scurries back upstairs~[paragraph break]You remember that they sometimes temporarily store security footage on a computer upstairs due to technical problems in the system. May be a good place to start.";
 Now the shell is crazy.
 
 The description of Room 301 is "The room is dimly lit. There are several rows of computers, but they are all turned off, except for one. The door leads to the Waiting Area."
@@ -132,7 +134,7 @@ The 301computer is in Room 301. The 301computer is fixed in place. The descripti
 
 The description of the Student Developer Lab 1 is "This room is almost completely empty... what is it even used for? The door leads to the Waiting Area.".
 
-The description of the Waiting Area is "From the waiting area you can access Room 301, Room 302, Room 303, the Student Developer Lab 1, the Student Developer Lab 2, the Western Stairs and the Eastern Stairs."
+The description of the Waiting Area is "The waiting area is cluttered with tables, chairs, and flyers for clubs and job opportunities.[paragraph break]From the waiting area you can access Room 301 to the northwest, Room 302 to the north, Room 303 to the northeast, the Student Developer Lab 1 to the southwest, the Student Developer Lab 2 to the south east, the Western Stairs to the west and the Eastern Stairs to the east."
 
 The flash drive is a thing. The description of the flash drive is "That is a small flash drive, only 1GB?" The flash drive is in The Student Developer Lab 1.
 
@@ -182,9 +184,12 @@ Midpoint is a scene. Midpoint begins when First Half ends. Midpoint ends when En
 When midpoint begins:
 	Move Nick to the main room.;
 	Now Nick is carrying an access key;
-	say "Nick: 'I took something from the professor earlier but I left it downstairs…'";
+	say "Nick: 'I took something from the professor earlier but I left it downstairs. It could help us investigate…'";
 	say "[line break]Nick runs downstairs.";
 	Now Inform AI Dissertation is in Documents;
+	
+When midpoint ends:
+	Remove Inform AI Dissertation from play.
 	
 Instead of talking to Nick when the first half has ended:
 	Say "Oh, by the way, I found this access key scribbled on a post-it note in the Mac Lab. Thought it might be a clue.";
@@ -192,7 +197,7 @@ Instead of talking to Nick when the first half has ended:
 	Now the access key is in the main room.;
 	Now the player has the access key;
 
-The Lab Computer is a door. The Lab Computer is northwest of the Terminal and southeast of the Main Room. The description of the lab computer is "You can access the terminal by logging in a lab computer. You can log in a lab computer by saying 'log in lab computer'". The Lab Computer is locked. The access key unlocks the lab computer.
+The Lab Computer is a door. "The lab computer you are working at hums softly." The Lab Computer is northwest of the Terminal and southeast of the Main Room. The description of the lab computer is "You can access the terminal by logging in a lab computer. You can log in a lab computer by saying 'log in lab computer'". The Lab Computer is locked. The access key unlocks the lab computer.
 
 Logging in is an action applying to one thing. Understand "Log in [any thing]" as logging in.
 
@@ -215,13 +220,34 @@ Carry out logging in:
 Instead of logging in for the first time during the first half:
 	Say "You begin typing your username as password. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope is isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.";
 
-The Terminal is a room. The description of the Terminal is "From the unix [terminal] you can navigate through user files with standard unix commands."
+Logging out is an action applying to nothing. Understand "Log out" as logging out.
+
+Carry out logging out:
+	If the player is in a terminal:
+		say "You have successfully logged out of the lab computer";
+		Now the command prompt is ">";
+		Move the player to the main room;
+	Otherwise:
+		say "That's a bit silly sounding in this situation, isn't it?";
+
+The Terminal is a room. The description of the Terminal is "From the unix [terminal] you can navigate through user files with standard unix commands. To leave, simply type 'log out'. For help, type 'help'."
+
+Instead of going somewhere while in the terminal:
+	try logging out.
+	
+DisplayHelp is an action applying to nothing. Understand "help" as displayhelp.
+
+Carry out displayhelp:
+	if the player is in a terminal:
+		say "The following commands are supported:[line break]  ls - directory listing[line break]  cd - change directory[line break]  vi, vim, nano - file opening[line break]  log out - exit[line break]  help - get help";
+	otherwise:
+		say "I can only help he who helps himself.";
 
 A directory is a kind of container. The description of a directory is "Directories contain files and other directories." A directory is openable.
 
 A personal file is a kind of thing. The description of a personal file is "Users organize files to their own preferences in the filesystem." Personal files are fixed in place.
 
-The current directory is a directory that varies. The current directory is usually XxRadProf420NoScopexX. XxRadProf420NoScopexX is a directory in the Terminal. Documents is a directory in XxRadProf420NoScopexX. Inform AI Dissertation is a personal file. Pictures is a directory in XxRadProf420NoScopexX. Large File is a personal file in Pictures. Books is a directory in XxRadProf420NoScopexX. Cows and Springs is a personal file in Books. Minnie Mouse is a personal file in Books. The Intricacies of TF2 is a personal file in Books.
+The current directory is a directory that varies. The current directory is usually XxRadProf420NoScopexX. XxRadProf420NoScopexX is a directory in the Terminal. "You see that you are logged in as the professor and you can navigate his files". Documents is a directory in XxRadProf420NoScopexX. Inform AI Dissertation is a personal file. Pictures is a directory in XxRadProf420NoScopexX. Large File is a personal file in Pictures. Books is a directory in XxRadProf420NoScopexX. Cows and Springs is a personal file in Books. Minnie Mouse is a personal file in Books. The Intricacies of TF2 is a personal file in Books.
 
 Directory listing is an action applying to nothing. Understand "ls" as directory listing.
 
@@ -253,7 +279,7 @@ Carry out file editing:
 	otherwise:
 		say "Use vim to open text files as follows: vi (file)";
 		
-Quitting vim is an action applying to nothing. Understand "wq" as quitting vim.
+Quitting vim is an action applying to nothing. Understand "wq", "q", "quit" as quitting vim.
 
 Carry out quitting vim:
 	if the player is in a terminal:
@@ -305,7 +331,11 @@ The Rack Room Access Card is an Access Card. The Rack Room Access Card is expire
 When midpoint ends:
 	Now the Rack Room Access Card is in the Main Room. "There is an access card here, this card can give you access to the Rack Room".
 
-Duct Tape is a kind of thing. There is Duct Tape in the Coffee Room.
+Duct Tape is a kind of thing. There is Duct Tape in the Coffee Room. The description of the duct tape is "Duct tape is ubiquitously useful, just ask the Mythbusters. Better take it.";
+
+DT Wallet Tutorial is a thing in the Coffee Room. The description of the DT Wallet Tutorial is "It's a print-out of a web page about making wallets using only duct tape. Interesting concept."
+
+The description of the coffee room is "The Coffee Room is quite empty at this hour. It looks like someone was following a tutorial to make a duct tape wallet.[paragraph break]The main room is to the southwest."
 
 Understand "block  [something]" as blocking. Blocking is an action applying to one thing.
 Understand "cover [something]" as blocking. 
@@ -361,7 +391,7 @@ The laptop is a computer. The description of the laptop is "It belongs to your f
 
 The system log is an object. The description of the system log is "[if First Half has ended]This is just what you need to prove the Sentient AI guilty of the murder.[otherwise]Just a log of some system commands.". The system log is in the admin room.
 
-The USB cable is an object. "It looks like some student left their USB cable in here.". The description of the USB cable is "It can be used to connect two machines together.". The USB cable is in 232B.
+The USB cable is an object. "232B is quite empty at this hour. It looks like some student left their USB cable in here.[line break][line break]The Main Room is southeast of you.". The description of the USB cable is "It can be used to connect two machines together.". The USB cable is in 232B.
 
 Understand "connect [computer] to/with/and [computer]" as connecting. Connecting is an action applying to two objects. 
 Check connecting: 
@@ -444,11 +474,6 @@ Carry out terminating:
 		change BossTransition to 0;
 	otherwise:
 		say "You punch [the noun] as hard as you can. [if the noun is the Sentient AI]It feels good to let out some steam.[otherwise]That was dumb. It still seems to work though.".
-		
-After going southwest:
-	if the player is in the Mac Lab and Midpoint has ended:
-		try looking;
-		say "Something is scribbled on the whiteboard:[line break]   'Hallie'[line break]Really? Did he really spend his last moments bragging about himself? No... there must be more to it than that.".
 
 Before going south in the Main Room:
 	if Midpoint has ended:
