@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
-<Skein rootNode="node-0x6d23620" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x147cac30" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>Zoom</generator>
+<<<<<<< HEAD
   <activeNode nodeId="node-0x97081e0" />
   <item nodeId="node-0x6d23620">
+=======
+  <activeNode nodeId="node-0x1cbbbd30" />
+  <item nodeId="node-0x147cac30">
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">
 
@@ -28,19 +33,17 @@ You can also see a Door to the Rack Room and an Admin Room door here.
 &gt;</result>
     <played>YES</played>
     <changed>NO</changed>
+<<<<<<< HEAD
     <temporary score="872">NO</temporary>
+=======
+    <temporary score="103">NO</temporary>
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     <children>
-      <child nodeId="node-0x9524df0" />
-      <child nodeId="node-0x952c090" />
-      <child nodeId="node-0x952c170" />
-      <child nodeId="node-0x952ce90" />
-      <child nodeId="node-0x952c480" />
-      <child nodeId="node-0x6d22f90" />
-      <child nodeId="node-0x952c3a0" />
-      <child nodeId="node-0x735edd0" />
-      <child nodeId="node-0x6d22f40" />
+      <child nodeId="node-0x147acab0" />
+      <child nodeId="node-0x1cc76c40" />
     </children>
   </item>
+<<<<<<< HEAD
   <item nodeId="node-0x6d22f40">
     <command xml:space="preserve">log in lab computer</command>
     <result xml:space="preserve">You begin typing your username as password. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope is isn&apos;t--
@@ -6777,520 +6780,183 @@ You punch the laptop as hard as you can. That was dumb. It still seems to work t
   <item nodeId="node-0x9525f00">
     <command xml:space="preserve">go northeast</command>
     <result xml:space="preserve">You can&apos;t go that way.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525e90" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525e90">
-    <command xml:space="preserve">take duct tape</command>
-    <result xml:space="preserve">You can&apos;t see any such thing.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525e20" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525e20">
-    <command xml:space="preserve">go to 23</command>
-    <result xml:space="preserve">That noun did not make sense in this context.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525db0" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525db0">
-    <command xml:space="preserve">go to main room</command>
-    <result xml:space="preserve">now going to... Main Room
-Main Room
-The Main Room is filled with the low hum of Lab Computers softly minding their own business.
-
-There is a webcam to the east
-
-You can also see a Lab Computer, a RR door and Nick here.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525d40" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525d40">
-    <command xml:space="preserve">go northwest</command>
+=======
+  <item nodeId="node-0x1cc76c40">
+    <command xml:space="preserve">nw</command>
     <result xml:space="preserve">
 232B
+232B is quite empty at this hour. The Main Room is to the southeast
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
+
 It looks like some student left their USB cable in here.
 
 &gt;</result>
     <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
+    <changed>YES</changed>
+    <temporary score="97">YES</temporary>
     <children>
-      <child nodeId="node-0x9525cd0" />
+      <child nodeId="node-0x1cb10590" />
     </children>
   </item>
-  <item nodeId="node-0x9525cd0">
-    <command xml:space="preserve">take usb cable</command>
+  <item nodeId="node-0x1cb10590">
+    <command xml:space="preserve">take cable</command>
     <result xml:space="preserve">Taken.
 
 &gt;</result>
     <played>YES</played>
     <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
+    <temporary score="97">YES</temporary>
     <children>
-      <child nodeId="node-0x9525c60" />
+      <child nodeId="node-0x1cb3ef80" />
+      <child nodeId="node-0x1cb5a490" />
     </children>
   </item>
-  <item nodeId="node-0x9525c60">
-    <command xml:space="preserve">go to main room</command>
-    <result xml:space="preserve">now going to... Main Room
+  <item nodeId="node-0x1cb5a490">
+    <command xml:space="preserve">x cable</command>
+    <result xml:space="preserve">It can be used to connect two machines together.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="97">YES</temporary>
+    <children>
+      <child nodeId="node-0x1ca41560" />
+    </children>
+  </item>
+  <item nodeId="node-0x1ca41560">
+    <command xml:space="preserve">se</command>
+    <result xml:space="preserve">
 Main Room
 The Main Room is filled with the low hum of Lab Computers softly minding their own business.
 
-There is a webcam to the east
+You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.
 
-You can also see a Lab Computer, a RR door and Nick here.
+The lab computer you are working at hums softly.
 
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525bf0" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525bf0">
-    <command xml:space="preserve">tape webcam</command>
-    <result xml:space="preserve">That&apos;s not a verb I recognise.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525b80" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525b80">
-    <command xml:space="preserve">use duct tape on webcam</command>
-    <result xml:space="preserve">You can&apos;t see any such thing.
+You can also see a Door to the Rack Room and an Admin Room door here.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
+    <temporary score="97">YES</temporary>
     <children>
-      <child nodeId="node-0x9525b10" />
+      <child nodeId="node-0x1cceb410" />
     </children>
   </item>
-  <item nodeId="node-0x9525b10">
-    <command xml:space="preserve">use duct tape</command>
-    <result xml:space="preserve">You can&apos;t see any such thing.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525aa0" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525aa0">
-    <command xml:space="preserve">look at webcam</command>
-    <result xml:space="preserve">It&apos;s a webcam,  a green light on its is blinking 
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525a30" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525a30">
-    <command xml:space="preserve">go north</command>
+  <item nodeId="node-0x1cceb410">
+    <command xml:space="preserve">nw</command>
     <result xml:space="preserve">
+232B
+232B is quite empty at this hour. The Main Room is to the southeast
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="96">YES</temporary>
+  </item>
+  <item nodeId="node-0x1cb3ef80">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">232B
+232B is quite empty at this hour. The Main Room is to the southeast
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="92">YES</temporary>
+    <children>
+      <child nodeId="node-0x2f35b0" />
+    </children>
+  </item>
+  <item nodeId="node-0x2f35b0">
+    <command xml:space="preserve">se</command>
+    <result xml:space="preserve">
+Main Room
+The Main Room is filled with the low hum of Lab Computers softly minding their own business.
+
+You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.
+
+The lab computer you are working at hums softly.
+
+You can also see a Door to the Rack Room and an Admin Room door here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="92">YES</temporary>
+    <children>
+      <child nodeId="node-0x1cb7b030" />
+    </children>
+  </item>
+  <item nodeId="node-0x1cb7b030">
+    <command xml:space="preserve">nw</command>
+    <result xml:space="preserve">
+232B
+232B is quite empty at this hour. The Main Room is to the southeast
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="91">YES</temporary>
+  </item>
+  <item nodeId="node-0x147acab0">
+    <command xml:space="preserve">go to admin room</command>
+    <result xml:space="preserve">now going to... Admin Room
 Admin Room
 There is an access card programmer here, you can use this to program a card that is expired
 
-You can also see a system log here.
+There is a printer in the corner.
+
+You can also see an Admin Room door and a system log here.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
+    <temporary score="103">YES</temporary>
     <children>
-      <child nodeId="node-0x95259c0" />
+      <child nodeId="node-0x1caf58d0" />
+      <child nodeId="node-0x6f3270" />
     </children>
   </item>
-  <item nodeId="node-0x95259c0">
-    <command xml:space="preserve">use access card programmer</command>
-    <result xml:space="preserve">You dont have an access card to use!
+  <item nodeId="node-0x6f3270">
+    <command xml:space="preserve">x programmer</command>
+    <result xml:space="preserve">You see nothing special about the Access Card Programmer.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
+    <temporary score="103">YES</temporary>
     <children>
-      <child nodeId="node-0x9525950" />
+      <child nodeId="node-0x1cc05950" />
     </children>
   </item>
-  <item nodeId="node-0x9525950">
-    <command xml:space="preserve">go south</command>
-    <result xml:space="preserve">
-Main Room
-The Main Room is filled with the low hum of Lab Computers softly minding their own business.
-
-There is a webcam to the east
-
-You can also see a Lab Computer, a RR door and Nick here.
+  <item nodeId="node-0x1cc05950">
+    <command xml:space="preserve">take programmer</command>
+    <result xml:space="preserve">Taken.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
+    <temporary score="103">YES</temporary>
     <children>
-      <child nodeId="node-0x95258e0" />
+      <child nodeId="node-0x1cbbbd30" />
     </children>
   </item>
-  <item nodeId="node-0x95258e0">
-    <command xml:space="preserve">unlock RR door</command>
-    <result xml:space="preserve">What do you want to unlock the RR door with?
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525870" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525870">
-    <command xml:space="preserve">access card</command>
-    <result xml:space="preserve">I only understood you as far as wanting to unlock the RR door with the access key.
+  <item nodeId="node-0x1cbbbd30">
+    <command xml:space="preserve">drop programmer</command>
+    <result xml:space="preserve">Dropped.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525800" />
-    </children>
+    <temporary score="102">YES</temporary>
   </item>
-  <item nodeId="node-0x9525800">
-    <command xml:space="preserve">use duct tape on webcam</command>
-    <result xml:space="preserve">You can&apos;t see any such thing.
+  <item nodeId="node-0x1caf58d0">
+    <command xml:space="preserve">x printer</command>
+    <result xml:space="preserve">It&apos;s connected to all of the computers in the CSL.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525790" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525790">
-    <command xml:space="preserve">Cover webcam with duct tape</command>
-    <result xml:space="preserve">I only understood you as far as wanting to cover the Eastern webcam.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525720" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525720">
-    <command xml:space="preserve">cover webcam</command>
-    <result xml:space="preserve">That&apos;s not something you can close.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x95256b0" />
-    </children>
-  </item>
-  <item nodeId="node-0x95256b0">
-    <command xml:space="preserve">cover eastern webcam</command>
-    <result xml:space="preserve">That&apos;s not something you can close.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525640" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525640">
-    <command xml:space="preserve">block webcam</command>
-    <result xml:space="preserve">You dont have anything to use!
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x95255d0" />
-    </children>
-  </item>
-  <item nodeId="node-0x95255d0">
-    <command xml:space="preserve">go north</command>
-    <result xml:space="preserve">
-Admin Room
-There is an access card programmer here, you can use this to program a card that is expired
-
-You can also see a system log here.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525560" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525560">
-    <command xml:space="preserve">use access card programmer</command>
-    <result xml:space="preserve">You dont have an access card to use!
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x95254f0" />
-    </children>
-  </item>
-  <item nodeId="node-0x95254f0">
-    <command xml:space="preserve">go south</command>
-    <result xml:space="preserve">
-Main Room
-The Main Room is filled with the low hum of Lab Computers softly minding their own business.
-
-There is a webcam to the east
-
-You can also see a Lab Computer, a RR door and Nick here.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525480" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525480">
-    <command xml:space="preserve">open rr door</command>
-    <result xml:space="preserve">It seems to be locked.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525410" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525410">
-    <command xml:space="preserve">use access card on RR door</command>
-    <result xml:space="preserve">I only understood you as far as wanting to use the access key.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x95253a0" />
-    </children>
-  </item>
-  <item nodeId="node-0x95253a0">
-    <command xml:space="preserve">unlock door</command>
-    <result xml:space="preserve">What do you want to unlock the RR door with?
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525330" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525330">
-    <command xml:space="preserve">access card</command>
-    <result xml:space="preserve">I only understood you as far as wanting to unlock the RR door with the access key.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x95252c0" />
-    </children>
-  </item>
-  <item nodeId="node-0x95252c0">
-    <command xml:space="preserve">open door</command>
-    <result xml:space="preserve">It seems to be locked.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525250" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525250">
-    <command xml:space="preserve">look</command>
-    <result xml:space="preserve">Main Room
-The Main Room is filled with the low hum of Lab Computers softly minding their own business.
-
-There is a webcam to the east
-
-You can also see a Lab Computer, a RR door and Nick here.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x95251e0" />
-    </children>
-  </item>
-  <item nodeId="node-0x95251e0">
-    <command xml:space="preserve">go east</command>
-    <result xml:space="preserve">(first opening the RR door)
-It seems to be locked.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525170" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525170">
-    <command xml:space="preserve">examine evilAI</command>
-    <result xml:space="preserve">You can&apos;t see any such thing.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525100" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525100">
-    <command xml:space="preserve">shut down evilAI</command>
-    <result xml:space="preserve">I only understood you as far as wanting to shut down.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525090" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525090">
-    <command xml:space="preserve">shut down AI</command>
-    <result xml:space="preserve">I only understood you as far as wanting to shut down.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9525020" />
-    </children>
-  </item>
-  <item nodeId="node-0x9525020">
-    <command xml:space="preserve">use usb cord</command>
-    <result xml:space="preserve">I only understood you as far as wanting to use the USB cable.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9524fb0" />
-    </children>
-  </item>
-  <item nodeId="node-0x9524fb0">
-    <command xml:space="preserve">open terminal</command>
-    <result xml:space="preserve">You can&apos;t see any such thing.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9524f40" />
-    </children>
-  </item>
-  <item nodeId="node-0x9524f40">
-    <command xml:space="preserve">look at computer</command>
-    <result xml:space="preserve">You can access the terminal by logging in a lab computer. You can log in a lab computer by saying &quot;log in lab computer&quot;
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9524ed0" />
-    </children>
-  </item>
-  <item nodeId="node-0x9524ed0">
-    <command xml:space="preserve">shut down computer</command>
-    <result xml:space="preserve">I only understood you as far as wanting to shut down.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1722">YES</temporary>
-    <children>
-      <child nodeId="node-0x9524e60" />
-    </children>
-  </item>
-  <item nodeId="node-0x9524e60">
-    <command xml:space="preserve">turn off computer</command>
-    <result xml:space="preserve">That&apos;s not something you can switch.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>NO</changed>
-    <temporary score="1721">YES</temporary>
-  </item>
-  <item nodeId="node-0x9524df0">
-    <command xml:space="preserve">log in lab</command>
-    <result xml:space="preserve">You begin typing your username as password. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope is isn&apos;t--
-
-&quot;HHHHHYAAAAALLLAAAAAGHGHGHHH&quot;
-Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.
-
-You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.
-
-&gt;</result>
-    <played>YES</played>
-    <changed>YES</changed>
-    <temporary score="7">YES</temporary>
+    <temporary score="98">YES</temporary>
   </item>
 </Skein>

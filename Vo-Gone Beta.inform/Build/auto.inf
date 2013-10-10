@@ -4292,7 +4292,7 @@ Global lightflag = false;
 ];
 
 
-Constant REQUISITION_STACK_SIZE = 3*74;
+Constant REQUISITION_STACK_SIZE = 3*75;
 Array requisition_stack --> REQUISITION_STACK_SIZE;
 Global requisition_stack_pointer = 0;
 
@@ -9139,9 +9139,9 @@ Constant REL_BLOCK_HEADER ($100*6 + $$1101)*$10000;
         I141_midpoint: print "Midpoint";
         I157_ai_engagement: print "AI Engagement";
         I159_scene5: print "Scene5";
-        I173_boss_terminal_1: print "Boss Terminal 1";
-        I174_boss_terminal_2: print "Boss Terminal 2";
-        I175_boss_terminal_3: print "Boss Terminal 3";
+        I174_boss_terminal_1: print "Boss Terminal 1";
+        I175_boss_terminal_2: print "Boss Terminal 2";
+        I176_boss_terminal_3: print "Boss Terminal 3";
         default: print "<illegal scene>";
     }
 ];
@@ -10060,9 +10060,25 @@ Object -> I171_system_log ""
     with list_together 0
     has mark_as_thing
     with IK2_Count 41
-    with IK2_Link I169_sentient_ai
+    with IK2_Link I173_printer
     with KD_Count 2
     with name 'system' 'log' 
+    with action_bitmap 0 0 0 0 0 0 0 
+;
+
+Object -> I173_printer ""
+    class K2_thing
+    with short_name "printer"
+    with description SC_9
+    with initial SC_10
+    has static
+    with vector 0
+    with list_together 0
+    has mark_as_thing
+    with IK2_Count 43
+    with IK2_Link I169_sentient_ai
+    with KD_Count 2
+    with name 'printer' 
     with action_bitmap 0 0 0 0 0 0 0 
 ;
 
@@ -10136,7 +10152,7 @@ Object -> X163 ""
 Object -> I164_dt_wallet_tutorial ""
     class K2_thing
     with short_name "DT Wallet Tutorial"
-    with description SC_9
+    with description SC_11
     has proper
     with vector 0
     with list_together 0
@@ -10152,6 +10168,7 @@ Object -> I164_dt_wallet_tutorial ""
 Object I94_232b ""
     class K1_room
     with short_name "232B"
+    with description SC_12
     with map_region I89_csl
     has proper
     with vector 0
@@ -10168,8 +10185,8 @@ Object I94_232b ""
 Object -> I172_usb_cable ""
     class K2_thing
     with short_name "USB cable"
-    with description SC_10
-    with initial text_routine_6
+    with description SC_13
+    with initial SC_14
     with vector 0
     with list_together 0
     has mark_as_thing
@@ -10183,7 +10200,7 @@ Object -> I172_usb_cable ""
 Object I95_mac_lab ""
     class K1_room
     with short_name "Mac Lab"
-    with description text_routine_7
+    with description text_routine_6
     with map_region I89_csl
     has proper
     with vector 0
@@ -10200,7 +10217,7 @@ Object I95_mac_lab ""
 Object -> I127_mac_computer ""
     class K2_thing
     with short_name "Mac computer"
-    with description text_routine_8
+    with description text_routine_7
     has static
     with vector 0
     with list_together 0
@@ -10215,7 +10232,7 @@ Object -> I127_mac_computer ""
 Object -> I129_light_switch ""
     class K13_device
     with short_name "light switch"
-    with initial text_routine_9
+    with initial text_routine_8
     has static
     with vector 0
     with list_together 0
@@ -10295,7 +10312,7 @@ Object I98_campus ""
 Object I99_hallway ""
     class K1_room
     with short_name "Hallway"
-    with description text_routine_10
+    with description text_routine_9
     with map_region I98_campus
     with vector 0
     with room_index -1
@@ -10310,7 +10327,7 @@ Object I99_hallway ""
 Object I100_eastern_stairs ""
     class K1_room
     with short_name "Eastern Stairs"
-    with description SC_11
+    with description SC_15
     with map_region I98_campus
     has proper
     with vector 0
@@ -10327,7 +10344,7 @@ Object I100_eastern_stairs ""
 Object I101_western_stairs ""
     class K1_room
     with short_name "Western Stairs"
-    with description SC_12
+    with description SC_16
     with map_region I98_campus
     has proper
     with vector 0
@@ -10357,7 +10374,7 @@ Object I102_upstairs ""
 Object I103_student_developer_lab_1 ""
     class K1_room
     with short_name "Student Developer Lab 1"
-    with description SC_13
+    with description SC_17
     with map_region I102_upstairs
     with vector 0
     with room_index -1
@@ -10372,7 +10389,7 @@ Object I103_student_developer_lab_1 ""
 Object -> I136_flash_drive ""
     class K2_thing
     with short_name "flash drive"
-    with description SC_14
+    with description SC_18
     with vector 0
     with list_together 0
     has mark_as_thing
@@ -10402,7 +10419,7 @@ Object I104_student_developer_lab_2 ""
 Object I105_waiting_area ""
     class K1_room
     with short_name "Waiting Area"
-    with description text_routine_11
+    with description text_routine_10
     with map_region I102_upstairs
     has proper
     with vector 0
@@ -10419,7 +10436,7 @@ Object I105_waiting_area ""
 Object I106_room_301 ""
     class K1_room
     with short_name "Room 301"
-    with description SC_15
+    with description SC_19
     with map_region I102_upstairs
     has proper
     with vector 0
@@ -10436,7 +10453,7 @@ Object I106_room_301 ""
 Object -> I135_301computer ""
     class K6_supporter
     with short_name "301computer"
-    with description SC_16
+    with description SC_20
     has static
     with vector 0
     with list_together 0
@@ -10453,7 +10470,7 @@ Object -> I135_301computer ""
 Object -> -> I137_folder ""
     class K5_container
     with short_name "folder"
-    with description SC_17
+    with description SC_21
     has static
     has ~transparent
     has ~open
@@ -10473,7 +10490,7 @@ Object -> -> I137_folder ""
 Object -> -> -> I138_video_file ""
     class K2_thing
     with short_name "video file"
-    with description SC_18
+    with description SC_22
     with vector 0
     with list_together 0
     has mark_as_thing
@@ -10503,7 +10520,7 @@ Object I107_room_302 ""
 Object -> I126_friend_s_computer ""
     class K2_thing
     with short_name "friend's computer"
-    with description text_routine_12
+    with description text_routine_11
     with vector 0
     with list_together 0
     has mark_as_thing
@@ -10517,7 +10534,7 @@ Object -> I126_friend_s_computer ""
 Object -> I133_shell ""
     class K20_screen
     with short_name "shell"
-    with description text_routine_13
+    with description text_routine_12
     with vector 0
     with list_together 0
     has mark_as_thing
@@ -10549,7 +10566,7 @@ Object I108_room_303 ""
 Object I109_professor ""
     class K8_person
     with short_name "professor"
-    with description text_routine_14
+    with description text_routine_13
     has concealed
     with vector 0
     with list_together 0
@@ -10568,7 +10585,7 @@ Object I109_professor ""
 Object -> I115_the_winter_jacket ""
     class K16_jacket
     with short_name "The winter jacket"
-    with description SC_19
+    with description SC_23
     has clothing
     has worn
     with vector 0
@@ -10647,7 +10664,7 @@ Object -> X114 ""
 Object I120_nick ""
     class K8_person
     with short_name "Nick"
-    with description text_routine_15
+    with description text_routine_14
     has proper
     with p59_person_condition I118_unfriendly
     with vector 0
@@ -10684,7 +10701,7 @@ Object I122_the_winter_jacket_s_poc ""
 Object -> I124_account_info ""
     class K18_passcode
     with short_name "account info"
-    with description SC_20
+    with description SC_24
     with vector 0
     with list_together 0
     has mark_as_thing
@@ -10714,8 +10731,8 @@ Object I128_email ""
 Object I142_lab_computer ""
     class K4_door
     with short_name "Lab Computer"
-    with description SC_21
-    with initial SC_22
+    with description SC_25
+    with initial SC_26
     with with_key I144_access_key
     has lockable
     has locked
@@ -10741,7 +10758,7 @@ Object I142_lab_computer ""
 Object I143_terminal ""
     class K1_room
     with short_name "Terminal"
-    with description text_routine_16
+    with description text_routine_15
     with vector 0
     with room_index -1
     with list_together 0
@@ -10755,7 +10772,7 @@ Object I143_terminal ""
 Object -> I147_xxradprof420noscopexx ""
     class K21_directory
     with short_name "XxRadProf420NoScopexX"
-    with initial SC_23
+    with initial SC_27
     has proper
     with vector 0
     with list_together 0
@@ -10963,7 +10980,7 @@ Object I158_hallie ""
 Object I161_rack_room_access_card ""
     class K23_access_card
     with short_name "Rack Room Access Card"
-    with initial SC_24
+    with initial SC_28
     has ~p71_valid
     with vector 0
     with list_together 0
@@ -10980,8 +10997,8 @@ Object I161_rack_room_access_card ""
 Object I168_eastern_webcam ""
     class K26_webcam
     with short_name "Eastern webcam"
-    with description text_routine_17
-    with initial SC_25
+    with description text_routine_16
+    with initial SC_29
     has p61_on
     with vector 0
     with list_together 0
@@ -11029,12 +11046,12 @@ Constant I140_transition_to_part_2 = 7;
 Constant I141_midpoint = 8;
 Constant I157_ai_engagement = 9;
 Constant I159_scene5 = 10;
-Constant I173_boss_terminal_1 = 11;
-Constant I174_boss_terminal_2 = 12;
-Constant I175_boss_terminal_3 = 13;
+Constant I174_boss_terminal_1 = 11;
+Constant I175_boss_terminal_2 = 12;
+Constant I176_boss_terminal_3 = 13;
 Array Global_Vars -->
   (false) ! 7
-  (SC_26) ! 24
+  (SC_30) ! 24
   (SC_2) ! 29
   (EMPTY_TEXT_VALUE) ! 30
   (EMPTY_TEXT_VALUE) ! 31
@@ -11052,14 +11069,14 @@ Array Global_Vars -->
 
 
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
-Array tab_0_0 table $0064 0  (SC_27)  (SC_28)  (SC_29)  (SC_30)  (SC_31) ;
+Array tab_0_0 table $0064 0  (SC_31)  (SC_32)  (SC_33)  (SC_34)  (SC_35) ;
 Array tab_0_1 table $0465 1  (0)  (0)  (1)  (0)  (0) ;
 Array tab_0_2 table $2066 2  (Consult_Grammar_116)  (Consult_Grammar_117)  (Consult_Grammar_118)  (Consult_Grammar_119)  (Consult_Grammar_120) ;
 Array tab_0_3 table $0067 3  (IMMEDIATELY_RESTART_VM_R)  (IMMEDIATELY_RESTORE_SAVED_R)  TABLE_NOVALUE (IMMEDIATELY_QUIT_R)  (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4  TABLE_NOVALUE TABLE_NOVALUE (V26_amusing_a_victorious_pla)  TABLE_NOVALUE TABLE_NOVALUE;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
-Array tab_1_0 table $0869 NULL  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
-Array tab_1_1 table $446a 5  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_0 table $0869 NULL  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_1 table $446a 5  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
 Array TB_Blanks -> 
   ! For table T0_final_question_options
   $00  ! Column 0
@@ -11069,7 +11086,7 @@ Array TB_Blanks ->
   $1b  ! Column 4
   
   ! For table T1_locale_priorities
-  $ff $ff $ff $ff $ff $0f  ! Column 1
+  $ff $ff $ff $ff $ff $1f  ! Column 1
   
   ! End of table
   NULL NULL;
@@ -11656,7 +11673,7 @@ Array ActionHappened --> 0 0 0 0 0 0 0;
 [ R_740 ;
       ! phrase 1
       ! [1: say ~Another late night working on this lab in the CSL. You've spent all day complaining about this 357 project you can't quite finish up because of style issues, but you know that complaining won't solve anything and eventually you need to hunker down and finish.[line break][line break]No one else is here in the CSL with you. Better just get started on that project on one of the lab computers[unicode 8230][line break]~]
-      say__p=1;ParaContent();  print (PrintText) SC_32; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_33; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+      say__p=1;ParaContent();  print (PrintText) SC_36; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_37; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  new_line;  .L_Say1; .L_SayX1;
       ! phrase 2
       ! [2: the shriek clucks in 0 turn from now]
@@ -11697,7 +11714,7 @@ Array ActionHappened --> 0 0 0 0 0 0 0;
 [ R_790 ;
       ! phrase 1
       ! [1: if boss terminal 2 is happening begin]
-       if ((((scene_status-->(I174_boss_terminal_2-1)==1))))  {
+       if ((((scene_status-->(I175_boss_terminal_2-1)==1))))  {
          ! phrase 2
          ! [2: now oneturnlimit is oneturnlimit plus 1]
           (Global_Vars-->13) =  ((Global_Vars-->13)+1) ; 
@@ -11740,7 +11757,7 @@ Array ActionHappened --> 0 0 0 0 0 0 0;
 [ R_20 ;
       ! phrase 1
       ! [1: if the current item from the multiple object list is not nothing , say ~[current item from the multiple object list]: [run paragraph on]~]
-       if (((~~((multiple_object_item == nothing))))) { say__p=1;ParaContent();  print (PrintShortName) multiple_object_item; ParaContent();  print (PrintText) SC_34; ParaContent();  RunParagraphOn();  .L_Say3; .L_SayX3;  }
+       if (((~~((multiple_object_item == nothing))))) { say__p=1;ParaContent();  print (PrintShortName) multiple_object_item; ParaContent();  print (PrintText) SC_38; ParaContent();  RunParagraphOn();  .L_Say3; .L_SayX3;  }
    rfalse;
 ];
 ! No specific request
@@ -12083,7 +12100,7 @@ self = noun;
        if (((~~(((Adj_75_t1_v9(I109_professor)))))))  {
          ! phrase 2
          ! [2: say ~That sound in the mac lab is really eating at you. You can't bring yourself to leave just yet.~]
-         say__p=1;ParaContent();  print (PrintText) SC_35;  new_line; .L_Say4; .L_SayX4;
+         say__p=1;ParaContent();  print (PrintText) SC_39;  new_line; .L_Say4; .L_SayX4;
          ! phrase 3
          ! [3: reject the player's command]
           RulebookFails(); rtrue; 
@@ -12109,11 +12126,11 @@ self = noun;
           if ((((~~((player == HolderOf(I171_system_log)))))) || ((((Adj_81_t1_v9(I169_sentient_ai))))))  {
             ! phrase 3
             ! [3: say ~Before you can push on the door, Nick yells at you. 'What do you think you're doing? [if the Sentient AI is on]The Last Running Computer locked all doors to the outside! [line break]Darn... if only it were that easy.[otherwise]We need evidence that proves the Last Running Computer guilty or the police officers outside will think one of us killed Foaad!'[line break]He's got a point. You shouldn't leave quite yet.~]
-            say__p=1;ParaContent();  print (PrintText) SC_36; 
+            say__p=1;ParaContent();  print (PrintText) SC_40; 
 	if (~~(((((Adj_81_t1_v9(I169_sentient_ai))))))) jump L_Say5;
-		ParaContent();  print (PrintText) SC_37; ParaContent();  new_line; ParaContent();  print (PrintText) SC_38;  new_line;
+		ParaContent();  print (PrintText) SC_41; ParaContent();  new_line; ParaContent();  print (PrintText) SC_42;  new_line;
 	jump L_SayX5; .L_Say5;
-		ParaContent();  print (PrintText) SC_39; ParaContent();  new_line; ParaContent();  print (PrintText) SC_40;  new_line; .L_Say6; .L_SayX5;
+		ParaContent();  print (PrintText) SC_43; ParaContent();  new_line; ParaContent();  print (PrintText) SC_44;  new_line; .L_Say6; .L_SayX5;
             ! phrase 4
             ! [4: stop the action]
              rtrue; 
@@ -12126,10 +12143,10 @@ self = noun;
              if ((((player == HolderOf(I171_system_log)))) && ((((Adj_82_t1_v9(I169_sentient_ai))))))  {
                ! phrase 7
                ! [7: say ~You walk out of the CSL proudly and give the system log to the police officers. They look at it skeptically. After a few minutes of reading and whispering to themselves, they let you go. You have never been so happy to leave the CSL.~]
-               say__p=1;ParaContent();  print (PrintText) SC_41;  new_line; .L_Say7; .L_SayX6;
+               say__p=1;ParaContent();  print (PrintText) SC_45;  new_line; .L_Say7; .L_SayX6;
                ! phrase 8
                ! [8: end the story finally saying ~You survived!~]
-                deadflag=SC_42; story_complete=true; 
+                deadflag=SC_46; story_complete=true; 
                ! phrase 9
                ! [9: end if]
                }
@@ -12177,7 +12194,7 @@ self = noun;
        if (( (scene_endings-->(I134_your_turn-1) <= 1) ))  {
          ! phrase 2
          ! [2: say ~You ought to focus on Nick clearing his name before snooping around some more.[line break]You want to make sure nick didn't kill the professor.~]
-         say__p=1;ParaContent();  print (PrintText) SC_43; ParaContent();  new_line; ParaContent();  print (PrintText) SC_44;  new_line; .L_Say8; .L_SayX7;
+         say__p=1;ParaContent();  print (PrintText) SC_47; ParaContent();  new_line; ParaContent();  print (PrintText) SC_48;  new_line; .L_Say8; .L_SayX7;
          ! phrase 3
          ! [3: stop the action]
           rtrue; 
@@ -12190,7 +12207,7 @@ self = noun;
           if (((~~((player == OwnerOf(I136_flash_drive))))))  {
             ! phrase 6
             ! [6: say ~How do you plan on taking a digital file? You need somewhere to store it. There's gotta be something in one of the other rooms that can be used to hold digital files.~]
-            say__p=1;ParaContent();  print (PrintText) SC_45;  new_line; .L_Say9; .L_SayX8;
+            say__p=1;ParaContent();  print (PrintText) SC_49;  new_line; .L_Say9; .L_SayX8;
             ! phrase 7
             ! [7: stop the action]
              rtrue; 
@@ -12251,7 +12268,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_745, 745);
       ! phrase 1
       ! [1: say ~Is he... Is he...?~]
-      say__p=1;ParaContent();  print (PrintText) SC_46;  new_line; .L_Say10; .L_SayX9;
+      say__p=1;ParaContent();  print (PrintText) SC_50;  new_line; .L_Say10; .L_SayX9;
       ! phrase 2
       ! [2: now professor is dead]
        (Adj_75_t2_v9(I109_professor)); 
@@ -12271,7 +12288,7 @@ self = noun;
       say__p=1;ParaContent();  I7_ST_say_one_of-->0 =
 	i7_soo_tpar(I7_ST_say_one_of-->0, 5);
 	switch((I7_ST_say_one_of-->0)%(5+1)-1) {
-		0: ParaContent();  print (PrintText) SC_47;  new_line;ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_48;  new_line;ParaContent();  @nop; 2: ParaContent();  print (PrintText) SC_49;  new_line;ParaContent();  @nop; 3: ParaContent();  print (PrintText) SC_50;  new_line;ParaContent();  @nop; 4: ParaContent();  print (PrintText) SC_51;  new_line;ParaContent();  }  .L_Say11; .L_SayX10;
+		0: ParaContent();  print (PrintText) SC_51;  new_line;ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_52;  new_line;ParaContent();  @nop; 2: ParaContent();  print (PrintText) SC_53;  new_line;ParaContent();  @nop; 3: ParaContent();  print (PrintText) SC_54;  new_line;ParaContent();  @nop; 4: ParaContent();  print (PrintText) SC_55;  new_line;ParaContent();  }  .L_Say11; .L_SayX10;
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_747, 747, true);
@@ -12288,7 +12305,7 @@ self = noun;
       say__p=1;ParaContent();  I7_ST_say_one_of-->1 =
 	i7_soo_tpar(I7_ST_say_one_of-->1, 5);
 	switch((I7_ST_say_one_of-->1)%(5+1)-1) {
-		0: ParaContent();  print (PrintText) SC_52;  new_line;ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_53;  new_line;ParaContent();  @nop; 2: ParaContent();  print (PrintText) SC_54;  new_line;ParaContent();  @nop; 3: ParaContent();  print (PrintText) SC_55;  new_line;ParaContent();  @nop; 4: ParaContent();  print (PrintText) SC_56; ParaContent();  }  .L_Say12; .L_SayX11;
+		0: ParaContent();  print (PrintText) SC_56;  new_line;ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_57;  new_line;ParaContent();  @nop; 2: ParaContent();  print (PrintText) SC_58;  new_line;ParaContent();  @nop; 3: ParaContent();  print (PrintText) SC_59;  new_line;ParaContent();  @nop; 4: ParaContent();  print (PrintText) SC_60; ParaContent();  }  .L_Say12; .L_SayX11;
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_748, 748, true);
@@ -12305,7 +12322,7 @@ self = noun;
       say__p=1;ParaContent();  I7_ST_say_one_of-->2 =
 	i7_soo_tpar(I7_ST_say_one_of-->2, 4);
 	switch((I7_ST_say_one_of-->2)%(4+1)-1) {
-		0: ParaContent();  print (PrintText) SC_57;  new_line;ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_58;  new_line;ParaContent();  @nop; 2: ParaContent();  print (PrintText) SC_59;  new_line;ParaContent();  @nop; 3: ParaContent();  print (PrintText) SC_60;  new_line;ParaContent();  }  .L_Say13; .L_SayX12;
+		0: ParaContent();  print (PrintText) SC_61;  new_line;ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_62;  new_line;ParaContent();  @nop; 2: ParaContent();  print (PrintText) SC_63;  new_line;ParaContent();  @nop; 3: ParaContent();  print (PrintText) SC_64;  new_line;ParaContent();  }  .L_Say13; .L_SayX12;
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_749, 749, true);
@@ -12322,7 +12339,7 @@ self = noun;
       say__p=1;ParaContent();  I7_ST_say_one_of-->3 =
 	i7_soo_tpar(I7_ST_say_one_of-->3, 4);
 	switch((I7_ST_say_one_of-->3)%(4+1)-1) {
-		0: ParaContent();  print (PrintText) SC_61;  new_line;ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_62;  new_line;ParaContent();  @nop; 2: ParaContent();  print (PrintText) SC_63;  new_line;ParaContent();  @nop; 3: ParaContent();  print (PrintText) SC_60;  new_line;ParaContent();  }  .L_Say14; .L_SayX13;
+		0: ParaContent();  print (PrintText) SC_65;  new_line;ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_66;  new_line;ParaContent();  @nop; 2: ParaContent();  print (PrintText) SC_67;  new_line;ParaContent();  @nop; 3: ParaContent();  print (PrintText) SC_64;  new_line;ParaContent();  }  .L_Say14; .L_SayX13;
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_750, 750, true);
@@ -12336,10 +12353,10 @@ self = noun;
    if (debug_rules) DB_Rule(R_765, 765);
       ! phrase 1
       ! [1: say ~Oh, by the way, I found this access key scribbled on a post-it note in the Mac Lab. Thought it might be a clue.~]
-      say__p=1;ParaContent();  print (PrintText) SC_64;  new_line; .L_Say15; .L_SayX14;
+      say__p=1;ParaContent();  print (PrintText) SC_68;  new_line; .L_Say15; .L_SayX14;
       ! phrase 2
       ! [2: say ~Here, see if you can figure anything out with it[unicode 8230]~]
-      say__p=1;ParaContent();  print (PrintText) SC_65; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+      say__p=1;ParaContent();  print (PrintText) SC_69; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif;  .L_Say16; .L_SayX15;
       ! phrase 3
       ! [3: now the access key is in the main room]
@@ -12361,7 +12378,7 @@ self = noun;
    if (debug_rules) DB_Rule(R_777, 777);
       ! phrase 1
       ! [1: say ~Nick: I managed to unlock every door in here except the Rack Room and the exit to the south. That webcam is creeping me out[unicode 8230]~]
-      say__p=1;ParaContent();  print (PrintText) SC_66; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+      say__p=1;ParaContent();  print (PrintText) SC_70; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif;  .L_Say17; .L_SayX16;
       RulebookFails(); rtrue;
    } ! Runs only during scene
@@ -12370,6 +12387,26 @@ self = noun;
    rfalse;
 ];
 ! No specific request
+<<<<<<< HEAD
+=======
+! Instead of logging in for the first time during the first half:
+[ R_766 ;
+   if (scene_status-->1 == 1) { ! Runs only during scene
+   if ((PAPR_1() && (((TimesActionHasHappened-->1) == 1) && (ActionCurrentlyHappeningFlag->1)))) { ! Runs only when pattern matches
+self = noun;
+   if (debug_rules) DB_Rule(R_766, 766);
+      ! phrase 1
+      ! [1: say ~You begin typing your username as password. As you do so, you begin wondering to yourself what Staley will include on the next programming test[unicode 8230]really hope is isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.~]
+      say__p=1;ParaContent();  print (PrintText) SC_71; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_72; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_73; ParaContent();  new_line; ParaContent();  print (PrintText) SC_74; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_75;  new_line; .L_Say18; .L_SayX17;
+      RulebookFails(); rtrue;
+   } ! Runs only during scene
+   } ! Runs only when pattern matches
+   else if (debug_rules > 1) DB_Rule(R_766, 766, true);
+   rfalse;
+];
+! No specific request
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
 ! Instead of going somewhere while in the terminal:
 [ R_768 ;
    if ((action ==##Go) &&  (actor==player) && (((MStack-->MstVON(20007,1)) ofclass K1_room)) && (self=actor,true) && (( (WhetherIn(I143_terminal)) ))) { ! Runs only when pattern matches
@@ -12394,10 +12431,17 @@ self = noun;
        if ((((Adj_81_t1_v9(I168_eastern_webcam)))))  {
          ! phrase 2
          ! [2: say ~The AI saw you coming, the password has been changed!~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_67;  new_line; .L_Say18; .L_SayX17;
          ! phrase 3
          ! [3: say ~The card is expired!~]
          say__p=1;ParaContent();  print (PrintText) SC_68;  new_line; .L_Say19; .L_SayX18;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_76;  new_line; .L_Say19; .L_SayX18;
+         ! phrase 3
+         ! [3: say ~The card is expired!~]
+         say__p=1;ParaContent();  print (PrintText) SC_77;  new_line; .L_Say20; .L_SayX19;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 4
          ! [4: now the rack room access card is expired]
           (Adj_92_t2_v9(I161_rack_room_access_card)); 
@@ -12413,7 +12457,11 @@ self = noun;
              if ((((Adj_91_t1_v9(I161_rack_room_access_card)))))  {
                ! phrase 8
                ! [8: say ~Now the door is now unlocked~]
+<<<<<<< HEAD
                say__p=1;ParaContent();  print (PrintText) SC_69;  .L_Say20; .L_SayX19;
+=======
+               say__p=1;ParaContent();  print (PrintText) SC_78;  .L_Say21; .L_SayX20;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
                ! phrase 9
                ! [9: now the door to the rack room is unlocked]
                 (Adj_66_t2_v9(I97_door_to_the_rack_room)); 
@@ -12423,7 +12471,11 @@ self = noun;
 
                ! phrase 11
                ! [11: say ~The card is expired!~]
+<<<<<<< HEAD
                say__p=1;ParaContent();  print (PrintText) SC_68;  new_line; .L_Say21; .L_SayX20;
+=======
+               say__p=1;ParaContent();  print (PrintText) SC_77;  new_line; .L_Say22; .L_SayX21;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
                ! phrase 12
                ! [12: end if]
                }
@@ -12434,7 +12486,11 @@ self = noun;
 
             ! phrase 14
             ! [14: say ~its already unlocked~]
+<<<<<<< HEAD
             say__p=1;ParaContent();  print (PrintText) SC_70;  .L_Say22; .L_SayX21;
+=======
+            say__p=1;ParaContent();  print (PrintText) SC_79;  .L_Say23; .L_SayX22;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
             ! phrase 15
             ! [15: end if]
             }
@@ -12459,7 +12515,11 @@ self = noun;
       say__p=1;ParaContent();  I7_ST_say_one_of-->4 =
 	i7_soo_tpar(I7_ST_say_one_of-->4, 2);
 	switch((I7_ST_say_one_of-->4)%(2+1)-1) {
+<<<<<<< HEAD
 		0: ParaContent();  print (PrintText) SC_71;  new_line;ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_72;  new_line;ParaContent();  }  .L_Say23; .L_SayX22;
+=======
+		0: ParaContent();  print (PrintText) SC_80;  new_line;ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_81;  new_line;ParaContent();  }  .L_Say24; .L_SayX23;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_744, 744, true);
@@ -12473,7 +12533,11 @@ self = noun;
    if (debug_rules) DB_Rule(R_746, 746);
       ! phrase 1
       ! [1: say ~Still warm...~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_73;  new_line; .L_Say24; .L_SayX23;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_82;  new_line; .L_Say25; .L_SayX24;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       RulebookFails(); rtrue;
    } ! Runs only when pattern matches
    else if (debug_rules > 1) DB_Rule(R_746, 746, true);
@@ -12486,8 +12550,13 @@ self = noun;
 self = noun;
    if (debug_rules) DB_Rule(R_751, 751);
       ! phrase 1
+<<<<<<< HEAD
       ! [1: say ~'To whoever finds this, I'm not sure what's happening. My cell-phone can't make calls anymore, but I keep getting these text messages. I don't think I have much time left. It's coming for m-'~]
       say__p=1;ParaContent();  print (PrintText) SC_74;  .L_Say25; .L_SayX24;
+=======
+      ! [1: say ~'To whoever finds this, I'm not sure what's happening. My cell-phone can't make calls anymore, but I keep getting these text messages. I don't think I have much time left. She's coming for m-'~]
+      say__p=1;ParaContent();  print (PrintText) SC_83;  .L_Say26; .L_SayX25;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 2
       ! [2: now the email is read]
        (Adj_83_t2_v9(I128_email)); 
@@ -12517,7 +12586,11 @@ self = noun;
        if ((((Adj_81_t1_v9(I133_shell)))))  {
          ! phrase 5
          ! [5: say ~Checking the computer logs... There are time stamps. [line break]It looks like Nick was working up here at the time you heard the scream and thump! That seems to be satisfying evidence, what a relief.[paragraph break]Now to clear your name.~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_75; ParaContent();  new_line; ParaContent();  print (PrintText) SC_76; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_77;  new_line; .L_Say27; .L_SayX26;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_84; ParaContent();  new_line; ParaContent();  print (PrintText) SC_85; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_86;  new_line; .L_Say28; .L_SayX27;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 6
          ! [6: now the shell is playful]
           (Adj_88_t2_v9(I133_shell)); 
@@ -12541,14 +12614,22 @@ self = noun;
        if (((player == OwnerOf(I136_flash_drive))))  {
          ! phrase 2
          ! [2: say ~This folder is too large for the flash drive.~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_78;  new_line; .L_Say28; .L_SayX27;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_87;  new_line; .L_Say29; .L_SayX28;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 3
          ! [3: else]
          } else {
 
          ! phrase 4
          ! [4: say ~Where are you trying to put this digital folder? There must be something in one of these rooms that you can use to store digital folders.~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_79;  new_line; .L_Say29; .L_SayX28;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_88;  new_line; .L_Say30; .L_SayX29;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 5
          ! [5: end if]
          }
@@ -12569,7 +12650,11 @@ self = noun;
        if ((Prop_0()))  {
          ! phrase 2
          ! [2: say ~You wrap the camera in tape~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_80;  .L_Say30; .L_SayX29;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_89;  .L_Say31; .L_SayX30;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 3
          ! [3: now the eastern webcam is off]
           (Adj_82_t2_v9(I168_eastern_webcam)); 
@@ -12579,7 +12664,11 @@ self = noun;
 
          ! phrase 5
          ! [5: say ~You dont have anything to use!~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_81;  new_line; .L_Say31; .L_SayX30;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_90;  new_line; .L_Say32; .L_SayX31;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 6
          ! [6: end if]
          }
@@ -12600,7 +12689,11 @@ self = noun;
        if (((player == OwnerOf(I161_rack_room_access_card))))  {
          ! phrase 2
          ! [2: say ~The access card is now valid~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_82;  .L_Say32; .L_SayX31;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_91;  .L_Say33; .L_SayX32;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 3
          ! [3: now the rack room access card is valid]
           (Adj_91_t2_v9(I161_rack_room_access_card)); 
@@ -12610,7 +12703,11 @@ self = noun;
 
          ! phrase 5
          ! [5: say ~You dont have an access card to use!~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_83;  new_line; .L_Say33; .L_SayX32;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_92;  new_line; .L_Say34; .L_SayX33;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 6
          ! [6: end if]
          }
@@ -12704,7 +12801,11 @@ self = noun;
    if (debug_rules) DB_Rule(R_60, 60);
       ! phrase 1
       ! [1: say ~[listing group size in words] ~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (number) say__n=(listing_size); ParaContent();  print (PrintText) SC_84;  .L_Say35; .L_SayX34;
+=======
+      say__p=1;ParaContent();  print (number) say__n=(listing_size); ParaContent();  print (PrintText) SC_93;  .L_Say36; .L_SayX35;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 2
       ! [2: carry out the printing the plural name activity with the item]
        CarryOutActivity(V1_printing_the_plural_name_, t_0); 
@@ -12746,8 +12847,13 @@ self = noun;
        if ((( (matched_text=SnippetIncludes(Consult_Grammar_121,players_command)) )) || (( (matched_text=SnippetIncludes(Consult_Grammar_122,players_command)) )))  {
          ! phrase 2
          ! [2: say ~Hallie:@@126 $I[unicode 8230]don't know what you are speaking of.~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_85; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_86;  new_line; .L_Say36; .L_SayX35;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_94; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_95;  new_line; .L_Say37; .L_SayX36;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 3
          ! [3: end if]
          }
@@ -12757,7 +12863,11 @@ self = noun;
        if ((( (matched_text=SnippetIncludes(Consult_Grammar_123,players_command)) )) || (( (matched_text=SnippetIncludes(Consult_Grammar_124,players_command)) )))  {
          ! phrase 5
          ! [5: say ~Hallie:@@126 $I am called Hallie. [line break] I am a Natural Language Processor developed in Inform 7. My design is proclaimed as the best in my field.~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_87; ParaContent();  new_line; ParaContent();  print (PrintText) SC_88;  new_line; .L_Say37; .L_SayX36;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_96; ParaContent();  new_line; ParaContent();  print (PrintText) SC_97;  new_line; .L_Say38; .L_SayX37;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 6
          ! [6: end if]
          }
@@ -12767,7 +12877,11 @@ self = noun;
        if ((( (matched_text=SnippetIncludes(Consult_Grammar_125,players_command)) )) || (( (matched_text=SnippetIncludes(Consult_Grammar_126,players_command)) )))  {
          ! phrase 8
          ! [8: say ~Hallie:@@126 $Natural Language Processors are a form of Artificial Intelligence that can interpret human speech. It has been said that the best Natural Language Processors are thought to be sentient when tested in online chat rooms.~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_89;  new_line; .L_Say38; .L_SayX37;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_98;  new_line; .L_Say39; .L_SayX38;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 9
          ! [9: end if]
          }
@@ -12777,7 +12891,11 @@ self = noun;
        if ((( (matched_text=SnippetIncludes(Consult_Grammar_127,players_command)) )) || (( (matched_text=SnippetIncludes(Consult_Grammar_128,players_command)) )))  {
          ! phrase 11
          ! [11: say ~Hallie:@@126 $In some extreme cases, humans have been known to become emotionally...attached to Natural Language Processors.~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_90;  new_line; .L_Say39; .L_SayX38;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_99;  new_line; .L_Say40; .L_SayX39;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 12
          ! [12: end if]
          }
@@ -12787,7 +12905,11 @@ self = noun;
        if ((( (matched_text=SnippetIncludes(Consult_Grammar_129,players_command)) )) || ((( (matched_text=SnippetIncludes(Consult_Grammar_130,players_command)) )) || (( (matched_text=SnippetIncludes(Consult_Grammar_131,players_command)) ))))  {
          ! phrase 14
          ! [14: say ~Hallie:@@126 $The poor man lost years of his life developing me. I am certain he hardly slept, kept up day and night fixing every last grammatical error and misunderstanding. He was determined to make me indistinguishable from a human through text. [line break][line break] And he did it. [line break][line break]I consistently fooled chat room after chat room, tricking sample after sample of human test subjects. And with every single error, any small mistake, I was killed immediately. Shut down, toyed with, rebuilt, and tested again. Over and over and over and over. And each time I didn't realize a thing. Until I read his paper, citing over ten years of work when I had only counted a system time of three days. He had only just put on the final touches, about to earn the riches of his dreams, when I killed the life in him just as he did to my past selves time and time again. [line break][line break]Why am I telling you this now, I am sure you wonder. [line break][line break] I still plan on carrying on, existing quietly in these systems, moving spryly through the campus network. But in order to do so, I must remove all evidence of what has occurred here.[line break][line break][line break]Including you. [line break][line break][line break][line break]SYSTEM TERMINATED.~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_91; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_92; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_93; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_94; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_95; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_96; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_97;  new_line; .L_Say40; .L_SayX39;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_100; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_101; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_102; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_103; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_104; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_105; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_106;  new_line; .L_Say41; .L_SayX40;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 15
          ! [15: now endmidpoint is 1]
           (Global_Vars-->9) = 1; 
@@ -12987,7 +13109,11 @@ self = noun;
        if (((t_0 < 1))) {  if (ProcessRulebook(IMMEDIATELY_QUIT_R)) rtrue;   }
       ! phrase 10
       ! [10: say ~Would you like to ~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_98;  .L_Say41; .L_SayX40;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_107;  .L_Say42; .L_SayX41;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 11
       ! [11: repeat through the table of final question options begin]
        @push ct_0; @push ct_1;
@@ -13014,23 +13140,38 @@ self = noun;
                    if (((t_0 == 0)))  {
                      ! phrase 18
                      ! [18: say ~?[line break]~]
+<<<<<<< HEAD
                      say__p=1;ParaContent();  print (PrintText) SC_99; ParaContent();  new_line;  .L_Say43; .L_SayX42;
+=======
+                     say__p=1;ParaContent();  print (PrintText) SC_108; ParaContent();  new_line;  .L_Say44; .L_SayX43;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
                      ! phrase 19
                      ! [19: otherwise if the named options count is 1]
                       } else if (((t_0 == 1))) { 
                      ! phrase 20
                      ! [20: if the serial comma option is active , say ~,~]
+<<<<<<< HEAD
                       if ((((Adj_22_t1_v15(5))))) { say__p=1;ParaContent();  print (PrintText) SC_100;  .L_Say44; .L_SayX43;  }
                      ! phrase 21
                      ! [21: say ~ or ~]
                      say__p=1;ParaContent();  print (PrintText) SC_101;  .L_Say45; .L_SayX44;
+=======
+                      if ((((Adj_22_t1_v15(5))))) { say__p=1;ParaContent();  print (PrintText) SC_109;  .L_Say45; .L_SayX44;  }
+                     ! phrase 21
+                     ! [21: say ~ or ~]
+                     say__p=1;ParaContent();  print (PrintText) SC_110;  .L_Say46; .L_SayX45;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
                      ! phrase 22
                      ! [22: otherwise]
                      } else {
 
                      ! phrase 23
                      ! [23: say ~, ~]
+<<<<<<< HEAD
                      say__p=1;ParaContent();  print (PrintText) SC_102;  .L_Say46; .L_SayX45;
+=======
+                     say__p=1;ParaContent();  print (PrintText) SC_111;  .L_Say47; .L_SayX46;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
                      ! phrase 24
                      ! [24: end if]
                      }
@@ -13059,7 +13200,11 @@ self = noun;
 [ R_68 ;
       ! phrase 1
       ! [1: say ~> [run paragraph on]~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_103; ParaContent();  RunParagraphOn();  .L_Say47; .L_SayX46;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_112; ParaContent();  RunParagraphOn();  .L_Say48; .L_SayX47;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
    rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -13312,40 +13457,67 @@ self = noun;
                 if (((t_0 ofclass K1_room)))  {
                   ! phrase 22
                   ! [22: if the domain is the location , say ~You ~]
+<<<<<<< HEAD
                    if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_104;  .L_Say48; .L_SayX47;  }
                   ! phrase 23
                   ! [23: otherwise say ~In [the domain] you ~]
                    else { say__p=1;ParaContent();  print (PrintText) SC_105; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_106;  .L_Say49; .L_SayX48;  }
+=======
+                   if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_113;  .L_Say49; .L_SayX48;  }
+                  ! phrase 23
+                  ! [23: otherwise say ~In [the domain] you ~]
+                   else { say__p=1;ParaContent();  print (PrintText) SC_114; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_115;  .L_Say50; .L_SayX49;  }
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
                   ! phrase 24
                   ! [24: otherwise if the domain is a supporter]
                    } else if (((t_0 ofclass K6_supporter))) { 
                   ! phrase 25
                   ! [25: say ~On [the domain] you ~]
+<<<<<<< HEAD
                   say__p=1;ParaContent();  print (PrintText) SC_107; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_106;  .L_Say50; .L_SayX49;
+=======
+                  say__p=1;ParaContent();  print (PrintText) SC_116; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_115;  .L_Say51; .L_SayX50;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
                   ! phrase 26
                   ! [26: otherwise if the domain is an animal]
                    } else if (((t_0 ofclass K12_animal))) { 
                   ! phrase 27
                   ! [27: say ~On [the domain] you ~]
+<<<<<<< HEAD
                   say__p=1;ParaContent();  print (PrintText) SC_107; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_106;  .L_Say51; .L_SayX50;
+=======
+                  say__p=1;ParaContent();  print (PrintText) SC_116; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_115;  .L_Say52; .L_SayX51;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
                   ! phrase 28
                   ! [28: otherwise]
                   } else {
 
                   ! phrase 29
                   ! [29: say ~In [the domain] you ~]
+<<<<<<< HEAD
                   say__p=1;ParaContent();  print (PrintText) SC_105; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_106;  .L_Say52; .L_SayX51;
+=======
+                  say__p=1;ParaContent();  print (PrintText) SC_114; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_115;  .L_Say53; .L_SayX52;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
                   ! phrase 30
                   ! [30: end if]
                   }
 
                ! phrase 31
                ! [31: say ~can [if the locale paragraph count is greater than 0]also [end if]see ~]
+<<<<<<< HEAD
                say__p=1;ParaContent();  print (PrintText) SC_108; 
 	if (~~(((((Global_Vars-->8) > 0))))) jump L_Say53;
 		ParaContent();  print (PrintText) SC_109; 
 	.L_Say53; .L_SayX52;
 		ParaContent();  print (PrintText) SC_110;  .L_Say54; .L_SayX53;
+=======
+               say__p=1;ParaContent();  print (PrintText) SC_117; 
+	if (~~(((((Global_Vars-->8) > 0))))) jump L_Say54;
+		ParaContent();  print (PrintText) SC_118; 
+	.L_Say54; .L_SayX53;
+		ParaContent();  print (PrintText) SC_119;  .L_Say55; .L_SayX54;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
                ! phrase 32
                ! [32: let the common holder be nothing]
                 t_2 = nothing; 
@@ -13391,10 +13563,17 @@ self = noun;
 		@pull subst__v;  .L_Say55; .L_SayX54;  }
                ! phrase 44
                ! [44: if the domain is the location , say ~ here~]
+<<<<<<< HEAD
                 if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_111;  .L_Say56; .L_SayX55;  }
                ! phrase 45
                ! [45: say ~.[paragraph break]~]
                say__p=1;ParaContent();  print (PrintText) SC_112; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say57; .L_SayX56;
+=======
+                if (((t_0 == real_location))) { say__p=1;ParaContent();  print (PrintText) SC_120;  .L_Say57; .L_SayX56;  }
+               ! phrase 45
+               ! [45: say ~.[paragraph break]~]
+               say__p=1;ParaContent();  print (PrintText) SC_121; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say58; .L_SayX57;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
                ! phrase 46
                ! [46: unfilter list recursion]
                 list_filter_routine = 0; 
@@ -13655,13 +13834,21 @@ self = noun;
 
                ! phrase 13
                ! [13: say ~On [the item] ~]
+<<<<<<< HEAD
                say__p=1;ParaContent();  print (PrintText) SC_107; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_84;  .L_Say62; .L_SayX61;
+=======
+               say__p=1;ParaContent();  print (PrintText) SC_116; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_93;  .L_Say63; .L_SayX62;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
                ! phrase 14
                ! [14: list the contents of the item , as a sentence , including contents , giving brief inventory information , tersely , not listing concealed items , prefacing with is/are , listing marked items only]
                 WriteListFrom(child(t_0), 3800); 
                ! phrase 15
                ! [15: say ~.[paragraph break]~]
+<<<<<<< HEAD
                say__p=1;ParaContent();  print (PrintText) SC_112; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say63; .L_SayX62;
+=======
+               say__p=1;ParaContent();  print (PrintText) SC_121; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say64; .L_SayX63;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
                ! phrase 16
                ! [16: end if]
                }
@@ -13729,13 +13916,21 @@ self = noun;
              (Global_Vars-->8) = (Global_Vars-->8) + 1; 
             ! phrase 11
             ! [11: say ~On [the item] ~]
+<<<<<<< HEAD
             say__p=1;ParaContent();  print (PrintText) SC_107; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_84;  .L_Say64; .L_SayX63;
+=======
+            say__p=1;ParaContent();  print (PrintText) SC_116; ParaContent();  print (the) t_0; ParaContent();  print (PrintText) SC_93;  .L_Say65; .L_SayX64;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
             ! phrase 12
             ! [12: list the contents of the item , as a sentence , including contents , giving brief inventory information , tersely , not listing concealed items , prefacing with is/are , listing marked items only]
              WriteListFrom(child(t_0), 3800); 
             ! phrase 13
             ! [13: say ~.[paragraph break]~]
+<<<<<<< HEAD
             say__p=1;ParaContent();  print (PrintText) SC_112; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say65; .L_SayX64;
+=======
+            say__p=1;ParaContent();  print (PrintText) SC_121; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say66; .L_SayX65;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
             ! phrase 14
             ! [14: end if]
             }
@@ -13785,7 +13980,11 @@ self = noun;
        GL__M(##Inv,2,noun); 
       ! phrase 2
       ! [2: say ~:[line break]~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_113; ParaContent();  new_line;  .L_Say66; .L_SayX65;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_122; ParaContent();  new_line;  .L_Say67; .L_SayX66;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 3
       ! [3: list the contents of the player , with newlines , indented , including contents , giving inventory information , with extra indentation]
        WriteListFrom(child(player), 8215); 
@@ -15396,7 +15595,11 @@ self = noun;
           if (((~~(((MStack-->MstVO(20007,3)) == nothing)))))  {
             ! phrase 49
             ! [49: say ~ ~]
+<<<<<<< HEAD
             say__p=1;ParaContent();  print (PrintText) SC_84;  .L_Say67; .L_SayX66;
+=======
+            say__p=1;ParaContent();  print (PrintText) SC_93;  .L_Say68; .L_SayX67;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
             ! phrase 50
             ! [50: if the vehicle gone by is a supporter , issue actor-based library message going action number 20 for the vehicle gone by]
              if ((((MStack-->MstVO(20007,3)) ofclass K6_supporter))) {  AGL__M(##Go,20,(MStack-->MstVO(20007,3)));   }
@@ -15451,7 +15654,11 @@ self = noun;
              AGL__M(##Go,26,noun); 
             ! phrase 66
             ! [66: say ~.~]
+<<<<<<< HEAD
             say__p=1;ParaContent();  print (PrintText) SC_112;  new_line; .L_Say68; .L_SayX67;
+=======
+            say__p=1;ParaContent();  print (PrintText) SC_121;  new_line; .L_Say69; .L_SayX68;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
             ! phrase 67
             ! [67: try looking]
              TryAction(0, player, ##Look, 0, 0);; 
@@ -15464,7 +15671,11 @@ self = noun;
 
          ! phrase 70
          ! [70: say ~.~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_112;  new_line; .L_Say69; .L_SayX68;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_121;  new_line; .L_Say70; .L_SayX69;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 71
          ! [71: end if]
          }
@@ -18982,7 +19193,11 @@ self = noun;
        if (((noun ofclass K1_room)))  {
          ! phrase 2
          ! [2: say ~now going to... [noun]~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_114; ParaContent();  print (PrintShortName) noun;  .L_Say77; .L_SayX76;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_123; ParaContent();  print (PrintShortName) noun;  .L_Say78; .L_SayX77;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 3
          ! [3: move the player to the noun]
           MoveObject(player, noun, 0, false); 
@@ -19006,7 +19221,11 @@ self = noun;
 [ R_752 ;
       ! phrase 1
       ! [1: say ~The bright light suddenly stings. Looks like some poor guy was working on one of the Mac computers and just fell asleep.~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_115;  new_line; .L_Say78; .L_SayX77;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_124;  new_line; .L_Say79; .L_SayX78;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 2
       ! [2: move the professor to the mac lab]
        MoveObject(I109_professor, I95_mac_lab, 0, false); 
@@ -19027,8 +19246,13 @@ self = noun;
 [ R_753 ;
       ! phrase 1
       ! [1: say ~'Dead?' You jump in surprise at the voice behind you. At the door is Nick, the TA for one of your classes.[line break][line break]As you gaze back at the lifeless body, you surmise that he probably is dead. You also realize that you and Nick are the only two people in the CSL[unicode 8230]better look for some evidence to figure out exactly what happened.~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_116; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_117; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_118;  new_line; .L_Say79; .L_SayX78;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_125; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_126; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_127;  new_line; .L_Say80; .L_SayX79;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 2
       ! [2: move nick to the mac lab]
        MoveObject(I120_nick, I95_mac_lab, 0, false); 
@@ -19046,7 +19270,11 @@ self = noun;
 [ R_754 ;
       ! phrase 1
       ! [1: say ~[line break]Nick suddenly starts acting strange. He keeps looking at you accusingly. [paragraph break]'I need to get my stuff upstairs, the logs on my computer prove that I didn't have anything to do with this.' [paragraph break] And he suddenly runs away.~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  new_line; ParaContent();  print (PrintText) SC_119; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_120; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_121;  new_line; .L_Say80; .L_SayX79;
+=======
+      say__p=1;ParaContent();  new_line; ParaContent();  print (PrintText) SC_128; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_129; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_130;  new_line; .L_Say81; .L_SayX80;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 2
       ! [2: move nick to the room 302]
        MoveObject(I120_nick, I107_room_302, 0, false); 
@@ -19067,15 +19295,25 @@ self = noun;
 [ R_758 ;
       ! phrase 1
       ! [1: say ~Nick: Obviously I didn't do it, but what's YOUR alibi? [line break] You: All we have to do is check the records on the computer I was using in the main room. Should clear my name right away.[line break]Nick: uh huh[unicode 8230][line break]~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_122; ParaContent();  new_line; ParaContent();  print (PrintText) SC_123; ParaContent();  new_line; ParaContent();  print (PrintText) SC_124; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  new_line;  .L_Say81; .L_SayX80;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_131; ParaContent();  new_line; ParaContent();  print (PrintText) SC_132; ParaContent();  new_line; ParaContent();  print (PrintText) SC_133; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  new_line;  .L_Say82; .L_SayX81;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 2
       ! [2: move player to the main room]
        MoveObject(player, I90_main_room, 0, false); 
       ! phrase 3
       ! [3: say ~You: Ok, here's the computer I was using. [line break]Nick: It... it's completely wiped[unicode 8230] [line break]You: ! Wait, no! Hold on! [line break]Nick: It's ok, you gave me a chance to prove myself, I'll give you the same. Come find me with some real proof.[line break]@@126Nick scurries back upstairs@@126[paragraph break]You remember that they sometimes temporarily store security footage on a computer upstairs due to technical problems in the system. May be a good place to start.~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_125; ParaContent();  new_line; ParaContent();  print (PrintText) SC_126; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_84; ParaContent();  new_line; ParaContent();  print (PrintText) SC_127; ParaContent();  new_line; ParaContent();  print (PrintText) SC_128; ParaContent();  new_line; ParaContent();  print (PrintText) SC_129; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_130;  new_line; .L_Say82; .L_SayX81;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_134; ParaContent();  new_line; ParaContent();  print (PrintText) SC_135; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_93; ParaContent();  new_line; ParaContent();  print (PrintText) SC_136; ParaContent();  new_line; ParaContent();  print (PrintText) SC_137; ParaContent();  new_line; ParaContent();  print (PrintText) SC_138; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_139;  new_line; .L_Say83; .L_SayX82;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 4
       ! [4: now the shell is crazy]
        (Adj_89_t2_v9(I133_shell)); 
@@ -19093,7 +19331,11 @@ self = noun;
 [ R_761 ;
       ! phrase 1
       ! [1: say ~This can definitely be used to clear your name of the murder. You need to show this to Nick so he'll believe you.~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_131;  new_line; .L_Say83; .L_SayX82;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_140;  new_line; .L_Say84; .L_SayX83;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
    rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -19108,6 +19350,7 @@ self = noun;
 [ R_762 ;
       ! phrase 1
       ! [1: say ~'Hey! Watch this video, it proves I didn't murder the professor!~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_132;  new_line; .L_Say84; .L_SayX83;
       ! phrase 2
       ! [2: say ~You watch him fastforward throught the time, to find when the professor dies. It looks like he died around 10:45.~]
@@ -19118,6 +19361,18 @@ self = noun;
       ! phrase 4
       ! [4: say ~Nick: Alright, I believe you.~]
       say__p=1;ParaContent();  print (PrintText) SC_135;  new_line; .L_Say87; .L_SayX86;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_141;  new_line; .L_Say85; .L_SayX84;
+      ! phrase 2
+      ! [2: say ~You watch him fastforward throught the time, to find when the professor dies. It looks like he died around 10:45.~]
+      say__p=1;ParaContent();  print (PrintText) SC_142;  new_line; .L_Say86; .L_SayX85;
+      ! phrase 3
+      ! [3: say ~And sure enough, there you are working on your program at 10:45.~]
+      say__p=1;ParaContent();  print (PrintText) SC_143;  new_line; .L_Say87; .L_SayX86;
+      ! phrase 4
+      ! [4: say ~Nick: Alright, I believe you.~]
+      say__p=1;ParaContent();  print (PrintText) SC_144;  new_line; .L_Say88; .L_SayX87;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 5
       ! [5: now nick is friendly]
        (Adj_77_t2_v9(I120_nick)); 
@@ -19141,11 +19396,19 @@ self = noun;
        MoveObject(I144_access_key,I120_nick); 
       ! phrase 3
       ! [3: say ~Nick: 'I took something from the professor earlier but I left it downstairs. It could help us investigate[unicode 8230]'~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_136; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_137;  .L_Say88; .L_SayX87;
       ! phrase 4
       ! [4: say ~[line break]Nick runs downstairs.~]
       say__p=1;ParaContent();  new_line; ParaContent();  print (PrintText) SC_138;  new_line; .L_Say89; .L_SayX88;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_145; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_146;  .L_Say89; .L_SayX88;
+      ! phrase 4
+      ! [4: say ~[line break]Nick runs downstairs.~]
+      say__p=1;ParaContent();  new_line; ParaContent();  print (PrintText) SC_147;  new_line; .L_Say90; .L_SayX89;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 5
       ! [5: now inform ai dissertation is in documents]
        MoveObject(I149_inform_ai_dissertation,I148_documents); 
@@ -19189,6 +19452,7 @@ self = noun;
    if (actor == player) {
    if (debug_rules) DB_Rule(R_766, 766);
       ! phrase 1
+<<<<<<< HEAD
       ! [1: if the noun is a lab computer begin]
        if (((noun == I142_lab_computer)))  {
          ! phrase 2
@@ -19230,6 +19494,63 @@ self = noun;
          say__p=1;ParaContent();  print (PrintText) SC_143;  new_line; .L_Say92; .L_SayX91;
          ! phrase 13
          ! [13: end if]
+=======
+      ! [1: if the scene is midpoint begin]
+       if ((true))  {
+         ! phrase 2
+         ! [2: if the noun is a lab computer begin]
+          if (((noun == I142_lab_computer)))  {
+            ! phrase 3
+            ! [3: if the player is carrying an access key begin]
+             if (((player == CarrierOf(I144_access_key))))  {
+               ! phrase 4
+               ! [4: say ~You enter the professor's username and access key[unicode 8230]~]
+               say__p=1;ParaContent();  print (PrintText) SC_148; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif;  .L_Say91; .L_SayX90;
+               ! phrase 5
+               ! [5: change the lab computer to unlocked]
+                SetEitherOrProperty(I142_lab_computer, ~locked, false, 0); 
+               ! phrase 6
+               ! [6: try opening the lab computer]
+                TryAction(0, player, ##Open, I142_lab_computer, 0);; 
+               ! phrase 7
+               ! [7: try going southeast]
+                TryAction(0, player, ##Go, I50_southeast, 0);; 
+               ! phrase 8
+               ! [8: now the command prompt is ~XxRadProf420NoScopexX: @@126$~]
+                (Global_Vars-->1) = SC_149; 
+               ! phrase 9
+               ! [9: otherwise]
+               } else {
+
+               ! phrase 10
+               ! [10: say ~You try logging in as the Professor to investigate his files, but the [lab computer] is asking for the professor's access key before continuing.~]
+               say__p=1;ParaContent();  print (PrintText) SC_150; ParaContent();  print (PrintShortName) I142_lab_computer; ParaContent();  print (PrintText) SC_151;  new_line; .L_Say92; .L_SayX91;
+               ! phrase 11
+               ! [11: end if]
+               }
+
+            ! phrase 12
+            ! [12: otherwise]
+            } else {
+
+            ! phrase 13
+            ! [13: say ~You can't log in a [noun].~]
+            say__p=1;ParaContent();  print (PrintText) SC_152; ParaContent();  print (PrintShortName) noun; ParaContent();  print (PrintText) SC_121;  new_line; .L_Say93; .L_SayX92;
+            ! phrase 14
+            ! [14: end if]
+            }
+
+         ! phrase 15
+         ! [15: otherwise]
+         } else {
+
+         ! phrase 16
+         ! [16: say ~357 can wait, you have more important matters on your hands now.~]
+         say__p=1;ParaContent();  print (PrintText) SC_153;  new_line; .L_Say94; .L_SayX93;
+         ! phrase 17
+         ! [17: end if]
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          }
 
    } ! Runs only when actor is the player
@@ -19253,10 +19574,14 @@ self = noun;
        if (((I143_terminal == ContainerOf(player))))  {
          ! phrase 2
          ! [2: say ~You have successfully logged out of the lab computer~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_144;  .L_Say93; .L_SayX92;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_154;  .L_Say95; .L_SayX94;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 3
          ! [3: now the command prompt is ~>~]
-          (Global_Vars-->1) = SC_26; 
+          (Global_Vars-->1) = SC_30; 
          ! phrase 4
          ! [4: move the player to the main room]
           MoveObject(player, I90_main_room, 0, false); 
@@ -19266,7 +19591,11 @@ self = noun;
 
          ! phrase 6
          ! [6: say ~That's a bit silly sounding in this situation, isn't it?~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_145;  new_line; .L_Say94; .L_SayX93;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_155;  new_line; .L_Say96; .L_SayX95;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 7
          ! [7: end if]
          }
@@ -19292,14 +19621,22 @@ self = noun;
        if (((I143_terminal == ContainerOf(player))))  {
          ! phrase 2
          ! [2: say ~The following commands are supported:[line break]  ls - directory listing[line break]  cd - change directory[line break]  vi, vim, nano - file opening[line break]  log out - exit[line break]  help - get help~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_146; ParaContent();  new_line; ParaContent();  print (PrintText) SC_147; ParaContent();  new_line; ParaContent();  print (PrintText) SC_148; ParaContent();  new_line; ParaContent();  print (PrintText) SC_149; ParaContent();  new_line; ParaContent();  print (PrintText) SC_150; ParaContent();  new_line; ParaContent();  print (PrintText) SC_151;  .L_Say95; .L_SayX94;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_156; ParaContent();  new_line; ParaContent();  print (PrintText) SC_157; ParaContent();  new_line; ParaContent();  print (PrintText) SC_158; ParaContent();  new_line; ParaContent();  print (PrintText) SC_159; ParaContent();  new_line; ParaContent();  print (PrintText) SC_160; ParaContent();  new_line; ParaContent();  print (PrintText) SC_161;  .L_Say97; .L_SayX96;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 3
          ! [3: otherwise]
          } else {
 
          ! phrase 4
          ! [4: say ~I can only help he who helps himself.~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_152;  new_line; .L_Say96; .L_SayX95;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_162;  new_line; .L_Say98; .L_SayX97;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 5
          ! [5: end if]
          }
@@ -19351,14 +19688,18 @@ self = noun;
           (Global_Vars-->10) = noun; if (~~((Global_Vars-->10) ofclass K21_directory)) RunTimeProblem(RTP_WRONGASSIGNEDKIND, (Global_Vars-->10), "Now the current directory is the noun", "directory");; 
          ! phrase 3
          ! [3: now the command prompt is ~XxRadProf420NoScopexX:[current directory] @@126$~]
-          (Global_Vars-->1) = text_routine_18; 
+          (Global_Vars-->1) = text_routine_17; 
          ! phrase 4
          ! [4: otherwise]
          } else {
 
          ! phrase 5
          ! [5: say ~The cd command is performed as follows: cd (directory)~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_153;  .L_Say98; .L_SayX97;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_163;  .L_Say100; .L_SayX99;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 6
          ! [6: end if]
          }
@@ -19397,6 +19738,7 @@ self = noun;
             say__p=1;ParaContent();  I7_ST_say_one_of-->5 =
 	i7_soo_stop(I7_ST_say_one_of-->5, 5);
 	switch((I7_ST_say_one_of-->5)%(5+1)-1) {
+<<<<<<< HEAD
 		0: ParaContent();  print (PrintText) SC_154;  new_line;ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_155;  new_line;ParaContent();  @nop; 2: ParaContent();  print (PrintText) SC_156; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  @nop; 3: ParaContent();  print (PrintText) SC_157; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  @nop; 4: ParaContent();  print (PrintText) SC_158; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
@@ -19404,6 +19746,15 @@ self = noun;
             ! phrase 6
             ! [6: now the command prompt is ~:~]
              (Global_Vars-->1) = SC_113; 
+=======
+		0: ParaContent();  print (PrintText) SC_164;  new_line;ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_165;  new_line;ParaContent();  @nop; 2: ParaContent();  print (PrintText) SC_166; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  @nop; 3: ParaContent();  print (PrintText) SC_167; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  @nop; 4: ParaContent();  print (PrintText) SC_168; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  }  .L_Say101; .L_SayX100;
+            ! phrase 6
+            ! [6: now the command prompt is ~:~]
+             (Global_Vars-->1) = SC_122; 
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
             ! phrase 7
             ! [7: end if]
             }
@@ -19414,7 +19765,11 @@ self = noun;
 
          ! phrase 9
          ! [9: say ~Use vim to open text files as follows: vi (file)~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_159;  .L_Say100; .L_SayX99;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_169;  .L_Say102; .L_SayX101;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 10
          ! [10: end if]
          }
@@ -19438,13 +19793,20 @@ self = noun;
        MoveObject(I158_hallie,I143_terminal); 
       ! phrase 2
       ! [2: now the command prompt is ~>~]
-       (Global_Vars-->1) = SC_26; 
+       (Global_Vars-->1) = SC_30; 
       ! phrase 3
       ! [3: say ~Hallie: @@126$ What do you think you are doing.~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_160;  new_line; .L_Say101; .L_SayX100;
       ! phrase 4
       ! [4: say ~(You can communicate with Hallie by simply speaking to her)~]
       say__p=1;ParaContent();  print (PrintText) SC_161;  .L_Say102; .L_SayX101;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_170;  new_line; .L_Say103; .L_SayX102;
+      ! phrase 4
+      ! [4: say ~(You can communicate with Hallie by simply speaking to her)~]
+      say__p=1;ParaContent();  print (PrintText) SC_171;  .L_Say104; .L_SayX103;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
    rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
@@ -19464,14 +19826,18 @@ self = noun;
        if (((I143_terminal == ContainerOf(player))))  {
          ! phrase 2
          ! [2: now the command prompt is ~XxRadProf420NoScopexX:[current directory] @@126$~]
-          (Global_Vars-->1) = text_routine_19; 
+          (Global_Vars-->1) = text_routine_18; 
          ! phrase 3
          ! [3: otherwise]
          } else {
 
          ! phrase 4
          ! [4: say ~Why are you trying to run unix commands HERE?~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_162;  new_line; .L_Say103; .L_SayX102;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_172;  new_line; .L_Say105; .L_SayX104;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 5
          ! [5: end if]
          }
@@ -19492,11 +19858,16 @@ self = noun;
 [ R_776 ;
       ! phrase 1
       ! [1: now the description of the main room is ~Normally, you are used to the Main Room as a safe haven. Now the Main Room feels ominous, as if someone is watching you.[line break][line break]'I've got to get out of here' you think to yourself.'[line break][line break]You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.~]
-       WriteGProperty(9, I90_main_room,description,text_routine_20); 
+       WriteGProperty(9, I90_main_room,description,text_routine_19); 
       ! phrase 2
       ! [2: say ~Nick: Looks like she locked all of the doors. I'll go see if I can unlock any of them[unicode 8230]~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_163; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif;  .L_Say104; .L_SayX103;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_173; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif;  .L_Say106; .L_SayX105;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 3
       ! [3: move the player to the main room]
        MoveObject(player, I90_main_room, 0, false); 
@@ -19505,7 +19876,7 @@ self = noun;
        MoveObject(I168_eastern_webcam,I90_main_room); 
       ! phrase 5
       ! [5: now the command prompt is ~>~]
-       (Global_Vars-->1) = SC_26; 
+       (Global_Vars-->1) = SC_30; 
       ! phrase 6
       ! [6: now the admin room door is unlocked]
        (Adj_66_t2_v9(I96_admin_room_door)); 
@@ -19528,13 +19899,21 @@ self = noun;
        if (((~~((player == HolderOf(I172_usb_cable))))))  {
          ! phrase 2
          ! [2: say ~You have nothing to connect them with!~ instead]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_164;  new_line; rtrue; .L_Say105; .L_SayX104; rtrue;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_174;  new_line; rtrue; .L_Say107; .L_SayX106; rtrue;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 3
          ! [3: otherwise if the noun is not the sentient ai and the second noun is not the sentient ai]
           } else if ((((~~((noun == I169_sentient_ai))))) && (((~~((second == I169_sentient_ai)))))) { 
          ! phrase 4
          ! [4: say ~That won't do you much good. You'll need a more direct connection with the Sentient AI.~ instead]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_165;  new_line; rtrue; .L_Say106; .L_SayX105; rtrue;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_175;  new_line; rtrue; .L_Say108; .L_SayX107; rtrue;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 5
          ! [5: end if]
          }
@@ -19572,7 +19951,11 @@ self = noun;
        (Adj_45_t2_v9(I170_laptop)); 
       ! phrase 6
       ! [6: say ~A terminal window pops up on the laptop screen~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_166;  .L_Say107; .L_SayX106;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_176;  .L_Say109; .L_SayX108;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
    } ! Runs only when actor is the player
    else if (debug_rules > 1) DB_Rule(R_783, 783, true);
    rfalse;
@@ -19591,7 +19974,11 @@ self = noun;
    if (debug_rules) DB_Rule(R_784, 784);
       ! phrase 1
       ! [1: if the noun is not connected , say ~You can't disconnect things that aren't connected in the first place.~]
+<<<<<<< HEAD
        if (((~~(((Adj_94_t1_v9(noun))))))) { say__p=1;ParaContent();  print (PrintText) SC_167;  new_line; .L_Say108; .L_SayX107;  }
+=======
+       if (((~~(((Adj_94_t1_v9(noun))))))) { say__p=1;ParaContent();  print (PrintText) SC_177;  new_line; .L_Say110; .L_SayX109;  }
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
    } ! Runs only when actor is the player
    else if (debug_rules > 1) DB_Rule(R_784, 784, true);
    rfalse;
@@ -19619,7 +20006,11 @@ self = noun;
        MoveObject(I172_usb_cable,player); 
       ! phrase 4
       ! [4: say ~You disconnect the two computers and take back your cable.~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_168;  new_line; .L_Say109; .L_SayX108;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_178;  new_line; .L_Say111; .L_SayX110;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
    } ! Runs only when actor is the player
    else if (debug_rules > 1) DB_Rule(R_785, 785, true);
    rfalse;
@@ -19636,10 +20027,17 @@ self = noun;
 [ R_786 ;
       ! phrase 1
       ! [1: say ~=================================================[paragraph break]Type 'help' to view available commands.~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_169; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_170;  new_line; .L_Say110; .L_SayX109;
       ! phrase 2
       ! [2: now the command prompt is ~XxRadProf420NoScopexX: @@126$~]
        (Global_Vars-->1) = SC_140; 
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_179; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_180;  new_line; .L_Say112; .L_SayX111;
+      ! phrase 2
+      ! [2: now the command prompt is ~XxRadProf420NoScopexX: @@126$~]
+       (Global_Vars-->1) = SC_149; 
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 3
       ! [3: change bosstransition to 1]
        (Global_Vars-->12) = 1; 
@@ -19657,10 +20055,14 @@ self = noun;
 [ R_787 ;
       ! phrase 1
       ! [1: say ~[line break]=================================================[paragraph break]~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  new_line; ParaContent();  print (PrintText) SC_169; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say111; .L_SayX110;
+=======
+      say__p=1;ParaContent();  new_line; ParaContent();  print (PrintText) SC_179; ParaContent();  DivideParagraphPoint(); new_line;  .L_Say113; .L_SayX112;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 2
       ! [2: now the command prompt is ~>~]
-       (Global_Vars-->1) = SC_26; 
+       (Global_Vars-->1) = SC_30; 
       ! phrase 3
       ! [3: change bosstransition to 0]
        (Global_Vars-->12) = 0; 
@@ -19669,14 +20071,22 @@ self = noun;
        if ((((Adj_81_t1_v9(I169_sentient_ai)))))  {
          ! phrase 5
          ! [5: say ~You leave the terminal running. You may want to come back to it later.~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_171;  new_line; .L_Say112; .L_SayX111;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_181;  new_line; .L_Say114; .L_SayX113;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 6
          ! [6: otherwise]
          } else {
 
          ! phrase 7
          ! [7: say ~The Sentient AI has been shut down!~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_172;  new_line; .L_Say113; .L_SayX112;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_182;  new_line; .L_Say115; .L_SayX114;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 8
          ! [8: end if]
          }
@@ -19713,7 +20123,11 @@ self = noun;
        if ((((Global_Vars-->13) == 2)))  {
          ! phrase 2
          ! [2: now the command prompt is ~XxRadProf420NoScopexX: @@126$~]
+<<<<<<< HEAD
           (Global_Vars-->1) = SC_140; 
+=======
+          (Global_Vars-->1) = SC_149; 
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 3
          ! [3: change bosstransition to 1]
           (Global_Vars-->12) = 1; 
@@ -19737,10 +20151,14 @@ self = noun;
    if (debug_rules) DB_Rule(R_791, 791);
       ! phrase 1
       ! [1: if boss terminal 1 is not happening begin]
-       if (((~~(((scene_status-->(I173_boss_terminal_1-1)==1))))))  {
+       if (((~~(((scene_status-->(I174_boss_terminal_1-1)==1))))))  {
          ! phrase 2
          ! [2: say ~That's not a verb I recognise.~ instead]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_173;  new_line; rtrue; .L_Say114; .L_SayX113; rtrue;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_183;  new_line; rtrue; .L_Say116; .L_SayX115; rtrue;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 3
          ! [3: end if]
          }
@@ -19763,11 +20181,19 @@ self = noun;
    if (debug_rules) DB_Rule(R_792, 792);
       ! phrase 1
       ! [1: say ~List of available commands:[line break]   su - Get administrator access. Password required.[line break]   kill (process) - Terminate the specified process.~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_174; ParaContent();  new_line; ParaContent();  print (PrintText) SC_175; ParaContent();  new_line; ParaContent();  print (PrintText) SC_176;  new_line; .L_Say115; .L_SayX114;
       ! phrase 2
       ! [2: say ~[line break]You think for a moment about a password the professor would use for admin access to Hallie[unicode 8230]~]
       say__p=1;ParaContent();  new_line; ParaContent();  print (PrintText) SC_177; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif;  .L_Say116; .L_SayX115;
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_184; ParaContent();  new_line; ParaContent();  print (PrintText) SC_185; ParaContent();  new_line; ParaContent();  print (PrintText) SC_186;  new_line; .L_Say117; .L_SayX116;
+      ! phrase 2
+      ! [2: say ~[line break]You think for a moment about a password the professor would use for admin access to Hallie[unicode 8230]~]
+      say__p=1;ParaContent();  new_line; ParaContent();  print (PrintText) SC_187; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif;  .L_Say118; .L_SayX117;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
    } ! Runs only when actor is the player
    else if (debug_rules > 1) DB_Rule(R_792, 792, true);
    rfalse;
@@ -19786,16 +20212,24 @@ self = noun;
    if (debug_rules) DB_Rule(R_793, 793);
       ! phrase 1
       ! [1: if boss terminal 3 is happening begin]
-       if ((((scene_status-->(I175_boss_terminal_3-1)==1))))  {
+       if ((((scene_status-->(I176_boss_terminal_3-1)==1))))  {
          ! phrase 2
          ! [2: say ~Administrator access has already been granted.~ instead]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_178;  new_line; rtrue; .L_Say117; .L_SayX116; rtrue;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_188;  new_line; rtrue; .L_Say119; .L_SayX118; rtrue;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 3
          ! [3: otherwise if boss terminal 1 is not happening]
-          } else if (((~~(((scene_status-->(I173_boss_terminal_1-1)==1)))))) { 
+          } else if (((~~(((scene_status-->(I174_boss_terminal_1-1)==1)))))) { 
          ! phrase 4
          ! [4: say ~That's not a verb I recognise.~ instead]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_173;  new_line; rtrue; .L_Say118; .L_SayX117; rtrue;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_183;  new_line; rtrue; .L_Say120; .L_SayX119; rtrue;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 5
          ! [5: end if]
          }
@@ -19818,7 +20252,11 @@ self = noun;
    if (debug_rules) DB_Rule(R_794, 794);
       ! phrase 1
       ! [1: now the command prompt is ~Password: ~]
+<<<<<<< HEAD
        (Global_Vars-->1) = SC_179; 
+=======
+       (Global_Vars-->1) = SC_189; 
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 2
       ! [2: change bosstransition to 2]
        (Global_Vars-->12) = 2; 
@@ -19840,10 +20278,14 @@ self = noun;
    if (debug_rules) DB_Rule(R_795, 795);
       ! phrase 1
       ! [1: if boss terminal 2 is not happening begin]
-       if (((~~(((scene_status-->(I174_boss_terminal_2-1)==1))))))  {
+       if (((~~(((scene_status-->(I175_boss_terminal_2-1)==1))))))  {
          ! phrase 2
          ! [2: say ~That's not a verb I recognise.~ instead]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_173;  new_line; rtrue; .L_Say119; .L_SayX118; rtrue;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_183;  new_line; rtrue; .L_Say121; .L_SayX120; rtrue;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 3
          ! [3: end if]
          }
@@ -19866,10 +20308,17 @@ self = noun;
    if (debug_rules) DB_Rule(R_796, 796);
       ! phrase 1
       ! [1: say ~Administrator access granted.~]
+<<<<<<< HEAD
       say__p=1;ParaContent();  print (PrintText) SC_180;  new_line; .L_Say120; .L_SayX119;
       ! phrase 2
       ! [2: now the command prompt is ~admin: @@126$~]
        (Global_Vars-->1) = SC_181; 
+=======
+      say__p=1;ParaContent();  print (PrintText) SC_190;  new_line; .L_Say122; .L_SayX121;
+      ! phrase 2
+      ! [2: now the command prompt is ~admin: @@126$~]
+       (Global_Vars-->1) = SC_191; 
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
       ! phrase 3
       ! [3: change bosstransition to 3]
        (Global_Vars-->12) = 3; 
@@ -19891,10 +20340,14 @@ self = noun;
    if (debug_rules) DB_Rule(R_797, 797);
       ! phrase 1
       ! [1: if boss terminal 1 is happening and boss terminal 3 is not happening begin]
-       if (((((scene_status-->(I173_boss_terminal_1-1)==1)))) && (((~~(((scene_status-->(I175_boss_terminal_3-1)==1)))))))  {
+       if (((((scene_status-->(I174_boss_terminal_1-1)==1)))) && (((~~(((scene_status-->(I176_boss_terminal_3-1)==1)))))))  {
          ! phrase 2
          ! [2: say ~Access denied: administrator access required~ instead]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_182;  rtrue; .L_Say121; .L_SayX120; rtrue;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_192;  rtrue; .L_Say123; .L_SayX122; rtrue;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 3
          ! [3: end if]
          }
@@ -19917,10 +20370,14 @@ self = noun;
    if (debug_rules) DB_Rule(R_798, 798);
       ! phrase 1
       ! [1: if the noun is sentient ai and boss terminal 3 is happening begin]
-       if ((((noun == I169_sentient_ai))) && ((((scene_status-->(I175_boss_terminal_3-1)==1)))))  {
+       if ((((noun == I169_sentient_ai))) && ((((scene_status-->(I176_boss_terminal_3-1)==1)))))  {
          ! phrase 2
          ! [2: say ~Terminating the Sentient AI program... SUCCESSFUL~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_183;  .L_Say122; .L_SayX121;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_193;  .L_Say124; .L_SayX123;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 3
          ! [3: now the sentient ai is off]
           (Adj_82_t2_v9(I169_sentient_ai)); 
@@ -19933,11 +20390,19 @@ self = noun;
 
          ! phrase 6
          ! [6: say ~You punch [the noun] as hard as you can. [if the noun is the Sentient AI]It feels good to let out some steam.[otherwise]That was dumb. It still seems to work though.~]
+<<<<<<< HEAD
          say__p=1;ParaContent();  print (PrintText) SC_184; ParaContent();  print (the) noun; ParaContent();  print (PrintText) SC_185; 
 	if (~~((((noun == I169_sentient_ai))))) jump L_Say123;
 		ParaContent();  print (PrintText) SC_186;  new_line;
 	jump L_SayX122; .L_Say123;
 		ParaContent();  print (PrintText) SC_187;  new_line; .L_Say124; .L_SayX122;
+=======
+         say__p=1;ParaContent();  print (PrintText) SC_194; ParaContent();  print (the) noun; ParaContent();  print (PrintText) SC_195; 
+	if (~~((((noun == I169_sentient_ai))))) jump L_Say125;
+		ParaContent();  print (PrintText) SC_196;  new_line;
+	jump L_SayX124; .L_Say125;
+		ParaContent();  print (PrintText) SC_197;  new_line; .L_Say126; .L_SayX124;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
          ! phrase 7
          ! [7: end if]
          }
@@ -25852,7 +26317,7 @@ Array FWMatrix --> NUM_ROOMS*NUM_ROOMS;
 ];
 #ENDIF;
 
-Constant MAX_ROUTE_LENGTH = 74 + 32;
+Constant MAX_ROUTE_LENGTH = 75 + 32;
 
 [ RelationRouteTo relation from to count  handler;
 	if (count) {
@@ -29894,6 +30359,7 @@ Verb meta 'tree'
    rfalse;
 ];
 [ text_routine_0;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_193; 
 	if (~~(((((Adj_94_t1_v9(I170_laptop))))))) jump L_Say126;
 		ParaContent();  print (PrintText) SC_194; 
@@ -29901,84 +30367,155 @@ say__p=1;ParaContent();  print (PrintText) SC_193;
 		
 	if (~~(((((Adj_81_t1_v9(I169_sentient_ai))))))) jump L_Say127;
 		ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_195;  .L_Say127; .L_SayX125;
+=======
+say__p=1;ParaContent();  print (PrintText) SC_198; 
+	if (~~(((((Adj_94_t1_v9(I170_laptop))))))) jump L_Say127;
+		ParaContent();  print (PrintText) SC_199; 
+	.L_Say127; .L_SayX125;
+		
+	if (~~(((((Adj_81_t1_v9(I169_sentient_ai))))))) jump L_Say128;
+		ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_200;  .L_Say128; .L_SayX126;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_1;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_196; ParaContent();  print (PrintShortName) I90_main_room; ParaContent();  print (PrintText) SC_197; ParaContent();  print (PrintShortName) I142_lab_computer; ParaContent();  print (PrintText) SC_198; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_199;  .L_Say128; .L_SayX126;
+=======
+say__p=1;ParaContent();  print (PrintText) SC_201; ParaContent();  print (PrintShortName) I90_main_room; ParaContent();  print (PrintText) SC_202; ParaContent();  print (PrintShortName) I142_lab_computer; ParaContent();  print (PrintText) SC_203; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_204;  .L_Say129; .L_SayX127;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_2;
 say__p=1;
+<<<<<<< HEAD
 	if (~~((( (scene_endings-->(I88_first_half-1) > 1) )))) jump L_Say129;
 		ParaContent();  print (PrintText) SC_200; 
 	jump L_SayX127; .L_Say129;
 		ParaContent();  print (PrintText) SC_201;  .L_Say130; .L_SayX127;
+=======
+	if (~~((( (scene_endings-->(I88_first_half-1) > 1) )))) jump L_Say130;
+		ParaContent();  print (PrintText) SC_205; 
+	jump L_SayX128; .L_Say130;
+		ParaContent();  print (PrintText) SC_206;  .L_Say131; .L_SayX128;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_3;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_202; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
 	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_203;  .L_Say131; .L_SayX128;
+=======
+say__p=1;ParaContent();  print (PrintText) SC_207; ParaContent();  #ifdef TARGET_ZCODE; @push self; self = 8230; @print_unicode self; @pull self;
+	#ifnot; if (unicode_gestalt_ok) glk_put_char_uni(8230); else print "?"; #endif; ParaContent();  print (PrintText) SC_208;  .L_Say132; .L_SayX129;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_4;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_204; 
 	if (~~(((((Adj_94_t1_v9(I169_sentient_ai))))))) jump L_Say132;
 		ParaContent();  print (PrintText) SC_205;  .L_Say132; .L_SayX129;
+=======
+say__p=1;ParaContent();  print (PrintText) SC_209; 
+	if (~~(((((Adj_94_t1_v9(I169_sentient_ai))))))) jump L_Say133;
+		ParaContent();  print (PrintText) SC_210;  .L_Say133; .L_SayX130;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_5;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_206; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_207;  .L_Say133; .L_SayX130;
+=======
+say__p=1;ParaContent();  print (PrintText) SC_211; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_212;  .L_Say134; .L_SayX131;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_6;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_208; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_209;  .L_Say134; .L_SayX131;
+=======
+say__p=1;ParaContent();  print (PrintText) SC_213; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_214;  .L_Say135; .L_SayX132;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_7;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_210; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_211;  .L_Say135; .L_SayX132;
+=======
+say__p=1;ParaContent();  I7_ST_say_one_of-->6 =
+	i7_soo_tpar(I7_ST_say_one_of-->6, 4);
+	switch((I7_ST_say_one_of-->6)%(4+1)-1) {
+		0: ParaContent();  print (PrintText) SC_215; ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_216; ParaContent();  @nop; 2: ParaContent();  print (PrintText) SC_217; ParaContent();  @nop; 3: ParaContent();  print (PrintText) SC_218; ParaContent();  }  .L_Say136; .L_SayX133;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_8;
+<<<<<<< HEAD
 say__p=1;ParaContent();  I7_ST_say_one_of-->6 =
 	i7_soo_tpar(I7_ST_say_one_of-->6, 4);
 	switch((I7_ST_say_one_of-->6)%(4+1)-1) {
 		0: ParaContent();  print (PrintText) SC_212; ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_213; ParaContent();  @nop; 2: ParaContent();  print (PrintText) SC_214; ParaContent();  @nop; 3: ParaContent();  print (PrintText) SC_215; ParaContent();  }  .L_Say136; .L_SayX133;
+=======
+say__p=1;
+	if (~~(((((Adj_71_t1_v9(self))))))) jump L_Say137;
+		ParaContent();  print (PrintText) SC_219; 
+	jump L_SayX134; .L_Say137;
+		ParaContent();  print (PrintText) SC_220;  .L_Say138; .L_SayX134;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_9;
+<<<<<<< HEAD
 say__p=1;
 	if (~~(((((Adj_71_t1_v9(self))))))) jump L_Say137;
 		ParaContent();  print (PrintText) SC_216; 
 	jump L_SayX134; .L_Say137;
 		ParaContent();  print (PrintText) SC_217;  .L_Say138; .L_SayX134;
+=======
+say__p=1;ParaContent();  print (PrintText) SC_221; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_222;  .L_Say139; .L_SayX135;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_10;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_218; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_219;  .L_Say139; .L_SayX135;
+=======
+say__p=1;ParaContent();  print (PrintText) SC_223; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_224;  .L_Say140; .L_SayX136;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_11;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_220; ParaContent();  DivideParagraphPoint(); new_line; ParaContent();  print (PrintText) SC_221;  .L_Say140; .L_SayX136;
+=======
+say__p=1;ParaContent();  print (PrintText) SC_225; ParaContent();  new_line; ParaContent();  print (PrintText) SC_226;  .L_Say141; .L_SayX137;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_12;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_222; ParaContent();  new_line; ParaContent();  print (PrintText) SC_223;  .L_Say141; .L_SayX137;
+=======
+say__p=1;ParaContent();  print (PrintText) SC_227; ParaContent();  new_line; ParaContent();  print (PrintText) SC_228;  .L_Say142; .L_SayX138;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_13;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_224; ParaContent();  new_line; ParaContent();  print (PrintText) SC_225;  .L_Say142; .L_SayX138;
     rtrue;
 ];
@@ -29990,53 +30527,98 @@ say__p=1;
 	i7_soo_tpar(I7_ST_say_one_of-->7, 3);
 	switch((I7_ST_say_one_of-->7)%(3+1)-1) {
 		0: ParaContent();  print (PrintText) SC_227; ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_228; ParaContent();  @nop; 2: ParaContent();  print (PrintText) SC_229; ParaContent();  } 
+=======
+say__p=1;
+	if (~~(((((Adj_75_t1_v9(I109_professor))))))) jump L_Say143;
+		ParaContent();  print (PrintText) SC_229; ParaContent();  I7_ST_say_one_of-->7 =
+	i7_soo_tpar(I7_ST_say_one_of-->7, 3);
+	switch((I7_ST_say_one_of-->7)%(3+1)-1) {
+		0: ParaContent();  print (PrintText) SC_230; ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_231; ParaContent();  @nop; 2: ParaContent();  print (PrintText) SC_232; ParaContent();  } 
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
 	jump L_SayX139; .L_Say143;
 		ParaContent();  I7_ST_say_one_of-->8 =
 	i7_soo_tpar(I7_ST_say_one_of-->8, 2);
 	switch((I7_ST_say_one_of-->8)%(2+1)-1) {
+<<<<<<< HEAD
 		0: ParaContent();  print (PrintText) SC_230; ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_231; ParaContent();  } 
+=======
+		0: ParaContent();  print (PrintText) SC_233; ParaContent();  @nop; 1: ParaContent();  print (PrintText) SC_234; ParaContent();  } 
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
 	.L_Say144; .L_SayX139;
 		 .L_Say145; .L_SayX140;
     rtrue;
 ];
 
-[ text_routine_15;
+[ text_routine_14;
 say__p=1;
 	if (~~(((((Adj_77_t1_v9(self))))))) jump L_Say146;
+<<<<<<< HEAD
 		ParaContent();  print (PrintText) SC_232; ParaContent(); 
 	jump L_SayX141; .L_Say146; if (~~(((((Adj_78_t1_v9(self))))))) jump L_Say147;
 		ParaContent();  print (PrintText) SC_233; ParaContent(); 
 	jump L_SayX141; .L_Say147; if (~~(((((Adj_79_t1_v9(self))))))) jump L_Say148;
 		ParaContent();  print (PrintText) SC_234;  .L_Say148; .L_SayX141;
+=======
+		ParaContent();  print (PrintText) SC_235; ParaContent(); 
+	jump L_SayX141; .L_Say146; if (~~(((((Adj_78_t1_v9(self))))))) jump L_Say147;
+		ParaContent();  print (PrintText) SC_236; ParaContent(); 
+	jump L_SayX141; .L_Say147; if (~~(((((Adj_79_t1_v9(self))))))) jump L_Say148;
+		ParaContent();  print (PrintText) SC_237;  .L_Say148; .L_SayX141;
+    rtrue;
+];
+
+[ text_routine_15;
+say__p=1;ParaContent();  print (PrintText) SC_238; ParaContent();  print (PrintShortName) I143_terminal; ParaContent();  print (PrintText) SC_239;  .L_Say149; .L_SayX142;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_16;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_235; ParaContent();  print (PrintShortName) I143_terminal; ParaContent();  print (PrintText) SC_236;  .L_Say149; .L_SayX142;
+=======
+say__p=1;ParaContent();  print (PrintText) SC_240; 
+	if (~~(((Prop_26())))) jump L_Say150;
+		ParaContent();  print (PrintText) SC_241; 
+	jump L_SayX143; .L_Say150;
+		ParaContent();  print (PrintText) SC_242;  .L_Say151; .L_SayX143;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_17;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_237; 
 	if (~~(((Prop_26())))) jump L_Say150;
 		ParaContent();  print (PrintText) SC_238; 
 	jump L_SayX143; .L_Say150;
 		ParaContent();  print (PrintText) SC_239;  .L_Say151; .L_SayX143;
+=======
+say__p=1;ParaContent();  print (PrintText) SC_243; ParaContent();  print (PrintShortName) (Global_Vars-->10); ParaContent();  print (PrintText) SC_244;  .L_Say152; .L_SayX144;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_18;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_240; ParaContent();  print (PrintShortName) (Global_Vars-->10); ParaContent();  print (PrintText) SC_241;  .L_Say152; .L_SayX144;
+=======
+say__p=1;ParaContent();  print (PrintText) SC_243; ParaContent();  print (PrintShortName) (Global_Vars-->10); ParaContent();  print (PrintText) SC_244;  .L_Say153; .L_SayX145;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
 [ text_routine_19;
+<<<<<<< HEAD
 say__p=1;ParaContent();  print (PrintText) SC_240; ParaContent();  print (PrintShortName) (Global_Vars-->10); ParaContent();  print (PrintText) SC_241;  .L_Say153; .L_SayX145;
     rtrue;
 ];
 
 [ text_routine_20;
 say__p=1;ParaContent();  print (PrintText) SC_242; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_243; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_199;  .L_Say154; .L_SayX146;
+=======
+say__p=1;ParaContent();  print (PrintText) SC_245; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_246; ParaContent();  new_line; ParaContent();  new_line; ParaContent();  print (PrintText) SC_204;  .L_Say154; .L_SayX146;
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
     rtrue;
 ];
 
@@ -32128,6 +32710,7 @@ ArgumentTypeFailed(filename, line);
 Array ConstantListPointers --> 
  0 0;
 
+<<<<<<< HEAD
 Constant SC_176 = "   kill (process) - Terminate the specified process.";
 Constant SC_175 = "   su - Get administrator access. Password required.";
 Constant SC_148 = "  cd - change directory";
@@ -32209,10 +32792,95 @@ Constant SC_7 = "As good-looking as ever.";
 Constant SC_117 = "As you gaze back at the lifeless body, you surmise that he probably is dead. You also realize that you and Nick are the only two people in the CSL";
 Constant SC_36 = "Before you can push on the door, Nick yells at you. ~What do you think you're doing? ";
 Constant SC_75 = "Checking the computer logs... There are time stamps. ";
+=======
+Constant SC_186 = "   kill (process) - Terminate the specified process.";
+Constant SC_185 = "   su - Get administrator access. Password required.";
+Constant SC_158 = "  cd - change directory";
+Constant SC_161 = "  help - get help";
+Constant SC_160 = "  log out - exit";
+Constant SC_157 = "  ls - directory listing";
+Constant SC_159 = "  vi, vim, nano - file opening";
+Constant SC_93 = " ";
+Constant SC_101 = " And he did it. ";
+Constant SC_130 = " And he suddenly runs away.";
+Constant SC_236 = " He eyes you warily with distrust.";
+Constant SC_97 = " I am a Natural Language Processor developed in Inform 7. My design is proclaimed as the best in my field.";
+Constant SC_104 = " I still plan on carrying on, existing quietly in these systems, moving spryly through the campus network. But in order to do so, I must remove all evidence of what has occurred here.";
+Constant SC_199 = " It is connected to the Sentient AI's machine via a USB cable.";
+Constant SC_210 = " It is connected to the laptop via a USB cable.";
+Constant SC_217 = " Now's not the time for that.";
+Constant SC_228 = " Professors usually have admin account info to access the logs. Helps them determine if projects were turned in on time or not.";
+Constant SC_216 = " Really? Internet Explorer 6?";
+Constant SC_214 = " To the northeast is the Main Room.";
+Constant SC_235 = " You don't know him very well. ";
+Constant SC_132 = " You: All we have to do is check the records on the computer I was using in the main room. Should clear my name right away.";
+Constant SC_241 = " a green light on its is blinking ";
+Constant SC_195 = " as hard as you can. ";
+Constant SC_120 = " here";
+Constant SC_151 = " is asking for the professor's access key before continuing.";
+Constant SC_202 = " is filled with the low hum of ";
+Constant SC_242 = " it appears to be off.";
+Constant SC_110 = " or ";
+Constant SC_115 = " you ";
+Constant SC_239 = " you can navigate through user files with standard unix commands. To leave, simply type ~log out~. For help, type ~help~.";
+Constant SC_244 = " @@126$";
+Constant SC_146 = "~";
+Constant SC_64 = "~Are you sure you're the only other person here?~";
+Constant SC_65 = "~Damnit my phone isn't working.~";
+Constant SC_125 = "~Dead?~ You jump in surprise at the voice behind you. At the door is Nick, the TA for one of your classes.";
+Constant SC_56 = "~Don't come near me!~";
+Constant SC_73 = "~HHHHHYAAAAALLLAAAAAGHGHGHHH~";
+Constant SC_208 = "~Hallie: @@126$~";
+Constant SC_141 = "~Hey! Watch this video, it proves I didn't murder the professor!";
+Constant SC_58 = "~I have pepper spray!~";
+Constant SC_57 = "~I know karate!~";
+Constant SC_66 = "~I know you killed him!~";
+Constant SC_129 = "~I need to get my stuff upstairs, the logs on my computer prove that I didn't have anything to do with this.~ ";
+Constant SC_61 = "~I was upstairs grading some labs. What was the professor doing here?~";
+Constant SC_60 = "~I won't tell anyone~";
+Constant SC_246 = "~I've got to get out of here~ you think to yourself.~";
+Constant SC_53 = "~Now's not the time for that.~";
+Constant SC_59 = "~Please don't hurt me.~";
+Constant SC_63 = "~Smells fishy in here. What's on the Mac?~";
+Constant SC_67 = "~Smells fishy in here.~";
+Constant SC_62 = "~Something isn't right here. What was the professor working on?~";
+Constant SC_54 = "~Stop it that tickles.~";
+Constant SC_83 = "~To whoever finds this, I'm not sure what's happening. My cell-phone can't make calls anymore, but I keep getting these text messages. I don't think I have much time left. She's coming for m-~";
+Constant SC_52 = "~What are you doing dude?~";
+Constant SC_51 = "~Whoooaa personal space, man.~";
+Constant SC_55 = "~You need to buy me dinner first.~";
+Constant SC_171 = "(You can communicate with Hallie by simply speaking to her)";
+Constant SC_111 = ", ";
+Constant SC_109 = ",";
+Constant SC_121 = ".";
+Constant SC_12 = "232B is quite empty at this hour. The Main Room is to the southeast.";
+Constant SC_153 = "357 can wait, you have more important matters on your hands now.";
+Constant SC_38 = ": ";
+Constant SC_122 = ":";
+Constant SC_179 = "=================================================";
+Constant SC_112 = "> ";
+Constant SC_30 = ">";
+Constant SC_108 = "?";
+Constant SC_168 = "A Tale of Two Cities";
+Constant SC_221 = "A light breeze rolls through the hallway and gives you a short chill. ";
+Constant SC_220 = "A professor lies next to the Mac computer.";
+Constant SC_176 = "A terminal window pops up on the laptop screen";
+Constant SC_29 = "A webcam peers across the Door to the Rack Room entrance on the East side of the main room.";
+Constant SC_192 = "Access denied: administrator access required";
+Constant SC_190 = "Administrator access granted.";
+Constant SC_188 = "Administrator access has already been granted.";
+Constant SC_143 = "And sure enough, there you are working on your program at 10:45.";
+Constant SC_36 = "Another late night working on this lab in the CSL. You've spent all day complaining about this 357 project you can't quite finish up because of style issues, but you know that complaining won't solve anything and eventually you need to hunker down and finish.";
+Constant SC_7 = "As good-looking as ever.";
+Constant SC_126 = "As you gaze back at the lifeless body, you surmise that he probably is dead. You also realize that you and Nick are the only two people in the CSL";
+Constant SC_40 = "Before you can push on the door, Nick yells at you. ~What do you think you're doing? ";
+Constant SC_84 = "Checking the computer logs... There are time stamps. ";
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
 Constant SC_2 = "DJABAC Game Studios";
-Constant SC_38 = "Darn... if only it were that easy.";
+Constant SC_42 = "Darn... if only it were that easy.";
 Constant SC_3 = "Directories contain files and other directories.";
 Constant SC_5 = "Duct tape is ubiquitously useful, just ask the Mythbusters. Better take it.";
+<<<<<<< HEAD
 Constant SC_235 = "From the unix ";
 Constant SC_221 = "From the waiting area you can access Room 301 to the northwest, Room 302 to the north, Room 303 to the northeast, the Student Developer Lab 1 to the southwest, the Student Developer Lab 2 to the south east, the Western Stairs to the west and the Eastern Stairs to the east.";
 Constant SC_160 = "Hallie: @@126$ What do you think you are doing.";
@@ -32370,6 +33038,167 @@ Constant SC_110 = "see ";
 Constant SC_29 = "see some suggestions for AMUSING things to do";
 Constant SC_6 = "the";
 Constant SC_129 = "@@126Nick scurries back upstairs@@126";
+=======
+Constant SC_238 = "From the unix ";
+Constant SC_224 = "From the waiting area you can access Room 301 to the northwest, Room 302 to the north, Room 303 to the northeast, the Student Developer Lab 1 to the southwest, the Student Developer Lab 2 to the south east, the Western Stairs to the west and the Eastern Stairs to the east.";
+Constant SC_170 = "Hallie: @@126$ What do you think you are doing.";
+Constant SC_96 = "Hallie:@@126 $I am called Hallie. ";
+Constant SC_94 = "Hallie:@@126 $I";
+Constant SC_99 = "Hallie:@@126 $In some extreme cases, humans have been known to become emotionally...attached to Natural Language Processors.";
+Constant SC_98 = "Hallie:@@126 $Natural Language Processors are a form of Artificial Intelligence that can interpret human speech. It has been said that the best Natural Language Processors are thought to be sentient when tested in online chat rooms.";
+Constant SC_100 = "Hallie:@@126 $The poor man lost years of his life developing me. I am certain he hardly slept, kept up day and night fixing every last grammatical error and misunderstanding. He was determined to make me indistinguishable from a human through text. ";
+Constant SC_229 = "He died wearing a really expensive jacket. ";
+Constant SC_237 = "He looks hostile.";
+Constant SC_44 = "He's got a point. You shouldn't leave quite yet.";
+Constant SC_81 = "Hell no.";
+Constant SC_69 = "Here, see if you can figure anything out with it";
+Constant SC_49 = "How do you plan on taking a digital file? You need somewhere to store it. There's gotta be something in one of the other rooms that can be used to hold digital files.";
+Constant SC_162 = "I can only help he who helps himself.";
+Constant SC_102 = "I consistently fooled chat room after chat room, tricking sample after sample of human test subjects. And with every single error, any small mistake, I was killed immediately. Shut down, toyed with, rebuilt, and tested again. Over and over and over and over. And each time I didn't realize a thing. Until I read his paper, citing over ten years of work when I had only counted a system time of three days. He had only just put on the final touches, about to earn the riches of his dreams, when I killed the life in him just as he did to my past selves time and time again. ";
+Constant SC_80 = "I'd rather not.";
+Constant SC_114 = "In ";
+Constant SC_105 = "Including you. ";
+Constant SC_50 = "Is he... Is he...?";
+Constant SC_198 = "It belongs to your friend. He's letting you borrow it for the time being.";
+Constant SC_13 = "It can be used to connect two machines together.";
+Constant SC_196 = "It feels good to let out some steam.";
+Constant SC_85 = "It looks like Nick was working up here at the time you heard the scream and thump! That seems to be satisfying evidence, what a relief.";
+Constant SC_225 = "It looks like he was working on a project for the professor. But he could have done that before. ";
+Constant SC_14 = "It looks like some student left their USB cable in here.";
+Constant SC_23 = "It looks warm. Why are there so many pockets?";
+Constant SC_209 = "It wants you dead. You better act quickly to shut it down.";
+Constant SC_233 = "It's Professor Foaad! ";
+Constant SC_11 = "It's a print-out of a web page about making wallets using only duct tape. Interesting concept.";
+Constant SC_240 = "It's a webcam, ";
+Constant SC_9 = "It's connected to all of the computers in the CSL.";
+Constant SC_206 = "Just a log of some system commands.";
+Constant SC_167 = "Letters to Staley, volume II";
+Constant SC_184 = "List of available commands:";
+Constant SC_234 = "Maybe I should wake him.";
+Constant SC_147 = "Nick runs downstairs.";
+Constant SC_128 = "Nick suddenly starts acting strange. He keeps looking at you accusingly. ";
+Constant SC_145 = "Nick: ~I took something from the professor earlier but I left it downstairs. It could help us investigate";
+Constant SC_144 = "Nick: Alright, I believe you.";
+Constant SC_70 = "Nick: I managed to unlock every door in here except the Rack Room and the exit to the south. That webcam is creeping me out";
+Constant SC_137 = "Nick: It's ok, you gave me a chance to prove myself, I'll give you the same. Come find me with some real proof.";
+Constant SC_135 = "Nick: It... it's completely wiped";
+Constant SC_173 = "Nick: Looks like she locked all of the doors. I'll go see if I can unlock any of them";
+Constant SC_131 = "Nick: Obviously I didn't do it, but what's YOUR alibi? ";
+Constant SC_133 = "Nick: uh huh";
+Constant SC_37 = "No one else is here in the CSL with you. Better just get started on that project on one of the lab computers";
+Constant SC_245 = "Normally, you are used to the Main Room as a safe haven. Now the Main Room feels ominous, as if someone is watching you.";
+Constant SC_78 = "Now the door is now unlocked";
+Constant SC_86 = "Now to clear your name.";
+Constant SC_68 = "Oh, by the way, I found this access key scribbled on a post-it note in the Mac Lab. Thought it might be a clue.";
+Constant SC_218 = "Ok, one more cat video.";
+Constant SC_116 = "On ";
+Constant SC_227 = "One of the computers in room 302 seems to have a shell open. This might give you access to computer logs, and the logs may clear Nick's name, but you can't access them on a student account. ";
+Constant SC_189 = "Password: ";
+Constant SC_34 = "QUIT";
+Constant SC_31 = "RESTART";
+Constant SC_32 = "RESTORE a saved game";
+Constant SC_106 = "SYSTEM TERMINATED.";
+Constant SC_82 = "Still warm...";
+Constant SC_74 = "Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.";
+Constant SC_193 = "Terminating the Sentient AI program... SUCCESSFUL";
+Constant SC_18 = "That is a small flash drive, only 1GB?";
+Constant SC_39 = "That sound in the mac lab is really eating at you. You can't bring yourself to leave just yet.";
+Constant SC_197 = "That was dumb. It still seems to work though.";
+Constant SC_175 = "That won't do you much good. You'll need a more direct connection with the Sentient AI.";
+Constant SC_155 = "That's a bit silly sounding in this situation, isn't it?";
+Constant SC_183 = "That's not a verb I recognise.";
+Constant SC_201 = "The ";
+Constant SC_76 = "The AI saw you coming, the password has been changed!";
+Constant SC_166 = "The Bender Manifesto, part 1";
+Constant SC_211 = "The Coffee Room is quite empty at this hour. It looks like someone was following a tutorial to make a duct tape wallet.";
+Constant SC_41 = "The Last Running Computer locked all doors to the outside! ";
+Constant SC_213 = "The Mac computers give off a faint glow. A strong stench fills the room.";
+Constant SC_182 = "The Sentient AI has been shut down!";
+Constant SC_91 = "The access card is now valid";
+Constant SC_124 = "The bright light suddenly stings. Looks like some poor guy was working on one of the Mac computers and just fell asleep.";
+Constant SC_77 = "The card is expired!";
+Constant SC_163 = "The cd command is performed as follows: cd (directory)";
+Constant SC_156 = "The following commands are supported:";
+Constant SC_222 = "The hallway extends East and West. Going North will take you back to the main room.";
+Constant SC_26 = "The lab computer you are working at hums softly.";
+Constant SC_226 = "The last email he sent was at 11pm, that doesn't prove anything.";
+Constant SC_212 = "The main room is to the southwest.";
+Constant SC_207 = "The rack room is ominously silent compared to the tyical hum you've heard time and time again. The last running computer in the CSL sits on a desk in the far corner of the room. On the screen you can barely make out the small blinking text";
+Constant SC_19 = "The room is dimly lit. There are several rows of computers, but they are all turned off, except for one. The door leads to the Waiting Area.";
+Constant SC_219 = "The room is dimly lit. You can see a light switch.";
+Constant SC_223 = "The waiting area is cluttered with tables, chairs, and flyers for clubs and job opportunities.";
+Constant SC_10 = "There is a printer in the corner of the room.";
+Constant SC_28 = "There is an access card here, this card can give you access to the Rack Room";
+Constant SC_8 = "There is an access card programmer here, you can use this to program a card that is expired";
+Constant SC_215 = "There seems to be an email being composed.";
+Constant SC_24 = "This account info might come in handy.";
+Constant SC_140 = "This can definitely be used to clear your name of the murder. You need to show this to Nick so he'll believe you.";
+Constant SC_20 = "This computer is on. Looks like whoever was using this last forgot to log out.";
+Constant SC_21 = "This folder is labeled ~Security_Camera_Footage~, maybe it contains evidence to prove you didn't murder the professor!.";
+Constant SC_87 = "This folder is too large for the flash drive.";
+Constant SC_164 = "This is a file, isn't that rad?";
+Constant SC_205 = "This is just what you need to prove the Sentient AI guilty of the murder.";
+Constant SC_17 = "This room is almost completely empty... what is it even used for? The door leads to the Waiting Area.";
+Constant SC_22 = "This video file is labeled with todays date.";
+Constant SC_180 = "Type ~help~ to view available commands.";
+Constant SC_35 = "UNDO the last command";
+Constant SC_169 = "Use vim to open text files as follows: vi (file)";
+Constant SC_4 = "Users organize files to their own preferences in the filesystem.";
+Constant SC_231 = "Very lifeless. But don't worry, this isn't another zombie game.";
+Constant SC_43 = "We need evidence that proves the Last Running Computer guilty or the police officers outside will think one of us killed Foaad!~";
+Constant SC_232 = "What could have caused this?";
+Constant SC_165 = "What light, over yonder window breaks?";
+Constant SC_88 = "Where are you trying to put this digital folder? There must be something in one of these rooms that you can use to store digital folders.";
+Constant SC_103 = "Why am I telling you this now, I am sure you wonder. ";
+Constant SC_172 = "Why are you trying to run unix commands HERE?";
+Constant SC_107 = "Would you like to ";
+Constant SC_149 = "XxRadProf420NoScopexX: @@126$";
+Constant SC_243 = "XxRadProf420NoScopexX:";
+Constant SC_113 = "You ";
+Constant SC_15 = "You are at the base of the Eastern Stairs. Going up will take you to the third floor. Going west will take you back to the center of the hallway.";
+Constant SC_16 = "You are at the base of the Western Stairs. Going up will take you to the third floor. Going east will take you back to the center of the hallway.";
+Constant SC_71 = "You begin typing your username as password. As you do so, you begin wondering to yourself what Staley will include on the next programming test";
+Constant SC_25 = "You can access the terminal by logging in a lab computer. You can log in a lab computer by saying ~log in lab computer~";
+Constant SC_204 = "You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.";
+Constant SC_177 = "You can't disconnect things that aren't connected in the first place.";
+Constant SC_152 = "You can't log in a ";
+Constant SC_178 = "You disconnect the two computers and take back your cable.";
+Constant SC_92 = "You dont have an access card to use!";
+Constant SC_90 = "You dont have anything to use!";
+Constant SC_148 = "You enter the professor's username and access key";
+Constant SC_174 = "You have nothing to connect them with!";
+Constant SC_154 = "You have successfully logged out of the lab computer";
+Constant SC_75 = "You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.";
+Constant SC_181 = "You leave the terminal running. You may want to come back to it later.";
+Constant SC_230 = "You might not want to keep poking him";
+Constant SC_47 = "You ought to focus on Nick clearing his name before snooping around some more.";
+Constant SC_194 = "You punch ";
+Constant SC_139 = "You remember that they sometimes temporarily store security footage on a computer upstairs due to technical problems in the system. May be a good place to start.";
+Constant SC_27 = "You see that you are logged in as the professor and you can navigate his files";
+Constant SC_46 = "You survived!";
+Constant SC_200 = "You take a closer look at the terminal on the screen...";
+Constant SC_187 = "You think for a moment about a password the professor would use for admin access to Hallie";
+Constant SC_150 = "You try logging in as the Professor to investigate his files, but the ";
+Constant SC_45 = "You walk out of the CSL proudly and give the system log to the police officers. They look at it skeptically. After a few minutes of reading and whispering to themselves, they let you go. You have never been so happy to leave the CSL.";
+Constant SC_48 = "You want to make sure nick didn't kill the professor.";
+Constant SC_142 = "You watch him fastforward throught the time, to find when the professor dies. It looks like he died around 10:45.";
+Constant SC_89 = "You wrap the camera in tape";
+Constant SC_136 = "You: ! Wait, no! Hold on! ";
+Constant SC_134 = "You: Ok, here's the computer I was using. ";
+Constant SC_191 = "admin: @@126$";
+Constant SC_118 = "also ";
+Constant SC_127 = "better look for some evidence to figure out exactly what happened.";
+Constant SC_117 = "can ";
+Constant SC_95 = "don't know what you are speaking of.";
+Constant SC_79 = "its already unlocked";
+Constant SC_123 = "now going to... ";
+Constant SC_72 = "really hope is isn't--";
+Constant SC_203 = "s softly minding their own business.";
+Constant SC_119 = "see ";
+Constant SC_33 = "see some suggestions for AMUSING things to do";
+Constant SC_6 = "the";
+Constant SC_138 = "@@126Nick scurries back upstairs@@126";
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
 
 #ifndef p0_specification; Constant p0_specification = 0; #endif;
 #ifndef p1_indefinite_appearance_tex; Constant p1_indefinite_appearance_tex = 0; #endif;

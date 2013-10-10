@@ -6,8 +6,12 @@ First Half ends when Nick is friendly.
 
 When play begins:
 	say "Another late night working on this lab in the CSL. You've spent all day complaining about this 357 project you can't quite finish up because of style issues, but you know that complaining won't solve anything and eventually you need to hunker down and finish.[line break][line break]No one else is here in the CSL with you. Better just get started on that project on one of the lab computers…[line break]";
+<<<<<<< HEAD
 	The shriek clucks in 0 turn from now.
 
+=======
+	
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
 The CSL is a region. The Main Room, Admin Room, Rack Room, Coffee Room, 232B, and Mac Lab are rooms in the CSL.
 The Admin Room door is a door. The admin room door is north of the Main Room and south of the admin room. The admin room door is locked. The Mac Lab is southwest of the Main Room. 232B is northwest of the Main Room. The Coffee Room is northeast of the Main Room.
 
@@ -206,6 +210,7 @@ The Lab Computer is a door. "The lab computer you are working at hums softly." T
 Logging in is an action applying to one thing. Understand "Log in [any thing]" as logging in.
 
 Carry out logging in:
+<<<<<<< HEAD
 	If the noun is a lab computer:
 		if the player is carrying an access key:
 			say "You enter the professor's username and access key…";
@@ -217,6 +222,25 @@ Carry out logging in:
 			say "You try logging in, but the [lab computer] is asking for an access key before continuing.";
 	Otherwise:
 		say "You can't log into that!";
+=======
+	If the scene is midpoint:
+		If the noun is a lab computer:
+			If the player is carrying an access key:
+				say "You enter the professor's username and access key…";
+				Change the lab computer to unlocked;
+				Try opening the lab computer;
+				Try going southeast;
+				Now the command prompt is "XxRadProf420NoScopexX: ~$".;
+			otherwise:
+				say "You try logging in as the Professor to investigate his files, but the [lab computer] is asking for the professor's access key before continuing.";
+		otherwise:
+			Say "You can't log in a [noun].";
+	Otherwise:
+		say "357 can wait, you have more important matters on your hands now.";
+
+Instead of logging in for the first time during the first half:
+	Say "You begin typing your username and password. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope it isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.";
+>>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
 
 Logging out is an action applying to nothing. Understand "Log out" as logging out.
 
@@ -381,6 +405,8 @@ Instead of unlocking the Door to the Rack Room with the access card:
 
 The description of the Rack Room is "The rack room is ominously silent compared to the tyical hum you've heard time and time again. The last running computer in the CSL sits on a desk in the far corner of the room. On the screen you can barely make out the small blinking text…'Hallie: ~$'"
 
+The description of 232B is "232B is quite empty at this hour. The Main Room is to the southeast.".
+
 A computer is a kind of thing. A computer can be on or off. A computer is usually on. A computer can be connected or disconnected. A computer is usually disconnected.
 
 The Sentient AI is a computer. The description of the Sentient AI is "It wants you dead. You better act quickly to shut it down.[if Sentient AI is connected] It is connected to the laptop via a USB cable.". The Sentient AI is on. The Sentient AI is in the Rack Room. The Sentient AI is fixed in place.
@@ -389,7 +415,9 @@ The laptop is a computer. The description of the laptop is "It belongs to your f
 
 The system log is an object. The description of the system log is "[if First Half has ended]This is just what you need to prove the Sentient AI guilty of the murder.[otherwise]Just a log of some system commands.". The system log is in the admin room.
 
-The USB cable is an object. "232B is quite empty at this hour. It looks like some student left their USB cable in here.[line break][line break]The Main Room is southeast of you.". The description of the USB cable is "It can be used to connect two machines together.". The USB cable is in 232B.
+The USB cable is an object. "It looks like some student left their USB cable in here.". The description of the USB cable is "It can be used to connect two machines together.". The USB cable is in 232B.
+
+The printer is an object. "There is a printer in the corner of the room.". The description of the printer is "It's connected to all of the computers in the CSL.". The printer is fixed in place. The printer is in the Admin Room.
 
 Understand "connect [computer] to/with/and [computer]" as connecting. Connecting is an action applying to two objects. 
 Check connecting: 
