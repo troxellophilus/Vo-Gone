@@ -5,13 +5,9 @@ First Half begins when play begins.
 First Half ends when Nick is friendly.
 
 When play begins:
-	say "Another late night working on this lab in the CSL. You've spent all day complaining about this 357 project you can't quite finish up because of style issues, but you know that complaining won't solve anything and eventually you need to hunker down and finish.[line break][line break]No one else is here in the CSL with you. Better just get started on that project on one of the lab computers…[line break]";
-<<<<<<< HEAD
+	say "Another late night working on this lab in the CSL. You've spent all day complaining about this 357 project you can't quite finish up because of style issues, but you know that complaining won't solve anything and eventually you need to hunker down and finish.[line break][line break]No one else is here in the CSL with you. Better just get started on that project on one of the lab computers…[line break][line break] (Type in 'directions' at any time to view possible rooms).";
 	The shriek clucks in 0 turn from now.
 
-=======
-	
->>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
 The CSL is a region. The Main Room, Admin Room, Rack Room, Coffee Room, 232B, and Mac Lab are rooms in the CSL.
 The Admin Room door is a door. The admin room door is north of the Main Room and south of the admin room. The admin room door is locked. The Mac Lab is southwest of the Main Room. 232B is northwest of the Main Room. The Coffee Room is northeast of the Main Room.
 
@@ -32,8 +28,12 @@ The description of the western stairs is "You are at the base of the Western Sta
 At the time when the shriek clucks:
 	Say "You begin to get to work on 357. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope is isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.";
 
-Going by name is an action applying to one thing. Understand "go to [any room]" as going by name.
+Asking for directions is an action applying to nothing. Understand "directions" as asking for directions.
+Carry out asking for directions:
+	repeat with R running through the list of adjacent rooms:
+		say "[R] is [best route from the location to the (R)][line break]".
 
+Going by name is an action applying to one thing. Understand "go to [any room]" as going by name.
 Carry out going by name:
 	if the noun is a room:
 		say "now going to... [noun]";
@@ -210,7 +210,6 @@ The Lab Computer is a door. "The lab computer you are working at hums softly." T
 Logging in is an action applying to one thing. Understand "Log in [any thing]" as logging in.
 
 Carry out logging in:
-<<<<<<< HEAD
 	If the noun is a lab computer:
 		if the player is carrying an access key:
 			say "You enter the professor's username and access key…";
@@ -222,7 +221,6 @@ Carry out logging in:
 			say "You try logging in, but the [lab computer] is asking for an access key before continuing.";
 	Otherwise:
 		say "You can't log into that!";
-=======
 	If the scene is midpoint:
 		If the noun is a lab computer:
 			If the player is carrying an access key:
@@ -240,7 +238,6 @@ Carry out logging in:
 
 Instead of logging in for the first time during the first half:
 	Say "You begin typing your username and password. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope it isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.";
->>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
 
 Logging out is an action applying to nothing. Understand "Log out" as logging out.
 

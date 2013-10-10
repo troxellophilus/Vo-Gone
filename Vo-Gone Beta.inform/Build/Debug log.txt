@@ -1,16 +1,12 @@
 Debugging log of Inform 7
-Inform called as: /Applications/Inform.app/Contents/Resources/Compilers/ni -rules /Applications/Inform.app/Contents/Resources/Inform7/Extensions -package /Users/Cameron/School Stuff/Fall '13/CSC 378/Project 1 - Interactive Fiction/Vo-Gone/Vo-Gone Beta.inform -extension=z8 
+Inform called as: C:\Program Files (x86)\Inform 7\Compilers\ni -rules C:\Program Files (x86)\Inform 7\Inform7\Extensions -package C:\Users\bnaftali\Desktop\GitHub\Vo-Gone\Vo-Gone Beta.inform -extension=z8 
 
 
 -----------------------------------------------------
 Phase I ... Lexical analysis
 -----------------------------------------------------
 
-<<<<<<< HEAD
-I've now read your source text, which is 5791 words long.
-=======
-I've now read your source text, which is 5856 words long.
->>>>>>> 38cdb38be985154526b87381d7fc129ec70dcd11
+I've now read your source text, which is 6076 words long.
 
 
 -----------------------------------------------------
@@ -150,13 +146,14 @@ Phase XII ... Code generation
 
 ==== Phase XII.18 ... Compiling routines from predicate calculus ====
 
+Providing for a total heap of 8192, given requirement of 8192
 
 
 -----------------------------------------------------
 Phase XIII ... Compilation now complete
 -----------------------------------------------------
 
-Total of 120 files written as streams.
+Total of 121 files written as streams.
 
 That concludes the debugging log from this run of Inform.
 Its contents were as follows, and can be changed by placing
