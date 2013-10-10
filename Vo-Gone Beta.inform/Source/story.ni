@@ -218,7 +218,7 @@ Carry out logging in:
 		say "357 can wait, you have more important matters on your hands now.";
 
 Instead of logging in for the first time during the first half:
-	Say "You begin typing your username as password. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope is isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.";
+	Say "You begin typing your username and password. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope it isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.";
 
 Logging out is an action applying to nothing. Understand "Log out" as logging out.
 
