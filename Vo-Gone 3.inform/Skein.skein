@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0x028EB350" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x0297B1A8" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>Inform 7 for Windows</generator>
-  <activeNode nodeId="node-0x02EAEA88"/>
-  <item nodeId="node-0x028EB350">
+  <activeNode nodeId="node-0x0297B1A8"/>
+  <item nodeId="node-0x0297B1A8">
     <command xml:space="preserve">- start -</command>
-    <result xml:space="preserve">Another late night working on this lab in the CSL. You've spent all day complaining about this 357 project you can't quite finish up because of style issues, but you know that complaining won't solve anything and eventually you need to hunker down and finish.&#x000A;&#x000A;No one else is here in the CSL with you. Better just get started on that project on one of the lab computers&#x2026;&#x000A; You begin to get to work on 357. As you do so, you begin wondering to yourself what Staley will include on the next programming test&#x2026;really hope is isn't--&#x000A;&#x000A;"HHHHHYAAAAALLLAAAAAGHGHGHHH"&#x000A;Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.&#x000A;&#x000A;You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.&#x000A; (Type in "directions" at any time to view possible rooms).&#x000A;&#x000A;Vo-Gone 3&#x000A;An Interactive Fiction by ben&#x000A;Release 1 / Serial number 131009 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Main Room&#x000A;The Main Room is filled with the low hum of Lab Computers softly minding their own business.&#x000A;&#x000A;You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.&#x000A;&#x000A;The lab computer you are working at hums softly.&#x000A;&#x000A;You can also see a Door to the Rack Room and an Admin Room door here.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Another late night working on this lab in the CSL. You've spent all day complaining about this 357 project you can't quite finish up because of style issues, but you know that complaining won't solve anything and eventually you need to hunker down and finish.&#x000A;&#x000A;No one else is here in the CSL with you. Better just get started on that project on one of the lab computers&#x2026;&#x000A; You begin to get to work on 357. As you do so, you begin wondering to yourself what Staley will include on the next programming test&#x2026;really hope is isn't--&#x000A;&#x000A;"HHHHHYAAAAALLLAAAAAGHGHGHHH"&#x000A;Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.&#x000A;You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.&#x000A;&#x000A; (Type in "directions" at any time to view possible rooms or "go to &lt;location&gt; to quick travel if you know where you want to go).&#x000A;&#x000A;Vo-Gone 3&#x000A;An Interactive Fiction by ben&#x000A;Release 1 / Serial number 131010 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Main Room&#x000A;The Main Room is filled with the low hum of Lab Computers softly minding their own business.&#x000A;&#x000A;You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.&#x000A;&#x000A;The lab computer you are working at hums softly.&#x000A;&#x000A;You can also see a Door to the Rack Room and an Admin Room door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <temporary score="0">NO</temporary>
     <children>
-      <child nodeId="node-0x02EC0840"/>
-      <child nodeId="node-0x02EC07D0"/>
-      <child nodeId="node-0x02EAEAF8"/>
-      <child nodeId="node-0x02EAEA88"/>
+      <child nodeId="node-0x0297E310"/>
+      <child nodeId="node-0x0296E268"/>
+      <child nodeId="node-0x029ABAF0"/>
+      <child nodeId="node-0x029ABBD0"/>
+      <child nodeId="node-0x029ABE70"/>
     </children>
   </item>
-  <item nodeId="node-0x02EC0840">
+  <item nodeId="node-0x0297E310">
     <command xml:space="preserve">log in lab computer</command>
     <result xml:space="preserve">You begin typing your username and password. As you do so, you begin wondering to yourself what Staley will include on the next programming test&#x2026;really hope it isn't--&#x000A;&#x000A;"HHHHHYAAAAALLLAAAAAGHGHGHHH"&#x000A;Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.&#x000A;&#x000A;You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.&#x000A;&#x000A;You begin to get to work on 357. As you do so, you begin wondering to yourself what Staley will include on the next programming test&#x2026;really hope is isn't--&#x000A;&#x000A;"HHHHHYAAAAALLLAAAAAGHGHGHHH"&#x000A;Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.&#x000A;&#x000A;You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -24,10 +25,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EC08B0"/>
+      <child nodeId="node-0x0297E380"/>
     </children>
   </item>
-  <item nodeId="node-0x02EC08B0">
+  <item nodeId="node-0x0297E380">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -35,7 +36,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02EC07D0">
+  <item nodeId="node-0x0296E268">
     <command xml:space="preserve">z</command>
     <result xml:space="preserve">Time passes.&#x000A;&#x000A;You begin to get to work on 357. As you do so, you begin wondering to yourself what Staley will include on the next programming test&#x2026;really hope is isn't--&#x000A;&#x000A;"HHHHHYAAAAALLLAAAAAGHGHGHHH"&#x000A;Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.&#x000A;&#x000A;You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -43,12 +44,12 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EC0760"/>
-      <child nodeId="node-0x02EAE938"/>
-      <child nodeId="node-0x02EAE8C8"/>
+      <child nodeId="node-0x0297E508"/>
+      <child nodeId="node-0x029AB930"/>
+      <child nodeId="node-0x029AB9A0"/>
     </children>
   </item>
-  <item nodeId="node-0x02EC0760">
+  <item nodeId="node-0x0297E508">
     <command xml:space="preserve">log in lab computer</command>
     <result xml:space="preserve">You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -56,10 +57,10 @@
     <changed>YES</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EC0990"/>
+      <child nodeId="node-0x029AA180"/>
     </children>
   </item>
-  <item nodeId="node-0x02EC0990">
+  <item nodeId="node-0x029AA180">
     <command xml:space="preserve">use lab computer</command>
     <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -67,10 +68,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EC0920"/>
+      <child nodeId="node-0x029AA1F0"/>
     </children>
   </item>
-  <item nodeId="node-0x02EC0920">
+  <item nodeId="node-0x029AA1F0">
     <command xml:space="preserve">ls</command>
     <result xml:space="preserve">Documents, Pictures and Books&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -78,10 +79,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EC0530"/>
+      <child nodeId="node-0x029AA610"/>
     </children>
   </item>
-  <item nodeId="node-0x02EC0530">
+  <item nodeId="node-0x029AA610">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Main Room&#x000A;The Main Room is filled with the low hum of Lab Computers softly minding their own business.&#x000A;&#x000A;You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.&#x000A;&#x000A;The lab computer you are working at hums softly.&#x000A;&#x000A;You can also see a Door to the Rack Room and an Admin Room door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -89,10 +90,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EC0A00"/>
+      <child nodeId="node-0x029AA740"/>
     </children>
   </item>
-  <item nodeId="node-0x02EC0A00">
+  <item nodeId="node-0x029AA740">
     <command xml:space="preserve">directions</command>
     <result xml:space="preserve">Coffee Room is northeast&#x000A;232B is northwest&#x000A;Mac Lab is southwest&#x000A;Hallway is south&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -100,10 +101,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EC0A70"/>
+      <child nodeId="node-0x029AA970"/>
     </children>
   </item>
-  <item nodeId="node-0x02EC0A70">
+  <item nodeId="node-0x029AA970">
     <command xml:space="preserve">sw</command>
     <result xml:space="preserve">Mac Lab&#x000A;The Mac computers give off a faint glow. A strong stench fills the room.&#x000A;&#x000A; To the northeast is the Main Room.&#x000A;&#x000A;The room is dimly lit. You can see a light switch.&#x000A;&#x000A;You can also see a Mac computer here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -111,10 +112,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EC0AE0"/>
+      <child nodeId="node-0x029AAD90"/>
     </children>
   </item>
-  <item nodeId="node-0x02EC0AE0">
+  <item nodeId="node-0x029AAD90">
     <command xml:space="preserve">ne</command>
     <result xml:space="preserve">Main Room&#x000A;The Main Room is filled with the low hum of Lab Computers softly minding their own business.&#x000A;&#x000A;You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.&#x000A;&#x000A;The lab computer you are working at hums softly.&#x000A;&#x000A;You can also see a Door to the Rack Room and an Admin Room door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -122,10 +123,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EC0B50"/>
+      <child nodeId="node-0x029AAFF0"/>
     </children>
   </item>
-  <item nodeId="node-0x02EC0B50">
+  <item nodeId="node-0x029AAFF0">
     <command xml:space="preserve">go to mac lab</command>
     <result xml:space="preserve">now going to... Mac Lab&#x000A;Mac Lab&#x000A;The Mac computers give off a faint glow. A strong stench fills the room.&#x000A;&#x000A; To the northeast is the Main Room.&#x000A;&#x000A;The room is dimly lit. You can see a light switch.&#x000A;&#x000A;You can also see a Mac computer here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -133,10 +134,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EC0BC0"/>
+      <child nodeId="node-0x029AB128"/>
     </children>
   </item>
-  <item nodeId="node-0x02EC0BC0">
+  <item nodeId="node-0x029AB128">
     <command xml:space="preserve">go to room 302</command>
     <result xml:space="preserve">now going to... Room 302&#x000A;Room 302&#x000A;You can see a friend's computer and a shell here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -144,10 +145,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EC0C30"/>
+      <child nodeId="node-0x029AB388"/>
     </children>
   </item>
-  <item nodeId="node-0x02EC0C30">
+  <item nodeId="node-0x029AB388">
     <command xml:space="preserve">go to mac lab</command>
     <result xml:space="preserve">now going to... Mac Lab&#x000A;Mac Lab&#x000A;The Mac computers give off a faint glow. A strong stench fills the room.&#x000A;&#x000A; To the northeast is the Main Room.&#x000A;&#x000A;The room is dimly lit. You can see a light switch.&#x000A;&#x000A;You can also see a Mac computer here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -155,10 +156,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EAE4D8"/>
+      <child nodeId="node-0x029AB5B0"/>
     </children>
   </item>
-  <item nodeId="node-0x02EAE4D8">
+  <item nodeId="node-0x029AB5B0">
     <command xml:space="preserve">turn on light switch</command>
     <result xml:space="preserve">You switch the light switch on.&#x000A;&#x000A;The bright light suddenly stings. Looks like some poor guy was working on one of the Mac computers and just fell asleep.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -166,10 +167,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EAE548"/>
+      <child nodeId="node-0x029AB620"/>
     </children>
   </item>
-  <item nodeId="node-0x02EAE548">
+  <item nodeId="node-0x029AB620">
     <command xml:space="preserve">x mac computer</command>
     <result xml:space="preserve">There seems to be an email being composed.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -177,10 +178,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EAE5B8"/>
+      <child nodeId="node-0x029AB690"/>
     </children>
   </item>
-  <item nodeId="node-0x02EAE5B8">
+  <item nodeId="node-0x029AB690">
     <command xml:space="preserve">x email</command>
     <result xml:space="preserve">"To whoever finds this, I'm not sure what's happening. My cell-phone can't make calls anymore, but I keep getting these text messages. I don't think I have much time left. It's coming for m-"&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -188,10 +189,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EAE628"/>
+      <child nodeId="node-0x029AB700"/>
     </children>
   </item>
-  <item nodeId="node-0x02EAE628">
+  <item nodeId="node-0x029AB700">
     <command xml:space="preserve">take email</command>
     <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -199,10 +200,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EAE698"/>
+      <child nodeId="node-0x029AB770"/>
     </children>
   </item>
-  <item nodeId="node-0x02EAE698">
+  <item nodeId="node-0x029AB770">
     <command xml:space="preserve">x guy</command>
     <result xml:space="preserve">It's Professor Foaad! Maybe I should try waking him up.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -210,10 +211,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EAE708"/>
+      <child nodeId="node-0x029AB7E0"/>
     </children>
   </item>
-  <item nodeId="node-0x02EAE708">
+  <item nodeId="node-0x029AB7E0">
     <command xml:space="preserve">wake foaad</command>
     <result xml:space="preserve">Is he... Is he...?&#x000A;&#x000A;"Dead?" You jump in surprise at the voice behind you. At the door is Nick, the TA for one of your classes.&#x000A;&#x000A;As you gaze back at the lifeless body, you surmise that he probably is dead. You also realize that you and Nick are the only two people in the CSL&#x2026;better look for some evidence to figure out exactly what happened.&#x000A;&#x000A;&#x000A;Nick suddenly starts acting strange. He keeps looking at you accusingly. &#x000A;&#x000A;"I need to get my stuff upstairs, the logs on my computer prove that I didn't have anything to do with this." &#x000A;&#x000A; And he suddenly runs away.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -221,10 +222,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EAE778"/>
+      <child nodeId="node-0x029AB850"/>
     </children>
   </item>
-  <item nodeId="node-0x02EAE778">
+  <item nodeId="node-0x029AB850">
     <command xml:space="preserve">directions</command>
     <result xml:space="preserve">Main Room is northeast&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -232,10 +233,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EAE7E8"/>
+      <child nodeId="node-0x029AB8C0"/>
     </children>
   </item>
-  <item nodeId="node-0x02EAE7E8">
+  <item nodeId="node-0x029AB8C0">
     <command xml:space="preserve">ne</command>
     <result xml:space="preserve">Main Room&#x000A;The Main Room is filled with the low hum of Lab Computers softly minding their own business.&#x000A;&#x000A;You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.&#x000A;&#x000A;The lab computer you are working at hums softly.&#x000A;&#x000A;You can also see a Door to the Rack Room and an Admin Room door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -243,7 +244,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02EAE938">
+  <item nodeId="node-0x029AB930">
     <command xml:space="preserve">directions</command>
     <result xml:space="preserve">Coffee Room is northeast&#x000A;232B is northwest&#x000A;Mac Lab is southwest&#x000A;Hallway is south&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -251,7 +252,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02EAE8C8">
+  <item nodeId="node-0x029AB9A0">
     <command xml:space="preserve">x lab computers</command>
     <result xml:space="preserve">I only understood you as far as wanting to examine the Lab Computer.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -259,10 +260,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EAE858"/>
+      <child nodeId="node-0x029ABA10"/>
     </children>
   </item>
-  <item nodeId="node-0x02EAE858">
+  <item nodeId="node-0x029ABA10">
     <command xml:space="preserve">x lab computer</command>
     <result xml:space="preserve">You can access the terminal by logging in a lab computer. You can log in a lab computer by saying "log in lab computer"&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -270,10 +271,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EAE9A8"/>
+      <child nodeId="node-0x029ABA80"/>
     </children>
   </item>
-  <item nodeId="node-0x02EAE9A8">
+  <item nodeId="node-0x029ABA80">
     <command xml:space="preserve">log in lab computer</command>
     <result xml:space="preserve">You begin typing your username and password. As you do so, you begin wondering to yourself what Staley will include on the next programming test&#x2026;really hope it isn't--&#x000A;&#x000A;"HHHHHYAAAAALLLAAAAAGHGHGHHH"&#x000A;Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.&#x000A;&#x000A;You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -281,7 +282,7 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02EAEAF8">
+  <item nodeId="node-0x029ABAF0">
     <command xml:space="preserve">go to rack room door</command>
     <result xml:space="preserve">(first opening the Door to the Rack Room)&#x000A;It seems to be locked.&#x000A;&#x000A;You begin to get to work on 357. As you do so, you begin wondering to yourself what Staley will include on the next programming test&#x2026;really hope is isn't--&#x000A;&#x000A;"HHHHHYAAAAALLLAAAAAGHGHGHHH"&#x000A;Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.&#x000A;&#x000A;You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -289,10 +290,10 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
     <children>
-      <child nodeId="node-0x02EAEA18"/>
+      <child nodeId="node-0x029ABB60"/>
     </children>
   </item>
-  <item nodeId="node-0x02EAEA18">
+  <item nodeId="node-0x029ABB60">
     <command xml:space="preserve">look</command>
     <result xml:space="preserve">Main Room&#x000A;The Main Room is filled with the low hum of Lab Computers softly minding their own business.&#x000A;&#x000A;You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.&#x000A;&#x000A;The lab computer you are working at hums softly.&#x000A;&#x000A;You can also see a Door to the Rack Room and an Admin Room door here.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
@@ -300,9 +301,798 @@
     <changed>NO</changed>
     <temporary score="0">YES</temporary>
   </item>
-  <item nodeId="node-0x02EAEA88">
+  <item nodeId="node-0x029ABBD0">
     <command xml:space="preserve">directions</command>
     <result xml:space="preserve">Coffee Room is northeast&#x000A;232B is northwest&#x000A;Mac Lab is southwest&#x000A;Hallway is south&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x029ABE70">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Main Room&#x000A;The Main Room is filled with the low hum of Lab Computers softly minding their own business.&#x000A;&#x000A;You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.&#x000A;&#x000A;The lab computer you are working at hums softly.&#x000A;&#x000A;You can also see a Door to the Rack Room and an Admin Room door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029ABE00"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029ABE00">
+    <command xml:space="preserve">sw</command>
+    <result xml:space="preserve">Mac Lab&#x000A;The Mac computers give off a faint glow. A strong stench fills the room.&#x000A;&#x000A; To the northeast is the Main Room.&#x000A;&#x000A;The room is dimly lit. You can see a light switch.&#x000A;&#x000A;You can also see a Mac computer here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029ABD90"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029ABD90">
+    <command xml:space="preserve">x mac computer</command>
+    <result xml:space="preserve">There seems to be an email being composed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029ABFC0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029ABFC0">
+    <command xml:space="preserve">x email</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029ABF50"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029ABF50">
+    <command xml:space="preserve">read email</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029ABEE0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029ABEE0">
+    <command xml:space="preserve">turn on lights</command>
+    <result xml:space="preserve">You switch the light switch on.&#x000A;&#x000A;The bright light suddenly stings. Looks like some poor guy was working on one of the Mac computers and just fell asleep.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029AC030"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029AC030">
+    <command xml:space="preserve">x email</command>
+    <result xml:space="preserve">"To whoever finds this, I'm not sure what's happening. My cell-phone can't make calls anymore, but I keep getting these text messages. I don't think I have much time left. It's coming for m-"&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029AC0A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029AC0A0">
+    <command xml:space="preserve">x guy</command>
+    <result xml:space="preserve">It's Professor Foaad! Maybe I should try waking him up.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029AC110"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029AC110">
+    <command xml:space="preserve">wake foaad</command>
+    <result xml:space="preserve">Is he... Is he...?&#x000A;&#x000A;"Dead?" You jump in surprise at the voice behind you. At the door is Nick, the TA for one of your classes.&#x000A;&#x000A;As you gaze back at the lifeless body, you surmise that he probably is dead. You also realize that you and Nick are the only two people in the CSL&#x2026;better look for some evidence to figure out exactly what happened.&#x000A;&#x000A;&#x000A;Nick suddenly starts acting strange. He keeps looking at you accusingly. &#x000A;&#x000A;"I need to get my stuff upstairs, the logs on my computer prove that I didn't have anything to do with this." &#x000A;&#x000A; And he suddenly runs away.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029AC180"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029AC180">
+    <command xml:space="preserve">x foaad</command>
+    <result xml:space="preserve">He died wearing a really expensive jacket. You might not want to keep poking him&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029AC1F0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029AC1F0">
+    <command xml:space="preserve">x jacket</command>
+    <result xml:space="preserve">It looks warm. Why are there so many pockets?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029AC260"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029AC260">
+    <command xml:space="preserve">x pockets</command>
+    <result xml:space="preserve">In the The winter jacket's pocket is an account info.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029AC2D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029AC2D0">
+    <command xml:space="preserve">take account info</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029AC340"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029AC340">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Mac Lab&#x000A;The Mac computers give off a faint glow. A strong stench fills the room.&#x000A;&#x000A; To the northeast is the Main Room.&#x000A;&#x000A;A professor lies next to the Mac computer.&#x000A;&#x000A;You can also see an email and a Mac computer here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029AC3B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029AC3B0">
+    <command xml:space="preserve">ne</command>
+    <result xml:space="preserve">Main Room&#x000A;The Main Room is filled with the low hum of Lab Computers softly minding their own business.&#x000A;&#x000A;You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.&#x000A;&#x000A;The lab computer you are working at hums softly.&#x000A;&#x000A;You can also see a Door to the Rack Room and an Admin Room door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029AC420"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029AC420">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Hallway&#x000A;A light breeze rolls through the hallway and gives you a short chill. &#x000A;&#x000A;The hallway extends East and West. Going North will take you back to the main room.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029AC490"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029AC490">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Main Room&#x000A;The Main Room is filled with the low hum of Lab Computers softly minding their own business.&#x000A;&#x000A;You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.&#x000A;&#x000A;The lab computer you are working at hums softly.&#x000A;&#x000A;You can also see a Door to the Rack Room and an Admin Room door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029AC500"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029AC500">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">(first opening the Admin Room door)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02993C60"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02993C60">
+    <command xml:space="preserve">nw</command>
+    <result xml:space="preserve">232B&#x000A;232B is quite empty at this hour. The Main Room is to the southeast.&#x000A;&#x000A;It looks like some student left their USB cable in here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02993CD0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02993CD0">
+    <command xml:space="preserve">take usb cable</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02993D40"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02993D40">
+    <command xml:space="preserve">se</command>
+    <result xml:space="preserve">Main Room&#x000A;The Main Room is filled with the low hum of Lab Computers softly minding their own business.&#x000A;&#x000A;You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.&#x000A;&#x000A;The lab computer you are working at hums softly.&#x000A;&#x000A;You can also see a Door to the Rack Room and an Admin Room door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02993DB0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02993DB0">
+    <command xml:space="preserve">ne</command>
+    <result xml:space="preserve">Coffee Room&#x000A;The Coffee Room is quite empty at this hour. It looks like someone was following a tutorial to make a duct tape wallet.&#x000A;&#x000A;The main room is to the southwest.&#x000A;&#x000A;You can see a Duct Tape and DT Wallet Tutorial here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02993E20"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02993E20">
+    <command xml:space="preserve">take duct tape</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02993E90"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02993E90">
+    <command xml:space="preserve">read dt wallet tutorial</command>
+    <result xml:space="preserve">It's a print-out of a web page about making wallets using only duct tape. Interesting concept.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02993F00"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02993F00">
+    <command xml:space="preserve">x dt wallet tutoral</command>
+    <result xml:space="preserve">I only understood you as far as wanting to examine DT Wallet Tutorial.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02993F70"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02993F70">
+    <command xml:space="preserve">takedt wallet tutorial</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D60B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D60B0">
+    <command xml:space="preserve">take dt wallet tutorial</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D6120"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D6120">
+    <command xml:space="preserve">sw</command>
+    <result xml:space="preserve">Main Room&#x000A;The Main Room is filled with the low hum of Lab Computers softly minding their own business.&#x000A;&#x000A;You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.&#x000A;&#x000A;The lab computer you are working at hums softly.&#x000A;&#x000A;You can also see a Door to the Rack Room and an Admin Room door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D6190"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D6190">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">(first opening the Door to the Rack Room)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D6200"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D6200">
+    <command xml:space="preserve">directions</command>
+    <result xml:space="preserve">Coffee Room is northeast&#x000A;232B is northwest&#x000A;Mac Lab is southwest&#x000A;Hallway is south&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D6270"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D6270">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Hallway&#x000A;A light breeze rolls through the hallway and gives you a short chill. &#x000A;&#x000A;The hallway extends East and West. Going North will take you back to the main room.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D62E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D62E0">
+    <command xml:space="preserve">directions</command>
+    <result xml:space="preserve">Main Room is north&#x000A;Eastern Stairs is east&#x000A;Western Stairs is west&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D6350"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D6350">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Eastern Stairs&#x000A;You are at the base of the Eastern Stairs. Going up will take you to the third floor. Going west will take you back to the center of the hallway.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D63C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D63C0">
+    <command xml:space="preserve">u</command>
+    <result xml:space="preserve">Waiting Area&#x000A;The waiting area is cluttered with tables, chairs, and flyers for clubs and job opportunities.&#x000A;&#x000A;From the waiting area you can access Room 301 to the northwest, Room 302 to the north, Room 303 to the northeast, the Student Developer Lab 1 to the southwest, the Student Developer Lab 2 to the south east, the Western Stairs to the west and the Eastern Stairs to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D6430"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D6430">
+    <command xml:space="preserve">nw</command>
+    <result xml:space="preserve">Room 301&#x000A;The room is dimly lit. There are several rows of computers, but they are all turned off, except for one. The door leads to the Waiting Area.&#x000A;&#x000A;You can see a 301computer (on which is a folder (closed)) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D64A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D64A0">
+    <command xml:space="preserve">x 301 computer</command>
+    <result xml:space="preserve">You can't use multiple objects with that verb.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D6510"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D6510">
+    <command xml:space="preserve">x computer</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D6580"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D6580">
+    <command xml:space="preserve">x 301computer</command>
+    <result xml:space="preserve">This computer is on. Looks like whoever was using this last forgot to log out.&#x000A;&#x000A;On the 301computer is a folder (closed).&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D65F0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D65F0">
+    <command xml:space="preserve">open folder</command>
+    <result xml:space="preserve">You open the folder, revealing a video file.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D6660"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D6660">
+    <command xml:space="preserve">take file</command>
+    <result xml:space="preserve">You ought to focus on Nick clearing his name before snooping around some more.&#x000A;You want to make sure nick didn't kill the professor.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D66D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D66D0">
+    <command xml:space="preserve">go through door</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D6740"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D6740">
+    <command xml:space="preserve">directions</command>
+    <result xml:space="preserve">Waiting Area is southeast&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D67B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D67B0">
+    <command xml:space="preserve">se</command>
+    <result xml:space="preserve">Waiting Area&#x000A;The waiting area is cluttered with tables, chairs, and flyers for clubs and job opportunities.&#x000A;&#x000A;From the waiting area you can access Room 301 to the northwest, Room 302 to the north, Room 303 to the northeast, the Student Developer Lab 1 to the southwest, the Student Developer Lab 2 to the south east, the Western Stairs to the west and the Eastern Stairs to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029D6820"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029D6820">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Room 302&#x000A;You can see Nick, a friend's computer and a shell here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB2D8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB2D8">
+    <command xml:space="preserve">talk to nick</command>
+    <result xml:space="preserve">"Damnit my phone isn't working."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB348"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB348">
+    <command xml:space="preserve">x friend's computer</command>
+    <result xml:space="preserve">It looks like he was working on a project for the professor. But he could have done that before. &#x000A;The last email he sent was at 11pm, that doesn't prove anything.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB3B8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB3B8">
+    <command xml:space="preserve">x shell</command>
+    <result xml:space="preserve">Checking the computer logs... There are time stamps. &#x000A;It looks like Nick was working up here at the time you heard the scream and thump! That seems to be satisfying evidence, what a relief.&#x000A;&#x000A;Now to clear your name.&#x000A;&#x000A;Nick: Obviously I didn't do it, but what's YOUR alibi? &#x000A; You: All we have to do is check the records on the computer I was using in the main room. Should clear my name right away.&#x000A;Nick: uh huh&#x2026;&#x000A;&#x000A;Main Room&#x000A;The Main Room is filled with the low hum of Lab Computers softly minding their own business.&#x000A;&#x000A;You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.&#x000A;&#x000A;The lab computer you are working at hums softly.&#x000A;&#x000A;You can also see a Door to the Rack Room and an Admin Room door here.&#x000A;&#x000A;You: Ok, here's the computer I was using. &#x000A;Nick: It... it's completely wiped&#x2026; &#x000A;You: ! Wait, no! Hold on! &#x000A;Nick: It's ok, you gave me a chance to prove myself, I'll give you the same. Come find me with some real proof.&#x000A;~Nick scurries back upstairs~&#x000A;&#x000A;You remember that they sometimes temporarily store security footage on a computer upstairs due to technical problems in the system. May be a good place to start.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB428"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB428">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Hallway&#x000A;A light breeze rolls through the hallway and gives you a short chill. &#x000A;&#x000A;The hallway extends East and West. Going North will take you back to the main room.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB498"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB498">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Eastern Stairs&#x000A;You are at the base of the Eastern Stairs. Going up will take you to the third floor. Going west will take you back to the center of the hallway.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB508"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB508">
+    <command xml:space="preserve">u</command>
+    <result xml:space="preserve">Waiting Area&#x000A;The waiting area is cluttered with tables, chairs, and flyers for clubs and job opportunities.&#x000A;&#x000A;From the waiting area you can access Room 301 to the northwest, Room 302 to the north, Room 303 to the northeast, the Student Developer Lab 1 to the southwest, the Student Developer Lab 2 to the south east, the Western Stairs to the west and the Eastern Stairs to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB578"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB578">
+    <command xml:space="preserve">go to room 303</command>
+    <result xml:space="preserve">now going to... Room 303&#x000A;Room 303&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB5E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB5E8">
+    <command xml:space="preserve">x</command>
+    <result xml:space="preserve">What do you want to examine?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB658"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB658">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Room 303&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB7A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB7A8">
+    <command xml:space="preserve">directions</command>
+    <result xml:space="preserve">Waiting Area is southwest&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB738"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB738">
+    <command xml:space="preserve">sw</command>
+    <result xml:space="preserve">Waiting Area&#x000A;The waiting area is cluttered with tables, chairs, and flyers for clubs and job opportunities.&#x000A;&#x000A;From the waiting area you can access Room 301 to the northwest, Room 302 to the north, Room 303 to the northeast, the Student Developer Lab 1 to the southwest, the Student Developer Lab 2 to the south east, the Western Stairs to the west and the Eastern Stairs to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB6C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB6C8">
+    <command xml:space="preserve">sw</command>
+    <result xml:space="preserve">Student Developer Lab 1&#x000A;This room is almost completely empty... what is it even used for? The door leads to the Waiting Area.&#x000A;&#x000A;You can see a flash drive here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB818"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB818">
+    <command xml:space="preserve">take flash drive</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB888"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB888">
+    <command xml:space="preserve">go to student developer lab 2</command>
+    <result xml:space="preserve">now going to... Student Developer Lab 2&#x000A;Student Developer Lab 2&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB8F8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB8F8">
+    <command xml:space="preserve">nw</command>
+    <result xml:space="preserve">Waiting Area&#x000A;The waiting area is cluttered with tables, chairs, and flyers for clubs and job opportunities.&#x000A;&#x000A;From the waiting area you can access Room 301 to the northwest, Room 302 to the north, Room 303 to the northeast, the Student Developer Lab 1 to the southwest, the Student Developer Lab 2 to the south east, the Western Stairs to the west and the Eastern Stairs to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB968"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB968">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Room 302&#x000A;You can see Nick, a friend's computer and a shell here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FB9D8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FB9D8">
+    <command xml:space="preserve">x shell</command>
+    <result xml:space="preserve">Checking the computer logs... There are time stamps. &#x000A;It looks like Nick was working up here at the time you heard the scream and thump! That seems to be satisfying evidence, what a relief.&#x000A;&#x000A;Now to clear your name.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029FBA48"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029FBA48">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Waiting Area&#x000A;The waiting area is cluttered with tables, chairs, and flyers for clubs and job opportunities.&#x000A;&#x000A;From the waiting area you can access Room 301 to the northwest, Room 302 to the north, Room 303 to the northeast, the Student Developer Lab 1 to the southwest, the Student Developer Lab 2 to the south east, the Western Stairs to the west and the Eastern Stairs to the east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029F3F08"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029F3F08">
+    <command xml:space="preserve">nw</command>
+    <result xml:space="preserve">Room 301&#x000A;The room is dimly lit. There are several rows of computers, but they are all turned off, except for one. The door leads to the Waiting Area.&#x000A;&#x000A;You can see a 301computer (on which is a folder (in which is a video file)) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029F3F78"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029F3F78">
+    <command xml:space="preserve">take file</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;This can definitely be used to clear your name of the murder. You need to show this to Nick so he'll believe you.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029F3FE8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029F3FE8">
+    <command xml:space="preserve">go to main room</command>
+    <result xml:space="preserve">now going to... Main Room&#x000A;Main Room&#x000A;The Main Room is filled with the low hum of Lab Computers softly minding their own business.&#x000A;&#x000A;You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.&#x000A;&#x000A;The lab computer you are working at hums softly.&#x000A;&#x000A;You can also see a Door to the Rack Room and an Admin Room door here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029F4058"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029F4058">
+    <command xml:space="preserve">talk to nick</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029F40C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029F40C8">
+    <command xml:space="preserve">go to room 302</command>
+    <result xml:space="preserve">now going to... Room 302&#x000A;Room 302&#x000A;You can see Nick, a friend's computer and a shell here.&#x000A;&#x000A;"Hey! Watch this video, it proves I didn't murder the professor!&#x000A;You watch him fastforward throught the time, to find when the professor dies. It looks like he died around 10:45.&#x000A;And sure enough, there you are working on your program at 10:45.&#x000A;Nick: Alright, I believe you.&#x000A;&#x000A;Nick: "I took something from the professor earlier but I left it downstairs. It could help us investigate&#x2026;"&#x000A;Nick runs downstairs.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029F4138"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029F4138">
+    <command xml:space="preserve">go to main room</command>
+    <result xml:space="preserve">now going to... Main Room&#x000A;Main Room&#x000A;The Main Room is filled with the low hum of Lab Computers softly minding their own business.&#x000A;&#x000A;You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.&#x000A;&#x000A;The lab computer you are working at hums softly.&#x000A;&#x000A;You can also see a Door to the Rack Room, an Admin Room door and Nick here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029F41A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029F41A8">
+    <command xml:space="preserve">talk to nick</command>
+    <result xml:space="preserve">Oh, by the way, I found this access key scribbled on a post-it note in the Mac Lab. Thought it might be a clue.&#x000A;Here, see if you can figure anything out with it&#x2026;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029F4218"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029F4218">
+    <command xml:space="preserve">x post-it note</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029F4288"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029F4288">
+    <command xml:space="preserve">read post-it note</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x029F42F8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x029F42F8">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying:&#x000A;  an access key&#x000A;  a video file&#x000A;  a flash drive&#x000A;  DT Wallet Tutorial&#x000A;  a Duct Tape&#x000A;  an USB cable&#x000A;  an account info&#x000A;  a laptop&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <played>YES</played>
     <changed>NO</changed>

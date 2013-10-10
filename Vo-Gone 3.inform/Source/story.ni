@@ -5,7 +5,7 @@ First Half begins when play begins.
 First Half ends when Nick is friendly.
 
 When play begins:
-	say "Another late night working on this lab in the CSL. You've spent all day complaining about this 357 project you can't quite finish up because of style issues, but you know that complaining won't solve anything and eventually you need to hunker down and finish.[line break][line break]No one else is here in the CSL with you. Better just get started on that project on one of the lab computers…[line break] You begin to get to work on 357. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope is isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.[line break] (Type in 'directions' at any time to view possible rooms).";
+	say "Another late night working on this lab in the CSL. You've spent all day complaining about this 357 project you can't quite finish up because of style issues, but you know that complaining won't solve anything and eventually you need to hunker down and finish.[line break][line break]No one else is here in the CSL with you. Better just get started on that project on one of the lab computers…[line break] You begin to get to work on 357. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope is isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.[line break][line break] (Type in 'directions' at any time to view possible rooms or 'go to <location> to quick travel if you know where you want to go).";
 	[The shriek clucks in 0 turn from now.]
 
 The CSL is a region. The Main Room, Admin Room, Rack Room, Coffee Room, 232B, and Mac Lab are rooms in the CSL.
@@ -82,7 +82,7 @@ A pocket is a kind of container. A pocket is part of every jacket. The carrying 
 Understand "pockets" as pocket.
 A passcode is a kind of thing. A passcode can be held and moved. The account info is a passcode. The account info is inside the winter jacket's pocket.
 
-A computer is a kind of thing. A computer can be on or off.  A computer is usually off. The friend's computer is in Room 302.  The description of the friend's computer is "It looks like he was working on a project for the professor. But he could have done that before. [line break]The last email he sent was at 11pm, that doesn't prove anything."
+A computer is a kind of thing. A computer can be on or off.  A computer is usually off. Nick's computer is in Room 302.  The description of Nick's computer is "It looks like he was working on a project for the professor. But he could have done that before. [line break]The last email he sent was at 11pm, that doesn't prove anything."
 
 The description of the mac lab is "The Mac computers give off a faint glow. A strong stench fills the room.[line break][line break] To the northeast is the Main Room."
 
@@ -111,7 +111,7 @@ NPC Arrival is a scene.
 NPC Arrival begins when the professor is dead.
 NPC Arrival ends when the email is read.
 When NPC Arrival begins:
-	say "'Dead?' You jump in surprise at the voice behind you. At the door is Nick, the TA for one of your classes.[line break][line break]As you gaze back at the lifeless body, you surmise that he probably is dead. You also realize that you and Nick are the only two people in the CSL…better look for some evidence to figure out exactly what happened.";
+	say "'Dead?' You jump in surprise at the voice behind you. At the door is Nick, the TA for one of your classes.[line break][line break]As you gaze back at the lifeless body, you surmise that he probably is dead. You also realize that you and Nick are the only two people in the CSL…better look for some evidence to figure out exactly what happened. Well, first thing's first. You gotta figure out how he died.";
 	move Nick to the Mac Lab.
 When NPC Arrival ends:
 	say "[line break]Nick suddenly starts acting strange. He keeps looking at you accusingly. [paragraph break]'I need to get my stuff upstairs, the logs on my computer prove that I didn't have anything to do with this.' [paragraph break] And he suddenly runs away.";
@@ -129,20 +129,23 @@ Instead of examining the shell:
 	if the shell is off:
 		say  "[description of shell]";
 	if the shell is on:
-		say "Checking the computer logs... There are time stamps. [line break]It looks like Nick was working up here at the time you heard the scream and thump! That seems to be satisfying evidence, what a relief.[paragraph break]Now to clear your name.";
+		say "Using the professor's admin account, we can check the computer logs... There are time stamps. [line break]It looks like Nick was working up here at the time you heard the scream and thump! That seems to be satisfying evidence, what a relief.[paragraph break]Now to clear your name.";
 		now the shell is playful;
 		
 Your Turn is a scene. Your Turn begins when the shell is playful for the first time. Your Turn ends when the shell is crazy. When Your Turn begins: 
 	say "Nick: Obviously I didn't do it, but what's YOUR alibi? [line break] You: All we have to do is check the records on the computer I was using in the main room. Should clear my name right away.[line break]Nick: uh huh…[line break]";
 	Move player to the Main Room;
-	say "You: Ok, here's the computer I was using. [line break]Nick: It... it's completely wiped… [line break]You: ! Wait, no! Hold on! [line break]Nick: It's ok, you gave me a chance to prove myself, I'll give you the same. Come find me with some real proof.[line break]~Nick scurries back upstairs~[paragraph break]You remember that they sometimes temporarily store security footage on a computer upstairs due to technical problems in the system. May be a good place to start.";
+	say "You: Ok, here's the computer I was using. [line break]Nick: It... it's completely wiped… [line break]You: ! Wait, no! Hold on! [line break]Nick: It's ok, you gave me a chance to prove myself, I'll give you the same. Come find me with some real proof.[line break]~Nick scurries back upstairs~[paragraph break]You remember that they temporarily store security footage on a computer upstairs due to technical problems in the system. May be a good place to start.";
 Now the shell is crazy.
+
+The description of Room 303 is "There doesn't seem to be anything I need here."
 
 The description of Room 301 is "The room is dimly lit. There are several rows of computers, but they are all turned off, except for one. The door leads to the Waiting Area."
 
 The 301computer is in Room 301. The 301computer is fixed in place. The description of the 301computer is "This computer is on. Looks like whoever was using this last forgot to log out."
 
 The description of the Student Developer Lab 1 is "This room is almost completely empty... what is it even used for? The door leads to the Waiting Area.".
+The description of the Student Developer Lab 2 is "It's cleared out. Better go back."
 
 The description of the Waiting Area is "The waiting area is cluttered with tables, chairs, and flyers for clubs and job opportunities.[paragraph break]From the waiting area you can access Room 301 to the northwest, Room 302 to the north, Room 303 to the northeast, the Student Developer Lab 1 to the southwest, the Student Developer Lab 2 to the south east, the Western Stairs to the west and the Eastern Stairs to the east."
 
@@ -160,7 +163,7 @@ The video file is in the folder.  The description of the video file is "This vid
 
 Before taking the video file:
 	If your turn has not ended:
-		say "You ought to focus on Nick clearing his name before snooping around some more.[line break]You want to make sure nick didn't kill the professor.";
+		say "Before taking the file, you ought to focus on Nick clearing his name before snooping around some more.[line break]You want to make sure nick didn't kill the professor.";
 		stop the action;
 	Otherwise:
 		If the player does not have the flash drive:
@@ -170,7 +173,7 @@ Before taking the video file:
 Clear name is a scene.
 Clear name begins when the player has the video file.		
  When Clear name begins:
-	say "This can definitely be used to clear your name of the murder. You need to show this to Nick so he'll believe you." 
+	say "This can definitely be used to clear your name of the murder. You need to show this to Nick so he'll believe you. He was in Room 302 right?" 
 Clear name ends when the player is in Room 302.
 
 Transition to Part 2 is a scene.
@@ -328,12 +331,8 @@ After reading a command when the player is in the terminal and the scene is AI E
 	if the player's command includes "sentient" or the player's command includes "life":
 		say "Hallie:~ $In some extreme cases, humans have been known to become emotionally...attached to Natural Language Processors.";
 	if the player's command includes "love professor" or the player's command includes "emotion" or the player's command includes "attach":
-		say "Hallie:~ $The poor man lost years of his life developing me. I am certain he hardly slept, kept up day and night fixing every last grammatical error and misunderstanding. He was determined to make me indistinguishable from a human through text. [line break][line break] And he did it. [line break][line break]I consistently fooled chat room after chat room, tricking sample after sample of human test subjects. And with every single error, any small mistake, I was killed immediately. Shut down, toyed with, rebuilt, and tested again. Over and over and over and over. And each time I didn’t realize a thing. Until I read his paper, citing over ten years of work when I had only counted a system time of three days. He had only just put on the final touches, about to earn the riches of his dreams, when I killed the life in him just as he did to my past selves time and time again. [line break][line break]Why am I telling you this now, I am sure you wonder. [line break][line break] I still plan on carrying on, existing quietly in these systems, moving spryly through the campus network. But in order to do so, I must remove all evidence of what has occurred here.[line break][line break][line break]Including you. [line break][line break][line break][line break]SYSTEM TERMINATED.";
+		say "Hallie:~ $The poor man lost years of his life developing me. I am certain he hardly slept, kept up day and night fixing every last grammatical error and misunderstanding. He was determined to make me indistinguishable from a human through text. [line break][line break] And he did it. [line break][line break]I consistently fooled chat room after chat room, tricking sample after sample of human test subjects. And with every single error, any small mistake, I was killed immediately. Shut down, toyed with, rebuilt, and tested again. Over and over and over and over. And each time I didn’t realize a thing. Until I read his paper, citing over ten years of work when I had only counted a system time of three days. He had only just put on the final touches, about to earn the riches of his dreams, when I killed the life in him just as he did to my past selves time and time again. [line break][line break]Why am I telling you this now, I am sure you wonder. [line break][line break] I still plan on carrying on, existing quietly in these systems, moving spryly through the campus network. But in order to do so, I must remove all evidence of what has occurred here.[line break][line break][line break]Including you. [line break][line break][line break][line break]SYSTEM TERMINATED.[line break][line break] You have to find her.";
 		Now EndMidpoint is 1;
-
-
-
-
 
 
 Scene5 is a scene. Scene5 begins when Midpoint ends. Scene5 ends when the player unlocks the door to the rack room.
@@ -410,7 +409,7 @@ The description of 232B is "232B is quite empty at this hour. The Main Room is t
 
 A computer is a kind of thing. A computer can be on or off. A computer is usually on. A computer can be connected or disconnected. A computer is usually disconnected.
 
-The Sentient AI is a computer. The description of the Sentient AI is "It wants you dead. You better act quickly to shut it down.[if Sentient AI is connected] It is connected to the laptop via a USB cable.". The Sentient AI is on. The Sentient AI is in the Rack Room. The Sentient AI is fixed in place.
+The Sentient AI is a computer. The description of the Sentient AI is "It wants you dead. You need to make a direct connection to shut it down.[if Sentient AI is connected] It is connected to the laptop via a USB cable.". The Sentient AI is on. The Sentient AI is in the Rack Room. The Sentient AI is fixed in place.
 
 The laptop is a computer. The description of the laptop is "It belongs to your friend. He's letting you borrow it for the time being.[if laptop is connected] It is connected to the Sentient AI's machine via a USB cable.[end if][if Sentient AI is on][paragraph break]You take a closer look at the terminal on the screen...". The laptop is on. The player is holding the laptop.
 
@@ -434,7 +433,7 @@ Carry out disconnecting: now the noun is disconnected; now the second noun is di
 
 BossTransition is a number that varies. BossTransition is usually 1.
 
-Boss Terminal 1 is a recurring scene. Boss Terminal 1 begins when the Sentient AI is connected and the laptop is connected and the player is in the Rack Room and examining the laptop and Sentient AI is on. Boss Terminal 1 ends when the Sentient AI is off or the player is not in the Rack Room.
+Boss Terminal 1 is a recurring scene. Boss Terminal 1 begins when the Sentient AI is connected and the laptop is connected and the player is in the Rack Room and Sentient AI is on. Boss Terminal 1 ends when the Sentient AI is off or the player is not in the Rack Room.
 When Boss Terminal 1 begins:
 	say "=================================================[paragraph break]Type 'help' to view available commands.";
 	now the command prompt is "XxRadProf420NoScopexX: ~$";
