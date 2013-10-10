@@ -6,6 +6,7 @@ First Half ends when Nick is friendly.
 
 When play begins:
 	say "Another late night working on this lab in the CSL. You've spent all day complaining about this 357 project you can't quite finish up because of style issues, but you know that complaining won't solve anything and eventually you need to hunker down and finish.[line break][line break]No one else is here in the CSL with you. Better just get started on that project on one of the lab computers…[line break]";
+	The shriek clucks in 0 turn from now.
 
 The CSL is a region. The Main Room, Admin Room, Rack Room, Coffee Room, 232B, and Mac Lab are rooms in the CSL.
 The Admin Room door is a door. The admin room door is north of the Main Room and south of the admin room. The admin room door is locked. The Mac Lab is southwest of the Main Room. 232B is northwest of the Main Room. The Coffee Room is northeast of the Main Room.
@@ -24,6 +25,9 @@ The description of the hallway is "A light breeze rolls through the hallway and 
 The description of the eastern stairs is "You are at the base of the Eastern Stairs. Going up will take you to the third floor. Going west will take you back to the center of the hallway.";
 The description of the western stairs is "You are at the base of the Western Stairs. Going up will take you to the third floor. Going east will take you back to the center of the hallway.";
 
+At the time when the shriek clucks:
+	Say "You begin to get to work on 357. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope is isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.";
+
 Going by name is an action applying to one thing. Understand "go to [any room]" as going by name.
 
 Carry out going by name:
@@ -40,7 +44,7 @@ Before going south in the main room:
 		say "That sound in the mac lab is really eating at you. You can't bring yourself to leave just yet.";
 		reject the player's command;
 
-A professor is an undescribed thing. A professor can wear clothes. A professor can be dead or Heisenberg. The description of the professor is "[if professor is dead]He died wearing a really expensive jacket. [one of]You might not want to keep poking him[or]Very lifeless. But don't worry, this isn't another zombie game.[or]What could have caused this?[then purely at random][else][one of]It's Professor Foaad! [or]Maybe I should wake him.[then purely at random][end if]".  Instead of taking a professor, say "[one of]I'd rather not.[or]Hell no.[then purely at random]".
+A professor is an undescribed thing. A professor can wear clothes. A professor can be dead or Heisenberg. The description of the professor is "[if professor is dead]He died wearing a really expensive jacket. [one of]You might not want to keep poking him[or]Very lifeless. But don't worry, this isn't another zombie game.[or]What could have caused this?[then purely at random][else][one of]It's Professor Foaad! Maybe I should try waking him up.[or]Maybe I should try poking him.[then purely at random][end if]".  Instead of taking a professor, say "[one of]I'd rather not.[or]Hell no.[then purely at random]".
 Understand "him", "person", "guy", "Foaad" and "Khosmood" as a professor.
 
 Understand "poke [someone]" as touching.
@@ -83,7 +87,7 @@ The description of the account info is "This account info might come in handy."
 An email is a thing. An email can be read or unread.
 
 Instead of examining an email:
-	say "'To whoever finds this, I'm not sure what's happening. My cell-phone can't make calls anymore, but I keep getting these text messages. I don't think I have much time left. She's coming for m-'";
+	say "'To whoever finds this, I'm not sure what's happening. My cell-phone can't make calls anymore, but I keep getting these text messages. I don't think I have much time left. It's coming for m-'";
 	now the email is read.
 	
 
@@ -202,23 +206,17 @@ The Lab Computer is a door. "The lab computer you are working at hums softly." T
 Logging in is an action applying to one thing. Understand "Log in [any thing]" as logging in.
 
 Carry out logging in:
-	If the scene is first half:
-		say "357 can wait, you have more important matters on your hands now.";
-	otherwise:
-		If the noun is a lab computer:
-			If the player is carrying an access key:
-				say "You enter the professor's username and access key…";
-				Change the lab computer to unlocked;
-				Try opening the lab computer;
-				Try going southeast;
-				Now the command prompt is "XxRadProf420NoScopexX: ~$".;
-			otherwise:
-				say "You try logging in as the Professor to investigate his files, but the [lab computer] is asking for the professor's access key before continuing.";
-		otherwise:
-			Say "You can't log in a [noun].";
-
-Instead of logging in for the first time during the first half:
-	Say "You begin typing your username and password. As you do so, you begin wondering to yourself what Staley will include on the next programming test…really hope is isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]You know you should work on 357, but the sound is really bothering you, and someone might be hurt. Better go check it out.";
+	If the noun is a lab computer:
+		if the player is carrying an access key:
+			say "You enter the professor's username and access key…";
+			Change the lab computer to unlocked;
+			Try opening the lab computer;
+			Try going southeast;
+			Now the command prompt is "XxRadProf420NoScopexX: ~$".;
+		Otherwise:
+			say "You try logging in, but the [lab computer] is asking for an access key before continuing.";
+	Otherwise:
+		say "You can't log into that!";
 
 Logging out is an action applying to nothing. Understand "Log out" as logging out.
 
