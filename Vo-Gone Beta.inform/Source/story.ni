@@ -383,6 +383,8 @@ Instead of unlocking the Door to the Rack Room with the access card:
 
 The description of the Rack Room is "The rack room is ominously silent compared to the tyical hum you've heard time and time again. The last running computer in the CSL sits on a desk in the far corner of the room. On the screen you can barely make out the small blinking text…'Hallie: ~$'"
 
+The description of 232B is "232B is quite empty at this hour. The Main Room is to the southeast.".
+
 A computer is a kind of thing. A computer can be on or off. A computer is usually on. A computer can be connected or disconnected. A computer is usually disconnected.
 
 The Sentient AI is a computer. The description of the Sentient AI is "It wants you dead. You better act quickly to shut it down.[if Sentient AI is connected] It is connected to the laptop via a USB cable.". The Sentient AI is on. The Sentient AI is in the Rack Room. The Sentient AI is fixed in place.
@@ -391,7 +393,9 @@ The laptop is a computer. The description of the laptop is "It belongs to your f
 
 The system log is an object. The description of the system log is "[if First Half has ended]This is just what you need to prove the Sentient AI guilty of the murder.[otherwise]Just a log of some system commands.". The system log is in the admin room.
 
-The USB cable is an object. "232B is quite empty at this hour. It looks like some student left their USB cable in here.[line break][line break]The Main Room is southeast of you.". The description of the USB cable is "It can be used to connect two machines together.". The USB cable is in 232B.
+The USB cable is an object. "It looks like some student left their USB cable in here.". The description of the USB cable is "It can be used to connect two machines together.". The USB cable is in 232B.
+
+The printer is an object. "There is a printer in the corner of the room.". The description of the printer is "It's connected to all of the computers in the CSL.". The printer is fixed in place. The printer is in the Admin Room.
 
 Understand "connect [computer] to/with/and [computer]" as connecting. Connecting is an action applying to two objects. 
 Check connecting: 
