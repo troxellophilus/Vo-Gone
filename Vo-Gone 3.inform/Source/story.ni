@@ -84,7 +84,7 @@ A passcode is a kind of thing. A passcode can be held and moved. The account inf
 
 A computer is a kind of thing. A computer can be on or off.  A computer is usually off. Nick's computer is in Room 302.  The description of Nick's computer is "It looks like he was working on a project for the professor. But he could have done that before. [line break]The last email he sent was at 11pm, that doesn't prove anything."
 
-The description of the mac lab is "The Mac computers give off a faint glow. A strong stench fills the room.[line break][line break] To the northeast is the Main Room."
+The description of the mac lab is "The Mac computers give off a faint glow. A strong stench fills the room.[line break][line break] To the northeast is the Main Room.[if Midpoint has happened][paragraph break]You notice something scribbled on the whiteboard:[line break][italic type]      Hallie[line break][roman type]It looks as though Foaad wrote this down during his last moments. He clearly wanted you to see it. Why is this word so important?".
 
 The Mac computer is in the Mac Lab. The description of the Mac computer is "[one of]There seems to be an email being composed.[or] Really? Internet Explorer 6?[or] Now's not the time for that.[or]Ok, one more cat video.[then purely at random]". The Mac computer is fixed in place.
 
@@ -205,8 +205,9 @@ When midpoint ends:
 	Remove Inform AI Dissertation from play.
 	
 Instead of talking to Nick when the first half has ended:
-	Say "Oh, by the way, I found this access key scribbled on a post-it note in the Mac Lab. Thought it might be a clue.";
-	Say "Here, see if you can figure anything out with it…";
+	[Say "Oh, by the way, I found this access key scribbled on a post-it note in the Mac Lab. Thought it might be a clue.";
+	Say "Here, see if you can figure anything out with it…";]
+	Say "[if Midpoint is happening]'Oh, by the way, I found this access key scribbled on a post-it note in the Mac Lab. Thought it might be a clue. Here, see if you can figure anything out with it…'[otherwise if Nick is holding the laptop]'Oh yeah, I also brought my laptop with me. I don't know what you would want it for, but just ask me if you want to use it.'[otherwise]'You didn't break my laptop, did you?'";
 	Now the access key is in the main room.;
 	Now the player has the access key;
 
@@ -224,6 +225,14 @@ Carry out logging in:
 			Now the command prompt is "XxRadProf420NoScopexX: ~$".;
 		Otherwise:
 			say "You try logging in, but the [lab computer] is asking for an access key before continuing.";
+	Otherwise if the noun is the Sentient AI:
+		If the Sentient AI is on and the player is in the Rack Room:
+			say "Hallie:~ $Don't be foolish. I know better than to give you access.[paragraph break]Hmm... You might be able to hack in by connecting it to another computer. Nick might know what to do.";
+		Otherwise if the Sentient AI is off and the player is in the Rack Room:
+			say "What do you think you're doing? You just shut it down, remember?";
+	Otherwise if the noun is the laptop:
+		If the laptop is not connected:
+			say "Sure you can log in, but it won't do you any good if it's not connected to the anything.";
 	Otherwise:
 		say "You can't log into that!";
 	If the scene is midpoint:
@@ -253,6 +262,10 @@ Carry out logging out:
 		say "You have successfully logged out of the lab computer";
 		Now the command prompt is ">";
 		Move the player to the main room;
+	Otherwise if the Boss Terminal 1 is happening:
+		say "You have successfully logged out of the laptop";
+		Now the command prompt is ">";
+		Move the player to the main room;
 	Otherwise:
 		say "That's a bit silly sounding in this situation, isn't it?";
 
@@ -266,6 +279,8 @@ DisplayHelp is an action applying to nothing. Understand "help" as displayhelp.
 Carry out displayhelp:
 	if the player is in a terminal:
 		say "The following commands are supported:[line break]  ls - directory listing[line break]  cd - change directory[line break]  vi, vim, nano - file opening[line break]  log out - exit[line break]  help - get help";
+	otherwise if Boss Terminal 1 is happening:	
+		say "List of available commands:[line break]  su - Get administrator access. Password required.[line break]  kill (program) - Terminate the specified program.[line break]  print log - Prints a log of all previous system commands.[line break]  log out - Exit[line break]  help - Get help[line break]";
 	otherwise:
 		say "I can only help he who helps himself.";
 
@@ -403,29 +418,36 @@ Instead of unlocking the Door to the Rack Room with the access card:
 
 
 
-The description of the Rack Room is "The rack room is ominously silent compared to the tyical hum you've heard time and time again. The last running computer in the CSL sits on a desk in the far corner of the room. On the screen you can barely make out the small blinking text…'Hallie: ~$'"
+The description of the Rack Room is "The rack room is ominously silent compared to the tyical hum you've heard time and time again. The last running computer in the CSL sits on a desk in the far corner of the room. [If the Sentient AI is on]On the screen you can barely make out the small blinking text…'Hallie: ~$'[paragraph break]The Sentient AI has several ports to connect various cables to."
 
 The description of 232B is "232B is quite empty at this hour. The Main Room is to the southeast.".
 
 A computer is a kind of thing. A computer can be on or off. A computer is usually on. A computer can be connected or disconnected. A computer is usually disconnected.
 
-The Sentient AI is a computer. The description of the Sentient AI is "It wants you dead. You need to make a direct connection to shut it down.[if Sentient AI is connected] It is connected to the laptop via a USB cable.". The Sentient AI is on. The Sentient AI is in the Rack Room. The Sentient AI is fixed in place.
+The Sentient AI is a computer. The description of the Sentient AI is "[if Sentient AI is on]It wants you dead. You better act quickly to shut it down. Maybe you can try logging in.[otherwise]It's not much of a threat anymore.[end if][if Sentient AI is connected] It is connected to the laptop via a USB cable.". The Sentient AI is on. The Sentient AI is scenery in the Rack Room. The Sentient AI is fixed in place.
 
-The laptop is a computer. The description of the laptop is "It belongs to your friend. He's letting you borrow it for the time being.[if laptop is connected] It is connected to the Sentient AI's machine via a USB cable.[end if][if Sentient AI is on][paragraph break]You take a closer look at the terminal on the screen...". The laptop is on. The player is holding the laptop.
+The laptop is a computer. The description of the laptop is "It belongs to Nick. He's letting you borrow it for the time being.[if laptop is connected] It is connected to the Sentient AI's machine via a USB cable.". The laptop is on. Nick is holding the laptop.
 
-The system log is an object. The description of the system log is "[if First Half has ended]This is just what you need to prove the Sentient AI guilty of the murder.[otherwise]Just a log of some system commands.". The system log is in the admin room.
+The system log is an object. The description of the system log is "It's a list of the AI's system commands. Let's see here...[line break][italic type](10:45:18 PM) Hallie:~ $murder foaad[line break][roman type]Yep, it can't get any clearer than that.".
 
 The USB cable is an object. "It looks like some student left their USB cable in here.". The description of the USB cable is "It can be used to connect two machines together.". The USB cable is in 232B.
 
-The printer is an object. "There is a printer in the corner of the room.". The description of the printer is "It's connected to all of the computers in the CSL.". The printer is fixed in place. The printer is in the Admin Room.
+The printer is an object. "There is a printer in the corner of the room.[if the system log is in the Admin Room]The system log is resting in its tray.". The description of the printer is "It's connected to all of the computers in the CSL.". The printer is fixed in place. The printer is in the Admin Room.	
+
+The block giving rule is not listed in the check giving it to rules.
+Persuasion rule for asking Nick to try giving the laptop to yourself:
+	say "'Here you go. Put it to good use.'";
+	persuasion succeeds.
 
 Understand "connect [computer] to/with/and [computer]" as connecting. Connecting is an action applying to two objects. 
+Understand "link [computer] to/with/and [computer]" as connecting.
+Understand "join [computer] to/with/and [computer]" as connecting.
 Check connecting: 
 	if the player is not holding the USB cable: 
 		say "You have nothing to connect them with!" instead; 
 	otherwise if the noun is not the Sentient AI and the second noun is not the Sentient AI: 
 		say "That won't do you much good. You'll need a more direct connection with the Sentient AI." instead.
-Carry out connecting: now the noun is connected; now the second noun is connected; remove the USB cable from play; try silently dropping the laptop; now the laptop is fixed in place; say "A terminal window pops up on the laptop screen".
+Carry out connecting: now the noun is connected; now the second noun is connected; remove the USB cable from play; try silently dropping the laptop; now the laptop is fixed in place; say "You connect the two computers together with the USB cable. As a result, a terminal window pops up on the laptop screen. You could probably log in.".
 
 Understand "disconnect [computer] from [computer]" as disconnecting. Disconnecting is an action applying to two objects. 
 Check disconnecting: if the noun is not connected, say "You can't disconnect things that aren't connected in the first place.".
@@ -433,26 +455,24 @@ Carry out disconnecting: now the noun is disconnected; now the second noun is di
 
 BossTransition is a number that varies. BossTransition is usually 1.
 
-Boss Terminal 1 is a recurring scene. Boss Terminal 1 begins when the Sentient AI is connected and the laptop is connected and the player is in the Rack Room and Sentient AI is on. Boss Terminal 1 ends when the Sentient AI is off or the player is not in the Rack Room.
+Boss Terminal 1 is a recurring scene. Boss Terminal 1 begins when the Sentient AI is connected and the laptop is connected and the player is in the Rack Room and logging in the laptop. Boss Terminal 1 ends when the player is not in the Rack Room.
 When Boss Terminal 1 begins:
-	say "=================================================[paragraph break]Type 'help' to view available commands.";
-	now the command prompt is "XxRadProf420NoScopexX: ~$";
+	say "[bold type]Terminal[roman type][line break]To leave, simply type 'log out'. Type 'help' to view available commands.";
+	now the command prompt is "NICKSTER: ~$";
 	change BossTransition to 1.
 When Boss Terminal 1 ends:
-	say "[line break]=================================================[paragraph break]";
 	now the command prompt is ">";
 	change BossTransition to 0;
 	if the Sentient AI is on:
 		say "You leave the terminal running. You may want to come back to it later.";
-	otherwise:
-		say "The Sentient AI has been shut down!".
 		
 Boss Terminal 2 is a recurring scene. Boss Terminal 2 begins when BossTransition is 2. Boss Terminal 2 ends when BossTransition is not 2 or OneTurnLimit is 2.
 When Boss Terminal 2 begins:
-	change OneTurnLimit to 0.
+	change OneTurnLimit to 0;
+	say "[italic type]You think for a moment about a password the professor would use for admin access to Hallie…".
 When Boss Terminal 2 ends:
 	if OneTurnLimit is 2:
-		now the command prompt is "XxRadProf420NoScopexX: ~$";
+		now the command prompt is "NICKSTER: ~$";
 		change BossTransition to 1.
 
 OneTurnLimit is a number that varies. OneTurnLimit is usually 0.
@@ -460,15 +480,7 @@ Every turn:
 	if Boss Terminal 2 is happening:
 		now OneTurnLimit is OneTurnLimit plus 1.
 	
-Boss Terminal 3 is a recurring scene. Boss Terminal 3 begins when BossTransition is 3. Boss Terminal 3 ends when BossTransition is not 3
-		
-Understand "help" as listing commands. Listing commands is an action applying to nothing.
-Check listing commands:
-	if Boss Terminal 1 is not happening:
-		say "That's not a verb I recognise." instead.
-Carry out listing commands:
-	say "List of available commands:[line break]   su - Get administrator access. Password required.[line break]   kill (process) - Terminate the specified process.";
-	say "[line break]You think for a moment about a password the professor would use for admin access to Hallie…";
+Boss Terminal 3 is a recurring scene. Boss Terminal 3 begins when BossTransition is 3. Boss Terminal 3 ends when BossTransition is not 3.
 
 Understand "su" as becoming admin. Becoming admin is an action applying to nothing.
 Check becoming admin:
@@ -490,26 +502,36 @@ Carry out getting permission:
 	change BossTransition to 3.
 	
 Understand "kill [computer]" as terminating. Terminating is an action applying to one thing.
-Check terminating:
+Carry out terminating:
 	if Boss Terminal 1 is happening and Boss Terminal 3 is not happening:
 		say "Access denied: administrator access required" instead;
-Carry out terminating:
-	if the noun is Sentient AI and Boss Terminal 3 is happening:
+	otherwise if the noun is Sentient AI and Boss Terminal 3 is happening and the Sentient AI is on:
 		say "Terminating the Sentient AI program... SUCCESSFUL";
 		Now the Sentient AI is off;
 		change BossTransition to 0;
 	otherwise:
 		say "You punch [the noun] as hard as you can. [if the noun is the Sentient AI]It feels good to let out some steam.[otherwise]That was dumb. It still seems to work though.".
+		
+Understand "print log" as printing. Printing is an action applying to nothing.
+Carry out printing:
+	if Boss Terminal 1 is happening and Boss Terminal 3 is not happening:
+		say "Access denied: administrator access required" instead;
+	otherwise if the player is holding the system log:
+		say "[italic type]You already printed one. What's wrong with that copy?";
+	otherwise if Boss Terminal 3 is happening:
+		say "Printing system log...[line break][italic type]You can hear a printer running in the Admin Room.";
+		now a system log is in the Admin Room;
+	otherwise:
+		say "That's not a verb I recognise." instead.
+
+Understand "Hallie" as the Sentient AI.
 
 Before going south in the Main Room:
 	if Midpoint has ended:
 		if the player is not holding the system log or the Sentient AI is on:
-			say "Before you can push on the door, Nick yells at you. 'What do you think you're doing? [if the Sentient AI is on]The Last Running Computer locked all doors to the outside! [line break]Darn... if only it were that easy.[otherwise]We need evidence that proves the Last Running Computer guilty or the police officers outside will think one of us killed Foaad!'[line break]He's got a point. You shouldn't leave quite yet."; 
+			say "[if the Sentient AI is on]You try pushing the door open, but it won't budge.[line break]Darn... if only it were that easy.[otherwise]Before you can push on the door, Nick yells at you. 'We need evidence that proves the AI guilty or the police officers outside will think one of us killed Foaad!'[line break]He's got a point. You shouldn't leave quite yet."; 
 			stop the action.;
 		otherwise:
 			if the player is holding the system log and the Sentient AI is off:
 				say "You walk out of the CSL proudly and give the system log to the police officers. They look at it skeptically. After a few minutes of reading and whispering to themselves, they let you go. You have never been so happy to leave the CSL.";
 				end the story finally saying "You survived!".
-
-
-
