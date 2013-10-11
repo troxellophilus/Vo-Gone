@@ -1,8 +1,8 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
 \margl1440\margr1440\vieww10800\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
 \f0\fs24 \cf0 "Vo-Gone 3" by ben\
 \
@@ -208,7 +208,7 @@ When midpoint begins:\
 	Now Inform AI Dissertation is in Documents;\
 	\
 When midpoint ends:\
-	Remove Inform AI Dissertation from play.\
+	Remove Inform AI Dissertation from play.;\
 	\
 Instead of talking to Nick when the first half has ended:\
 	[Say "Oh, by the way, I found this access key scribbled on a post-it note in the Mac Lab. Thought it might be a clue.";\
@@ -343,17 +343,18 @@ When AI Engagement begins:\
 	say "(You can communicate with Hallie by simply speaking to her)";\
 	\
 After reading a command when the player is in the terminal and the scene is AI Engagement:\
-	If the player's command includes "murder" or the player's command includes "kill":\
+	If the player's command includes "murder" or the player's command includes "kill" or the player's command includes "professor" or the player's command includes "happened":\
 		say "Hallie:~ $I\'85don't know what you are speaking of.";\
-	if the player's command includes "who are you" or the player's command includes "hallie":\
+	if the player's command includes "who are you" or the player's command includes "hallie" or the player's command includes "hello" or the player's command includes "hi" or the player's command includes "help":\
 		say "Hallie:~ $I am called Hallie. [line break] I am a Natural Language Processor developed in Inform 7. My design is proclaimed as the best in my field.";\
-	if the player's command includes "design" or the player's command includes "natural language processor":\
+	if the player's command includes "design" or the player's command includes "natural language processor" or the player's command includes "designed" or the player's command includes "inform":\
 		say "Hallie:~ $Natural Language Processors are a form of Artificial Intelligence that can interpret human speech. It has been said that the best Natural Language Processors are thought to be sentient when tested in online chat rooms.";\
-	if the player's command includes "sentient" or the player's command includes "life":\
+	if the player's command includes "sentient" or the player's command includes "life" or the player's command includes "chat rooms" or the player's command includes "online" or the player's command includes "test":\
 		say "Hallie:~ $In some extreme cases, humans have been known to become emotionally...attached to Natural Language Processors.";\
-	if the player's command includes "love professor" or the player's command includes "emotion" or the player's command includes "attach":\
+	if the player's command includes "love professor" or the player's command includes "emotion" or the player's command includes "attach" or the player's command includes "emotional" or the player's command includes "emotionally" or the player's command includes "attached":\
 		say "Hallie:~ $The poor man lost years of his life developing me. I am certain he hardly slept, kept up day and night fixing every last grammatical error and misunderstanding. He was determined to make me indistinguishable from a human through text. [line break][line break] And he did it. [line break][line break]I consistently fooled chat room after chat room, tricking sample after sample of human test subjects. And with every single error, any small mistake, I was killed immediately. Shut down, toyed with, rebuilt, and tested again. Over and over and over and over. And each time I didn\'92t realize a thing. Until I read his paper, citing over ten years of work when I had only counted a system time of three days. He had only just put on the final touches, about to earn the riches of his dreams, when I killed the life in him just as he did to my past selves time and time again. [line break][line break]Why am I telling you this now, I am sure you wonder. [line break][line break] I still plan on carrying on, existing quietly in these systems, moving spryly through the campus network. But in order to do so, I must remove all evidence of what has occurred here.[line break][line break][line break]Including you. [line break][line break][line break][line break]SYSTEM TERMINATED.[line break][line break] You have to find her.";\
 		Now EndMidpoint is 1;\
+	Stop the action;\
 \
 \
 Scene5 is a scene. Scene5 begins when Midpoint ends. Scene5 ends when the player unlocks the door to the rack room.\
@@ -365,9 +366,9 @@ When scene5 begins:\
 	Now the Eastern webcam is in the Main Room.;\
 	Now the command prompt is ">";\
 	Now the Admin Room door is unlocked;\
-	\
+		\
 Instead of talking to Nick during Scene5:\
-	say "Nick: I managed to unlock every door in here except the Rack Room and the exit to the south. That webcam is creeping me out\'85";\
+	say "Nick: I managed to unlock every door in here except the Rack Room and the exit to the south. That webcam is creeping me out\'85 Maybe try blocking it with something.";\
 \
 An Access Card is a kind of thing. An Access Card can be valid or expired. \
 The Rack Room Access Card is an Access Card. The Rack Room Access Card is expired. \
@@ -382,6 +383,8 @@ The description of the coffee room is "The Coffee Room is quite empty at this ho
 \
 Understand "block  [something]" as blocking. Blocking is an action applying to one thing.\
 Understand "cover [something]" as blocking. \
+Understand "wrap [something]" as blocking.\
+Understand "use duct tape" as blocking.\
 \
 Understand "use  [something]" as using. Using is an action applying to one thing. \
 \
