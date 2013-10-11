@@ -1,20 +1,20 @@
 ! Blurb file created by Inform build 6G60
 
-status "C:\Program Files (x86)\Inform 7\Inform7\Extensions\Reserved\CblorbModel.html" "C:\Users\Ben\Documents\GitHub\Vo-Gone\Vo-Gone 3.inform\Build\StatusCblorb.html"
+status "/Applications/Inform.app/Contents/Resources/Inform7/Extensions/Reserved/CblorbModel.html" "/Users/Cameron/School Stuff/Fall '13/CSC 378/Project 1 - Interactive Fiction/Vo-Gone/Vo-Gone 3.inform/Build/StatusCblorb.html"
 
 
 ! Identification
 
-project folder "C:\Users\Ben\Documents\GitHub\Vo-Gone\Vo-Gone 3.inform"
-release to "C:\Users\Ben\Documents\GitHub\Vo-Gone\Vo-Gone 3 Materials\Release"
+project folder "/Users/Cameron/School Stuff/Fall '13/CSC 378/Project 1 - Interactive Fiction/Vo-Gone/Vo-Gone 3.inform"
+release to "/Users/Cameron/School Stuff/Fall '13/CSC 378/Project 1 - Interactive Fiction/Vo-Gone/Vo-Gone 3 Materials/Release"
 
 ! Blorb instructions
 
 storyfile leafname "Vo-Gone 3.zblorb"
-storyfile "C:\Users\Ben\Documents\GitHub\Vo-Gone\Vo-Gone 3.inform\Build\output.z8" include
-ifiction "C:\Users\Ben\Documents\GitHub\Vo-Gone\Vo-Gone 3.inform\Metadata.iFiction" include
-cover "C:\Program Files (x86)\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
-picture 1 "C:\Program Files (x86)\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
+storyfile "/Users/Cameron/School Stuff/Fall '13/CSC 378/Project 1 - Interactive Fiction/Vo-Gone/Vo-Gone 3.inform/Build/output.z8" include
+ifiction "/Users/Cameron/School Stuff/Fall '13/CSC 378/Project 1 - Interactive Fiction/Vo-Gone/Vo-Gone 3.inform/Metadata.iFiction" include
+cover "/Applications/Inform.app/Contents/Resources/Inform7/Extensions/Reserved/DefaultCover.jpg"
+picture 1 "/Applications/Inform.app/Contents/Resources/Inform7/Extensions/Reserved/DefaultCover.jpg"
 
 ! Placeholder variables
 
