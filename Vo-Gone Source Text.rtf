@@ -4,7 +4,7 @@
 \margl1440\margr1440\vieww10800\viewh8400\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
-\f0\fs24 \cf0 "Vo-Gone 3" by ben\
+\f0\fs24 \cf0 "Vo-Gone RC3" by Ben Naftali, Drew Troxell, Alven Feng, Anthony Valdez, Cameron Thib\
 \
 First Half is a scene.\
 First Half begins when play begins.\
@@ -214,7 +214,6 @@ Instead of talking to Nick when the first half has ended:\
 	[Say "Oh, by the way, I found this access key scribbled on a post-it note in the Mac Lab. Thought it might be a clue.";\
 	Say "Here, see if you can figure anything out with it\'85";]\
 	Say "[if Midpoint is happening]'Oh, by the way, I found this access key scribbled on a post-it note in the Mac Lab. Thought it might be a clue. Here, see if you can figure anything out with it\'85'[otherwise if Nick is holding the laptop]'Oh yeah, I also brought my laptop with me. I don't know what you would want it for, but just ask me if you want to use it.'[otherwise]'You didn't break my laptop, did you?'";\
-	Now the access key is in the main room.;\
 	Now the player has the access key;\
 \
 The Lab Computer is a door. "The lab computer you are working at hums softly." The Lab Computer is northwest of the Terminal and southeast of the Main Room. The description of the lab computer is "You can access the terminal by logging in a lab computer. You can log in a lab computer by saying 'log in lab computer'". The Lab Computer is locked. The access key unlocks the lab computer.\
@@ -225,9 +224,7 @@ Carry out logging in:\
 	If the noun is a lab computer:\
 		if the player is carrying an access key:\
 			say "You enter the professor's username and access key\'85";\
-			Change the lab computer to unlocked;\
-			Try opening the lab computer;\
-			Try going southeast;\
+			Move the player to the terminal;\
 			Now the command prompt is "XxRadProf420NoScopexX: ~$".;\
 		Otherwise:\
 			say "You try logging in, but the [lab computer] is asking for an access key before continuing.";\
@@ -241,20 +238,6 @@ Carry out logging in:\
 			say "Sure you can log in, but it won't do you any good if it's not connected to the anything.";\
 	Otherwise:\
 		say "You can't log into that!";\
-	If the scene is midpoint:\
-		If the noun is a lab computer:\
-			If the player is carrying an access key:\
-				say "You enter the professor's username and access key\'85";\
-				Change the lab computer to unlocked;\
-				Try opening the lab computer;\
-				Try going southeast;\
-				Now the command prompt is "XxRadProf420NoScopexX: ~$".;\
-			otherwise:\
-				say "You try logging in as the Professor to investigate his files, but the [lab computer] is asking for the professor's access key before continuing.";\
-		otherwise:\
-			Say "You can't log in a [noun].";\
-	Otherwise:\
-		say "357 can wait, you have more important matters on your hands now.";\
 \
 Instead of logging in for the first time during the first half:\
 	[Say "You begin typing your username and password. As you do so, you begin wondering to yourself what Staley will include on the next programming test\'85really hope it isn't--[line break][line break]'HHHHHYAAAAALLLAAAAAGHGHGHHH'[line break]Suddenly an ear-piercing shriek rings out from the Mac Lab, swiftly followed by a thunderous THUMP.[line break][line break]\
@@ -278,7 +261,7 @@ Carry out logging out:\
 The Terminal is a room. The description of the Terminal is "From the unix [terminal] you can navigate through user files with standard unix commands. To leave, simply type 'log out'. For help, type 'help'."\
 \
 Instead of going somewhere while in the terminal:\
-	try logging out.\
+	try logging out.;\
 	\
 DisplayHelp is an action applying to nothing. Understand "help" as displayhelp.\
 \
@@ -299,7 +282,8 @@ The current directory is a directory that varies. The current directory is usual
 Directory listing is an action applying to nothing. Understand "ls" as directory listing.\
 \
 Carry out directory listing:\
-	say "[list of all things inside the current directory]";\
+	if the player is in the terminal:\
+		say "[list of all things inside the current directory]";\
 	\
 Directory changing is an action applying to one thing. Understand "cd [any thing]" as directory changing.\
 \
@@ -312,7 +296,7 @@ Carry out directory changing:\
 \
 File editing is an action applying to one thing. Understand "vi [any personal file]", "vim [any personal file]", "nano [any personal file]" as file editing.\
 \
-AIEngage is a number that varies. AIEngage is usually 0.\
+AIEngage is a number that varies. AIEngage is 0.\
 \
 AI Engagement is a scene. AI Engagement begins when AIEngage is 1. AI Engagement ends when EndMidpoint is 1.\
 \
@@ -342,10 +326,10 @@ When AI Engagement begins:\
 	say "Hallie: ~$ What do you think you are doing.";\
 	say "(You can communicate with Hallie by simply speaking to her)";\
 	\
-After reading a command when the player is in the terminal and the scene is AI Engagement:\
+After reading a command when the scene is AI Engagement:\
 	If the player's command includes "murder" or the player's command includes "kill" or the player's command includes "professor" or the player's command includes "happened":\
 		say "Hallie:~ $I\'85don't know what you are speaking of.";\
-	if the player's command includes "who are you" or the player's command includes "hallie" or the player's command includes "hello" or the player's command includes "hi" or the player's command includes "help":\
+	if the player's command includes "who are you" or the player's command includes "hallie" or the player's command includes "hello" or the player's command includes "hi" or the player's command includes "what's going on":\
 		say "Hallie:~ $I am called Hallie. [line break] I am a Natural Language Processor developed in Inform 7. My design is proclaimed as the best in my field.";\
 	if the player's command includes "design" or the player's command includes "natural language processor" or the player's command includes "designed" or the player's command includes "inform":\
 		say "Hallie:~ $Natural Language Processors are a form of Artificial Intelligence that can interpret human speech. It has been said that the best Natural Language Processors are thought to be sentient when tested in online chat rooms.";\
@@ -354,7 +338,9 @@ After reading a command when the player is in the terminal and the scene is AI E
 	if the player's command includes "love professor" or the player's command includes "emotion" or the player's command includes "attach" or the player's command includes "emotional" or the player's command includes "emotionally" or the player's command includes "attached":\
 		say "Hallie:~ $The poor man lost years of his life developing me. I am certain he hardly slept, kept up day and night fixing every last grammatical error and misunderstanding. He was determined to make me indistinguishable from a human through text. [line break][line break] And he did it. [line break][line break]I consistently fooled chat room after chat room, tricking sample after sample of human test subjects. And with every single error, any small mistake, I was killed immediately. Shut down, toyed with, rebuilt, and tested again. Over and over and over and over. And each time I didn\'92t realize a thing. Until I read his paper, citing over ten years of work when I had only counted a system time of three days. He had only just put on the final touches, about to earn the riches of his dreams, when I killed the life in him just as he did to my past selves time and time again. [line break][line break]Why am I telling you this now, I am sure you wonder. [line break][line break] I still plan on carrying on, existing quietly in these systems, moving spryly through the campus network. But in order to do so, I must remove all evidence of what has occurred here.[line break][line break][line break]Including you. [line break][line break][line break][line break]SYSTEM TERMINATED.[line break][line break] You have to find her.";\
 		Now EndMidpoint is 1;\
-	Stop the action;\
+\
+\
+\
 \
 \
 Scene5 is a scene. Scene5 begins when Midpoint ends. Scene5 ends when the player unlocks the door to the rack room.\
