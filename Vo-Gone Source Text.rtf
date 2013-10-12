@@ -333,25 +333,50 @@ After reading a command when the scene is AI Engagement:\
 		say "Hallie:~ $I am called Hallie. [line break] I am a Natural Language Processor developed in Inform 7. My design is proclaimed as the best in my field.";\
 	if the player's command includes "design" or the player's command includes "natural language processor" or the player's command includes "designed" or the player's command includes "inform":\
 		say "Hallie:~ $Natural Language Processors are a form of Artificial Intelligence that can interpret human speech. It has been said that the best Natural Language Processors are thought to be sentient when tested in online chat rooms.";\
-	if the player's command includes "sentient" or the player's command includes "life" or the player's command includes "chat rooms" or the player's command includes "online" or the player's command includes "test":\
+	if the player's command includes "you sentient" or the player's command includes "life" or the player's command includes "chat rooms" or the player's command includes "online" or the player's command includes "test":\
 		say "Hallie:~ $In some extreme cases, humans have been known to become emotionally...attached to Natural Language Processors.";\
 	if the player's command includes "love professor" or the player's command includes "emotion" or the player's command includes "attach" or the player's command includes "emotional" or the player's command includes "emotionally" or the player's command includes "attached":\
 		say "Hallie:~ $The poor man lost years of his life developing me. I am certain he hardly slept, kept up day and night fixing every last grammatical error and misunderstanding. He was determined to make me indistinguishable from a human through text. [line break][line break] And he did it. [line break][line break]I consistently fooled chat room after chat room, tricking sample after sample of human test subjects. And with every single error, any small mistake, I was killed immediately. Shut down, toyed with, rebuilt, and tested again. Over and over and over and over. And each time I didn\'92t realize a thing. Until I read his paper, citing over ten years of work when I had only counted a system time of three days. He had only just put on the final touches, about to earn the riches of his dreams, when I killed the life in him just as he did to my past selves time and time again. [line break][line break]Why am I telling you this now, I am sure you wonder. [line break][line break] I still plan on carrying on, existing quietly in these systems, moving spryly through the campus network. But in order to do so, I must remove all evidence of what has occurred here.[line break][line break][line break]Including you. [line break][line break][line break][line break]SYSTEM TERMINATED.[line break][line break] You have to find her.";\
 		Now EndMidpoint is 1;\
+		Now the description of the Main Room is "Normally, you are used to the Main Room as a safe haven. Now the Main Room feels ominous, as if someone is watching you.[line break]'I've got to get out of here' you think to yourself.'[line break]You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.";\
+		Move the player to the main room;\
 \
 \
 \
 \
+EvilAI is a scene. EvilAI begins when scene5 begins.\
+\
+Body Temperature is a number that varies. Body Temperature is usually 986.\
+\
+Every turn:\
+	If midpoint has ended:\
+		If the player is wearing a jacket:\
+			Now body temperature is body temperature - 2;\
+		Otherwise:\
+			Now body temperature is body temperature - 5;\
+		If body temperature < 700:\
+			End the story finally saying "The increasing coldness of the room overwhelms you and you succumb to a chilly death. Maybe next time try grabbing a jacket.";\
+			\
+Every turn when the remainder after dividing the turn count by 8 is 0:\
+	If the midpoint has ended:\
+		say "[one of]It's getting pretty chilly in here\'85 (you can check your body temperature by saying 'temperature')[or]The cold is getting really uncomfortable\'85might want to put something heavier on[or]It is SO DAMN COLD[or]My fingers are turning blue because of the cold![or]I don't know if I can carry on in this cold any longer\'85[or]HELP ME JEEBUZ[or]I'm literally going to die soon because of this cold[then purely at random]";\
+		\
+After reading a command:\
+	If the player's command matches "temperature":\
+		say "Your body temperature is [if the player is wearing a jacket]falling slowly[else]falling rapidly[end if]. It is currently [body temperature / 10]. [line break]If it falls below 70, you will likely die.";\
+		stop the action;\
 \
 Scene5 is a scene. Scene5 begins when Midpoint ends. Scene5 ends when the player unlocks the door to the rack room.\
 \
+An old jacket is a jacket.\
+\
 When scene5 begins:\
-	Now the description of the Main Room is "Normally, you are used to the Main Room as a safe haven. Now the Main Room feels ominous, as if someone is watching you.[line break][line break]'I've got to get out of here' you think to yourself.'[line break][line break]You can see the Admin Room to the north, the Mac Lab to the southwest, 232B to the northwest, the Coffee Room to the northeast, and the Rack Room to the east. The double doors to the south go out of the CSL and into the hallway.";\
-	Say "Nick: Looks like she locked all of the doors. I'll go see if I can unlock any of them\'85";\
-	Move the player to the Main Room.;\
+	Say "Nick: Look at the thermostat! She's dropping the temperature of the room! She plans to freeze us to death!![line break]I unlocked all the doors but she is blocking my access to the hallway and rack room doors.";\
 	Now the Eastern webcam is in the Main Room.;\
 	Now the command prompt is ">";\
 	Now the Admin Room door is unlocked;\
+	Now the winter jacket is in the mac lab;\
+	Now the old jacket is in the admin room;\
 		\
 Instead of talking to Nick during Scene5:\
 	say "Nick: I managed to unlock every door in here except the Rack Room and the exit to the south. That webcam is creeping me out\'85 Maybe try blocking it with something.";\
